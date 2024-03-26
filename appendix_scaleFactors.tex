@@ -1,0 +1,273 @@
+\chapter{Scale Factors and Datasets}\label{ch:appendix_scaleFactors}
+In this chapter we discuss the datasets used for the tag-and-probe method and the final scale factors used in the analysis.
+
+The tag-and-probe method begins by obtaining a set of high purity $Z \to e^{+}e^{-}$ samples from data shown in Table~\ref{table:TnPDatasets}. Events are required to pass an unprescaled single electron trigger, listed on Table~\ref{tab:tagtrig}. These single electron triggers are used to assure that the probe electrons selected are unbiased. Both the tag electrons and the probe electrons are further selected with the following cuts listed in Table~\ref{tab:tnpSelection}. The tag-and-probe system must be within the invariant mass range from 70 GeV to 110 GeV. The tag electrons have \pt cuts greater than the HLT requirements at to avoid ambiguity. The selected probe electrons are further categorized into whether they fail or pass the photon ID. The distributions are binned and \pt and $\eta$ as follows: $p_{T}=[125,200,300,400,500,1000]$~\GeV and $|\eta|=$[0,0.8,1.4442] in the EB and $|\eta|=$[1.566,2.5] in the endcap region. 
+
+In the next step, we apply the same selection procedure on MC samples instead of data. The MC samples are listed in Table~\ref{table:NominalMC}. The choice of using HT-binned Drell-Yann samples are governed by the need for more statistics in the high $p_{T}$ region.
+
+\begin{table}[!htbp]~\label{table:NominalMC}
+  \centering
+  \caption{Nominal MC samples used for TnP}
+  \resizebox{0.9\textwidth}{!}{%
+    \begin{tabular}{ll}
+      \hline \hline
+      Year & Nominal MC samples \\
+      \hline 
+      \textbf{2016} & /DYJetsToLL\_M-50\_HT-*\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 \\
+                    & /RunIISummer16MiniAODv3-PUMoriond17\_94X\_mcRun2\_asymptotic\_v3-v2 \\
+      \textbf{2017} & /DYJetsToLL\_M-50\_HT-*\_TuneCP5\_13TeV-madgraphMLM-pythia8 \\
+                    & /RunIIFall17MiniAODv2-PU2017\_12Apr2018\_new\_pmx\_94X\_mc2017\_realistic\_v14-v2 \\
+      \textbf{2018} & /DYJetsToLL\_M-50\_HT-*\_TuneCP5\_PSweights\_13TeV-madgraphMLM-pythia8 \\
+                    & RunIIAutumn18MiniAOD-102X\_upgrade2018\_realistic\_v15-v2 \\
+    \hline 
+    \end{tabular}
+  }
+\end{table}
+
+The passing and failing probe distributions for each $\eta-\pt$ bins are fitted to get the signal yields. The nominal fitting signal model is the template from MC, Zlineshape, the lineshape of the Z resonance peak is extracted and smeared with the Gaussian. The nominal fitting background model used is the RooCMSShape function which is a special case of the general Crystal Ball function, a pdf which combines a Gaussian core with a power-tail law used to model the invariant mass distribution of a particle resonance decay. We extract the signal yield for data. The MC, which serves as our ground truth, we use a simple cut and count. Using these yields we can subsequently calculate the efficiency which is defined as follows: 
+
+\begin{equation} \label{eq:efficiency}
+  \text{Efficiency} = \frac{\text{Signal Yield}_{\text{passing probe}}}{\text{Signal Yield}_{\text{passing probe}} + \text{Signal Yield}_{\text{failing probe}}}
+\end{equation}
+
+Alternative MC samples listed in Table~\ref{tab:AlternativeMC} are used to evaluate the generator dependence and the fitting model systematics. The signal model and the background models are alternately chosen as the nominal one. The alternative signal models were analytically fit with a Crystal Ball function convoluted with a Gaussian. The alternative background model is fitted with a second order polynomial. The default alternative background model in the tag-and-probe package is an exponential function. Comparing the fit results between the two alternative background models, the second order polynomial has a better fit and gives us smaller systematics.  The representative fit shown in Figure~\ref{fig:Sysbkg} shows that the exponential function does not fit very well due to the sign of its curvature. The second order polynomial function has more freedom to flex its curvature to fit the data and results in a better fit. 
+
+Finally, the scale factors are calculated by dividing the efficiency in data and the MC in $\eta-p_{T}$ bins. The results are shown in Figure~\ref{fig:SFvsPt}. The large uncertainties in the high-pt region dominated by the statistics, and this leads us to extrapolate the scale factors above 200 GeV.
+
+\begin{equation} \label{eq:SF}
+  \text{Scale Factor}(\eta,p_{T}) = \frac{\text{Efficiency}_{\text{Data}}(\eta,p_{T})}{\text{Efficiency}_{\text{MC}}(\eta,p_{T})}
+\end{equation}
+
+\begin{table}[!htbp]
+  \centering
+  \caption{Single electron high level trigger}
+  \begin{tabular}{@{}ll@{}}
+    \hline \hline
+    Year & TnP trigger path \\
+    \midrule
+    \hline \hline
+    \textbf{2016} & HLT\_Ele27\_WPTight\_Gsf \\
+    \textbf{2017} & HLT\_Ele32\_WPTight\_Gsf\_L1DoubleEG \\
+    \textbf{2018} & HLT\_Ele32\_WPTight\_Gsf \\
+      \hline \hline
+  \end{tabular}
+  \label{tab:tagtrig}
+\end{table}
+
+\begin{table}[!htbp]
+	\caption{Datasets used for TnP}
+	\centering
+	\resizebox{0.7\textwidth}{!}{%
+	\vspace{\baselineskip}
+	\small % or \footnotesize
+	\begin{tabular}{ll}
+	\hline \hline
+	Year & Dataset \\
+	\hline
+	2016 & /SingleElectron/Run2016B-17Jul2018\_ver2-v1/MINIAOD \\
+	      & /SingleElectron/Run2016C-17Jul2018-v1/MINIAOD \\
+        & /SingleElectron/Run2016D-17Jul2018-v1/MINIAOD \\
+        & /SingleElectron/Run2016E-17Jul2018-v1/MINIAOD \\
+        & /SingleElectron/Run2016F-17Jul2018-v1/MINIAOD \\
+        & /SingleElectron/Run2016G-17Jul2018-v1/MINIAOD \\
+        & /SingleElectron/Run2016H-17Jul2018-v1/MINIAOD \\
+	\hline
+    2017 &/SingleElectron/Run2017B-31Mar2018-v1/MINIAOD   \\
+	    & /SingleElectron/Run2017C-31Mar2018-v1/MINIAOD \\
+        & /SingleElectron/Run2017D-31Mar2018-v1/MINIAOD \\
+        & /SingleElectron/Run2017E-31Mar2018-v1/MINIAOD \\
+        & /SingleElectron/Run2017F-31Mar2018-v1/MINIAOD \\
+    \hline
+	  2018   & /EGamma/Run2018B-17Sep2018-v1/MINIAOD \\
+        & /EGamma/Run2018C-17Sep2018-v1/MINIAOD \\
+        & /EGamma/Run2018D-22Jan2019-v2/MINIAOD \\
+	\hline \hline
+	\end{tabular}}
+	\label{table:TnPDatasets}
+\end{table}
+
+\begin{table}[!htbp]
+  \centering
+  \caption{Tag and Probe Selection. The number in parentheses is for 2017 and 2018.}
+  \resizebox{0.7\textwidth}{!}{%
+    \begin{tabular}{ll}
+      \toprule
+      \hline \hline
+      Tag Selection & Probe Selection \\
+      \midrule
+      \hline 
+      $|\eta|<1.4442$  or  $1.566<|\eta|<2.1$ & $|\eta|<1.4442$ or $1.566<|\eta|<2.5$ \\
+      $p_{T}>30.0$ (35.0) & \\
+      Pass Tight electronCutBasedID & \\
+      \bottomrule
+      \hline \hline
+    \end{tabular}
+  }
+  \label{tab:tnpSelection}
+\end{table}
+
+\begin{table}[!htbp]
+  \centering
+  \caption{Alternative MC samples used for TnP}
+  \resizebox{0.9\textwidth}{!}{%
+    \small % or \footnotesize
+    \begin{tabular}{ll}
+      \toprule
+      \hline \hline
+      Year & Nominal MC samples \\
+      \midrule
+      \hline 
+      \textbf{2016} & /DYJetsToLL\_M-50\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8 \\
+                   & /RunIISummer16MiniAODv3-PUMoriond17\_94X\_mcRun2\_asymptotic\_v3\_ext2-v1 \\
+      \textbf{2017}  & /DYJetsToLL\_M-50\_TuneCP5\_13TeV-amcatnloFXFX-pythia8 \\
+                     & /RunIIFall17MiniAODv2-PU2017\_12Apr2018\_94X\_mc2017\_realistic\_v14-v1* \\
+      \textbf{2018} & /DYToEE\_M-50\_NNPDF31\_TuneCP5\_13TeV-powheg-pythia8 \\
+                    & /RunIIAutumn18MiniAOD-102X\_upgrade2018\_realistic\_v15-v1* \\
+      \bottomrule
+    \hline 
+    \end{tabular}}
+  \label{tab:AlternativeMC}
+\end{table}
+
+At high \pt, we extrapolate the scale factors as a function of \pt. The scale factors are found to be relatively flat and we take the central value and extrapolate to the entire high \pt region. The detailed procedure to obtain the extrapolated scale factors and uncertainties are described as follows See Appendix~\ref{ch:appendix_scaleFactors} for final scale factors.
+
+For each $\eta$ binning defined in the tag-and-probe package, the scale factors vs \pt are fitted with a first order polynomial function, defined
+as $p_0 + p_1(\pt-200)$. The fitted value of $p_0$ would be taken as the constant scale factor for $\pt > 200$ GeV. The fitting error of $p_1$ would be taken as the $68\%$ limit on the gradient of SF to reflect how confident we are to believe the scale factors are flat, and this would be an additional systematics for extrapolation.
+
+The final systematics for \pt$ > 200$ GeV would be the systematics of 200-300 GeV \pt bin obtained from tag-and-probe method $\oplus$ extra extrapolation systematics. A consistency check between the extrapolated and tag-and-probe measured results
+are done, and the tag-and-probe scale factors are within uncertainty. The final uncertainties are also compared with the constant 6\% systematics
+quoted in the 2016 analysis~\cite{CMS_AN_2017-027}. The current uncertainties are smaller in most $p_{T}$ region due to more statistics from
+HT-binned DY samples, a better alternative background function choice, and the extrapolation. Towards very high $p_{T}$ region the extrapolation
+systematics start to dominate because its $p_{T}$ dependent behaviour, which reflects some non-flatness of the scale factors.
+
+%%%%%%%%%%%%%%%%%%%%%%-------------2016--------------%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{table}[pt]
+%     \centering
+%     \caption{Final scale factors and uncertainties for 2016.}
+%     \cmsTable{
+%     \begin{tabular}{llccc}
+%         \\    
+%         \hline \hline
+%         \vspace*{-4.5mm} &&&&&&&& \\
+%         $\eta$ bin &  \pt bin & Scale Factor & Uncertainty & \multicolumn{2}{c}{Hewett} & \multicolumn{5}{c}{HLZ} \\
+%         & & negative & positive & $\nED=3$ & $\nED=4$ & $\nED=5$ & $\nED=6$ & $\nED=7$ \\ [\cmsTabSkip]
+%         \hline
+%         \vspace*{-2.5mm} &&&&&&&&& \\
+%         Expected & 8.7$^{+0.7}_{-0.6}$ & 7.3$^{+0.3}_{-0.3}$ & 7.8$^{+0.6}_{-0.5}$ & 10.3$^{+0.8}_{-0.7}$ & 8.7$^{+0.7}_{-0.6}$ & 7.9$^{+0.6}_{-0.5}$ & 7.3$^{+0.6}_{-0.5}$ & 6.9$^{+0.6}_{-0.5}$ \\ [\cmsTabSkip]
+%         Observed & 9.3 & 7.1 & 8.3 & 11.1 & 9.3 & 8.4 & 7.8 & 7.4 \vspace*{1.0mm} \\
+%         \hline \hline
+%     \end{tabular}
+%     }
+%     \label{Tab:Limits161718}
+% \end{table}
+
+\begin{table}[!htbp]
+  \caption{Final scale factors and uncertainties for 2016.}
+  \centering
+  \vspace{\baselineskip}
+  \begin{tabular}{llccc}
+  \hline \hline
+  % \vspace*{-4.5mm} &&&&&&&& \\
+  $\eta$  -bin & \pt bin & Scale Factor & Uncertainty & \multirow{2}{*}{\shortstack{Extrapolation\\Uncertainty (GeV)}} \\
+ \vspace*{-4.5mm} &&&&&&&& \\
+  \cline{1-5}
+      $0<|\eta|<0.8$      & $125<\pt<200$ & 1.0168 & 0.0108 & -        \\
+      $0<|\eta|<0.8$      & $200<\pt$     & 1.0133 & 0.0186 & 5.33e-05 \\
+      $0.8<|\eta|<1.4442$ & $125<\pt<200$ & 0.9963 & 0.0098 & -        \\
+      $0.8<|\eta|<1.4442$ & $200<\pt$     & 0.9951 & 0.0129 & 8.61e-01 \\
+      $1.566<|\eta|<2.5$  & $125<\pt<200$ & 1.0102 & 0.0145 & -        \\
+      $1.566<|\eta|<2.5$  & $200<\pt<300$ & 1.0030 & 0.0225 & 1.57e-04 \\
+  \hline \hline
+  \end{tabular}
+  \label{tab:finalSF_2016}
+\end{table}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%-------------2017--------------%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{table}[!htbp]
+  \caption{Final scale factors and uncertainties for 2017.}
+  \centering
+  \vspace{\baselineskip}
+  \begin{tabular}{llccc}
+  \hline \hline
+  % \vspace*{-4.5mm} &&&&&&&& \\
+  $\eta$  -bin & \pt bin & Scale Factor & Uncertainty & \multirow{2}{*}{\shortstack{Extrapolation\\Uncertainty (GeV)}} \\
+ \vspace*{-4.5mm} &&&&&&&& \\
+  \cline{1-5}
+     $0<|\eta|<0.8$      & $125<\pt<200$ & 1.0166 & 0.0134 & -       \\
+     $0<|\eta|<0.8$      & $200<\pt$     & 1.0147 & 0.0318 & 6.26e-05 \\
+     $0.8<|\eta|<1.4442$ & $125<\pt<200$ & 1.0036 & 0.0214 & -        \\
+     $0.8<|\eta|<1.4442$ & $200<\pt$     & 1.0063 & 0.0390 & 8.46e-05 \\
+     $1.566<|\eta|<2.5$  & $125<\pt<200$ & 0.9906 & 0.0137 & -        \\
+     $1.566<|\eta|<2.5$  & $200<\pt<300$ & 1.0007 & 0.0311 & 8.97e-05 \\
+  \hline \hline
+  \end{tabular}
+  \label{tab:finalSF_2017}
+\end{table}
+
+
+% \begin{table}[htbp]
+%   \begin{center}
+%     \begin{tabular}{|l|l|c|c|c|}
+%       \hline
+%       $\eta$ bin & \pt bin & Scale Factor & Uncertainty & \multirow{2}{*}{\shortstack{Extrapolation\\Uncertainty (GeV)}}
+%       \\
+%       \hline
+%       $0<|\eta|<0.8$      & $125<\pt<200$ & 1.0166 & 0.0134 & -        \\
+%       $0<|\eta|<0.8$      & $200<\pt$     & 1.0147 & 0.0318 & 6.26e-05 \\
+%       $0.8<|\eta|<1.4442$ & $125<\pt<200$ & 1.0036 & 0.0214 & -        \\
+%       $0.8<|\eta|<1.4442$ & $200<\pt$     & 1.0063 & 0.0390 & 8.46e-05 \\
+%       $1.566<|\eta|<2.5$  & $125<\pt<200$ & 0.9906 & 0.0137 & -        \\
+%       $1.566<|\eta|<2.5$  & $200<\pt<300$ & 1.0007 & 0.0311 & 8.97e-05 \\
+%       \hline
+%     \end{tabular}
+%   \end{center}
+%   \caption{Final scale factors and uncertainties for 2017.}
+%   \label{tab:finalSF_2017}
+% \end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%-------------2018--------------%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[!htbp]
+  \caption{Final scale factors and uncertainties for 2018.}
+  \centering
+  \vspace{\baselineskip}
+  \begin{tabular}{llccc}
+  \hline \hline
+  % \vspace*{-4.5mm} &&&&&&&& \\
+  $\eta$  -bin & \pt bin & Scale Factor & Uncertainty & \multirow{2}{*}{\shortstack{Extrapolation\\Uncertainty (GeV)}} \\
+ \vspace*{-4.5mm} &&&&&&&& \\
+  \cline{1-5}
+     $0<|\eta|<0.8$      & $125<\pt<200$ & 0.9989 & 0.0103 & -        \\
+     $0<|\eta|<0.8$      & $200<\pt$     & 1.0030 & 0.0115 & 4.79e-05 \\
+     $0.8<|\eta|<1.4442$ & $125<\pt<200$ & 0.9858 & 0.0119 & -        \\
+     $0.8<|\eta|<1.4442$ & $200<\pt$     & 0.9982 & 0.0193 & 6.72e-05 \\
+     $1.566<|\eta|<2.5$  & $125<\pt<200$ & 0.9887 & 0.0097 & -        \\
+     $1.566<|\eta|<2.5$  & $200<\pt<300$ & 0.9885 & 0.0223 & 9.24e-05 \\
+  \hline \hline
+  \end{tabular}
+  \label{tab:finalSF_2018}
+\end{table}
+
+% \begin{table}[htbp]
+%   \begin{center}
+%     \begin{tabular}{|l|l|c|c|c|}
+%       \hline
+%       $\eta$ bin & \pt bin & Scale Factor & Uncertainty & Extrapolation Uncertainty (/GeV)\\
+%       \hline
+%       $0<|\eta|<0.8$      & $125<\pt<200$ & 0.9989 & 0.0103 & -        \\
+%       $0<|\eta|<0.8$      & $200<\pt$     & 1.0030 & 0.0115 & 4.79e-05 \\
+%       $0.8<|\eta|<1.4442$ & $125<\pt<200$ & 0.9858 & 0.0119 & -        \\
+%       $0.8<|\eta|<1.4442$ & $200<\pt$     & 0.9982 & 0.0193 & 6.72e-05 \\
+%       $1.566<|\eta|<2.5$  & $125<\pt<200$ & 0.9887 & 0.0097 & -        \\
+%       $1.566<|\eta|<2.5$  & $200<\pt<300$ & 0.9885 & 0.0223 & 9.24e-05 \\
+%       \hline
+%     \end{tabular}
+%   \end{center}
+%   \caption{Final scale factors and uncertainties for 2018.}
+%   \label{tab:finalSF_2018}
+% \end{table}

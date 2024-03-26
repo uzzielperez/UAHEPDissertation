@@ -1,0 +1,211 @@
+%%
+%% THESIS/DISSERTATION TEMPLATE FOR THE UNIVERSITY OF ALABAMA.
+%%
+%% This example is written by Paul Kilgo. It highlights all the (few) features
+%% of uathesis.cls
+%%
+%% Modified by Uzziel Perez
+%% from https://github.com/OEP/uathesis
+%% using commit 4934e13 from April 29, 2017
+
+
+%% Use one of the following if writing a thesis/dissertation.
+%\documentclass[thesis]{uathesis}
+\documentclass[dissertation]{uathesis}
+
+\usepackage{lscape}
+\usepackage{siunitx}
+\usepackage{graphicx,subfigure}
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{listings}
+\usepackage[sort&compress,numbers]{natbib}
+\usepackage{setspace}
+\usepackage{xspace}
+\usepackage{multirow}
+\usepackage{amsmath}
+\allowdisplaybreaks
+\usepackage{slashed}
+\usepackage{notoccite}
+%\usepackage{indentfirst}
+%\usepackage[displaymath, mathlines]{lineno}
+%\linenumbers
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyvrb}
+\RecustomVerbatimCommand{\VerbatimInput}{VerbatimInput}
+{fontsize=\footnotesize,
+ frame=lines,
+ framesep=2em,
+ rulecolor=\color{Gray},
+ label=\fbox{\color{Black}Run.dat},
+ labelposition=topline,
+}
+\usepackage[nottoc]{tocbibind}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+%% Includes
+\newcommand{\FIXME}[1]{\textbf{\textcolor{red}{FIXME: {#1}}}}
+
+\newcommand{\TODO}[1]{{\bf (TODO: #1)}}
+%\newcommand{\TODO}[1]{}
+%\newcommand{\correction}[1]{\textbf{\textcolor{red}{#1}}}
+\newcommand{\correction}[1]{#1}
+%\newcommand{\correctionTwo}[1]{\textbf{\textcolor{red}{#1}}}
+\input{user-definitions.sty}
+
+\providecommand{\cmsTable}[1]{\resizebox{\textwidth}{!}{#1}}
+\newlength\cmsTabSkip\setlength{\cmsTabSkip}{1ex}
+
+\usepackage[titletoc]{appendix}
+\usepackage{setspace}
+
+%% Required parameters (variables removed to confirm proper spacing)
+\author{Cilicia Uzziel Perez}
+\adviser{Conor Henderson}
+
+%% The people on your committee.
+%% Use \and to break them up between lines.
+\committee{
+  Sergei Gleyzer, Co-chair \hfill \and
+  Paolo Rumerio \hfill \and
+  Dawn Williams \hfill \and
+  Nobuchika Okada \hfill \and
+}
+
+%% Note the use of \and to create line breaks and the
+%% inverted pyramid style requested by the graduate school.
+\begin{center}
+
+% \title{Search for Non-resonant Signatures of Beyond Standard Model Physics in high-mass diphoton events from proton-proton collisions $\sqrt{s} = 13\TeV$ with the CMS Detector \hfill \and and Selected Notes on HCAL \hfill \and \hfill LS2 Upgrades \hfill}
+
+% \title{
+% \begin{spacing}{1.8}
+% Search for Non-resonant Signatures of New Physics in high-mass diphoton events from proton-proton collisions at \hfill \and $\sqrt{s} = 13\TeV$ with the CMS Detector and Highlights \hfill \and  on HCAL LS2 Upgrades \hfill
+% \end{spacing}
+% }
+
+% \title{
+% \begin{spacing}{2}
+% Search for non-resonant new physics in high-mass diphoton events from pp collisions at $\sqrt{s} = 13\TeV$ with the CMS \hfill \and Detector and Highlights from HCAL LS2 Upgrades 
+% \end{spacing}
+% }
+
+\title{
+\begin{spacing}{2}
+Search for non-resonant new physics in high-mass diphoton events from pp collisions at $\sqrt{s} = 13\TeV$ with the CMS \hfill \and Detector and Highlights from HCAL Upgrades 
+\end{spacing}
+}
+
+% \title{
+% \begin{spacing}{2}
+% Non-resonant new physics search in high-mass diphoton events from pp collisions at $\sqrt{s} = 13\TeV$ with the CMS Detector \hfill \and and Highlights from HCAL LS2 Upgrades 
+% \end{spacing}
+% }
+
+\vspace{2\baselineskip} % Adjust the vertical space here
+
+
+
+\end{center}
+
+\degree{Doctor of Philosophy} 
+\department{Physics and Astronomy}
+
+\abstract{
+\begin{spacing}{2}
+Results are presented from a search for non-resonant signatures of physics beyond the standard model in the high-mass diphoton spectrum from proton-proton collisions at $\sqrt{s}=13$~TeV. The analysis uses data corresponding to 138~\fbinv collected by the CMS detector at the Large Hadron Collider from 2016--2018. Monte Carlo simulations corrected to next-to-next-to-leading order are used to predict the irreducible diphoton background. A data-driven technique is used to estimate the backgrounds from jets faking photons. The data are consistent with the background-only hypothesis. The full data are used to constrain the large extra dimensions model of Arkani--Hamed, Dimopoulos, and Dvali, and the continuum graviton model in the clockwork framework. Preliminary studies and limits on the scenario of Unparticles decaying to two photons are also presented. Additionally, the work on various hardware upgrades and software support for improved timing information from the CMS Hadron Calorimeter Barrel for the creation of a Level-1 trigger for Long-Lived Particles are discussed.
+\end{spacing}
+ % The data are consistent with the background-only hypothesis and the results are interpreted in the context of the large extra-dimensional model of Arkani-Hamed, Dimopoulos, and Dvali. At 95\% confidence level, lower exclusion limits are set on the string mass scale \Ms ranging from 5.6 to 9.7\TeV, depending on the model parameters. This result provides the current most stringent limits on searches for large extra dimensions in the diphoton channel.
+}
+
+\dedication{
+  {\centering
+    \textit{To Mama, Roel, Ate Jett, Dorothy, Shirin and Nani the Cat. Sa mga nagsisimula, kumakayod at nagtatapos. Nawa ay marating mo ang iyong paroroonan.} \par
+  }
+}
+
+\acknowledgments{
+
+The call to adventure to pursue a PhD was not for the faint of heart. It was a serious undertaking, rife with challenges and temptations that could only be surpassed with the support of many others. We have a proverb in the Philippines that says ``Ang hindi lumingon sa pinanggalingan, ay hindi makararating sa paroroonan" which in English means, ``Those who do not look back at where they came from will not reach their destination". I am grateful to everyone whom I have crossed paths with along the way and helped me get to the finish line which once seemed so far off or kept moving an inch away with every half-inch I tried to get closer. I have arrived.
+
+% The call to adventure to pursue a PhD is not for the faint of heart. It is a serious undertaking, rife with challenges and temptations that can only be surpassed with the support of many others. We have a proverb in the Philippines that says, "Ang hindi lumingon sa pinanggalingan, ay hindi makararating sa paroroonan" which in English means, "Those who do not look back at where they came from will not reach their destination). I am grateful to everyone I have crossed paths with along the way, who helped me overcome obstacles that once seemed insurmountable. Today, I stand at the finish line, a testament to their support and my perseverance. I have arrived, having completed my PhD journey.
+
+  First, I'd like to express my deep gratitude to my advisor, Conor Henderson, for going above and beyond his role as an educator. He not only imparted technical and physics knowledge but also opened doors for me within the CMS experiment. He kept me grounded and focused throughout my PhD journey, providing unwavering support during challenging times. Looking back, I couldn't have asked for a better adviser. I am forever grateful for our honest communication and his commitment to my well-being and success. I'm also thankful to Paolo Rumerio for his kindness and continuous support, despite having many roles to play. His presence and timely support was invaluable to me during my PhD.  Sergei Gleyzer, my co-adviser, for his pep talks and sharing his experiences, which played a crucial role in helping me complete my dissertation. I'm grateful for the opportunity to learn machine learning from him and his team. I've also had the pleasure of having Dr. Corrinne Mills as my CMS mentor. Her inputs and connections helped guide me find my way when I was lost. She reminded me to maintain a personal life and not simply drown in physics responsibilities. 
+
+I owe an enormous debt of gratitude to the members of the diphoton analysis team, including John Paul Chou, Antonios Agapitos, and Hsin-Yeh Wu, whose encouragement, expertise, agile working style and humor were instrumental in ushering the analysis in the last steps of the CMS publication journey. I also appreciate the contributions of  Otmane Charaf, Andrew Buccilli, Christopher West, and Seth Cooper, who supported me in various aspects of my research. Working with Grace Cummings, Jay Dittman, Sebastian Yan, and Mary Hadley on the HCAL detector was a dream come true, and I'm thankful for the camaraderie and everything I have learned from them.
+
+I extend my gratitude to the UA Physics Department, Patrick LeClair, Preethi Nair, Adam Hauser, and the rest of my dissertation committee members, Nobu Okada, Dawn Williams for the financial and moral support, physics discussions and feedback. I also owe a great deal to the HCAL Operations, CERN Social Affairs - particularly Sophie Charpie, HUG for their various forms of support during my extended stay in Geneva.
+
+Beyond academia, I'm grateful for the sense of community I found in Tuscaloosa. I appreciate the support from friends and fellow Filipinos, including Ate Jett, Kuya Sonny Reece, Tita Marie, Tita Carms, Tita Doris, Ate E, Tiny, Orville, Carlo, Roel, Prabandha Nakarmi, and the Bengali Soccer Mates. Game nights/afternoons with Colin, Amy, Lars, Sreetama, Kavya, Anna, Eric were important respites. Upama, Anupama, Abhipsa and Ruole were invaluable supportive colleagues. I also thank Jillian Sico for her friendship and for expanding my conception of self. I would also like to thank Jennifer Turner for her counsel since 2019, which in some other universe could turn into a person-of-color version of ``Goodwill Hunting" except I don't really beat people up.
+
+My time in Geneva was enriched by the love and appreciation from people like Alexia Speranza and her circle, Tita Ruby, Tito Ruben, Ilya, Hannah, Ome, Florian, Kathleen Heil, Jay, Mirana Randriambelonoro, Tricia Singh, Maria, Tita Violy. Izza, Tita Butch, Tito Antoine, Tita Mary, and Aaron were my family and gave me my best Christmas in a long time!  I also want to thank Aditya and Manya for making me a better honorary Indian by being the best Indians! To Melissa and Christophe Gaillard, thank you for giving me the best summer experiences that I have ever had in my lifetime looking after and for your kind spirits. 
+
+During my return to Tuscaloosa, I have survived a tough transitional period and lived like a vagabond. For this I am also thankful to Tim and Aggie, Butch and Ginger, Linda and Neil, Shirin and Chuck for having extended their homes and lives to a stranger, taught me their ways and let me go on my own path. Through them I met Dorothy Lott, whose kindness touched my heart and renewed my interest in life.
+
+Lastly, I want to express gratitude to André David, Delia, Michael Andrews, Afiq, Nuha, Miguel Sulangi, Roel and my dear Bananies - Karl, Bea, Pecier, Maribel, Joey, Tita Nens, Papa, my siblings Lilit, Nicole, and Marc, - for their unwavering support and love, which brought me to this point. My deepest appreciation goes to my Mama, my eternal source of strength and love. 
+
+  \correction{This work was supported in part by the US Department of Energy.} 
+}
+
+
+\university{The University of Alabama}
+% \school{Graduate School}
+\gradyear{\the\year}
+\place{Tuscaloosa, Alabama}
+
+
+\begin{document}
+
+\makefrontmatter
+
+\begin{body}
+
+\hypersetup{pageanchor=false}
+\include{ch1introduction}
+\include{ch2theory}
+\hypersetup{pageanchor=true}
+\include{ch3experiment}
+\include{ch4event_selection_obj_reco}
+\include{ch5background}
+\include{ch6signal}
+\include{ch7systematics}
+\include{ch8results}
+\include{ch9conclusions}
+
+\renewcommand{\bibsection}{\topskip=32pt\chapter*{References}\topskip=0pt \addcontentsline{toc}{chapter}{References}\vspace*{6pt}}
+
+\bibliographystyle{lucas_unsrt}
+
+\begingroup
+\setstretch{1.0}
+\bibliography{references}
+\endgroup
+
+\begin{appendices}
+
+\addtocontents{toc}{\setlength{\cftchapnumwidth}{14.4pt}}
+\renewcommand{\appendixname}{Appendix}
+\addtocontents{toc}{\protect\renewcommand{\protect\cftchappresnum}{}}
+
+\include{appendix_scaleFactors}
+\include{appendix_datasets_triggerpaths}
+\include{appendix_fake_rate_application}
+\include{appendix_signal_mc}
+\include{appendix_sample_cards}
+\include{appendix_pseudodata}
+
+\end{appendices}
+
+\end{body}
+\end{document}
+
+
+
+

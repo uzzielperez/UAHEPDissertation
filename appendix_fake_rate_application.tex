@@ -1,0 +1,99 @@
+\chapter{Fake Rate Application}\label{ch:appendix_fake_rate_app}
+
+In Sec.~\ref{sec:bkg_fake} we defined the photon fake rate as 
+\begin{equation} \label{eq:fakeRateAppendix}
+f=\frac{\mbox{number of jets passing high \pt ID}}{\mbox{number of jets passing denominator definition}}.
+\end{equation}
+
+% Our goal in this appendix is to show how the $jj$ and $\gamma + j$ backgrounds are estima
+
+% \begin{equation} \label{eq:jjestimate}
+
+% \end{equation}
+
+
+% \begin{equation}
+%  \begin{align}
+%   \label{eq:jjgjestimate}
+%   \text{jj} &= (f_1F_1)(f_2F_2), \\
+%   \gamma\text{j} &= (R_1N_2)+(N_1R_2) \\
+%   &= (T_1-f_1F_1)(f_2F_2) + (f_1F_1)(T_2-f_2F_2) \\
+%   &= T_1(f_2F_2)+(f_1F_1)T_2-2(f_1F_1)(f_2F_2).
+% \end{align}
+% \end{equation}
+ 
+The derivations for Eq.~\ref{eq:nfake}, here is followed from Appendix A of Ref.~\cite{Kaplan:2017}. Knowing that the fake rate is defined as in  eq.~\ref{eq:fakeRateAppendix}, the probability that a known jet is tight (T) or loose (L) are respectively given by
+
+\begin{equation} \label{eq:probTL}
+\begin{align*}
+    P(T|j) &= \frac{f}{1+f}, \\
+    P(L|j) &= \frac{1}{1+f}.
+\end{align*}
+\end{equation}
+
+Here Tight (T) refers to objects passing the photon ID, while Loose (L) refers to objects passing the denominator criteria. If the object is a known photon, then $P(T|\gamma) = 1$ and $P(L|\gamma) = 0$.
+
+Using the conditional probabilities above, we can write the number of Tight-Tight, Tight-Loose, Loose-Tight, Loose-Loose object pairs as follows,
+
+\begin{equation} \label{eq:NEstim}
+\begin{align}
+    N_{TT} &= N_{\gamma\gamma} + N_{\gamma j}P_2(T|j) +  N_{j\gamma }P_1(T|j) + N_{jj}P_1(T|j)P_2(T|j),\\
+    N_{TL} &= N_{\gamma j}P_2(T|j)  + N_{jj}P_1(T|j)P_2(T|j),\\
+    N_{LT} &= N_{j\gamma}P_1(T|j)  + N_{jj}P_1(T|j)P_2(T|j),\\
+    N_{LL} &=  N_{jj}P_1(T|j)P_2(T|j).
+\end{align}
+\end{equation}.
+
+The subscripts 1 and 2 denote whether the object is leading or subleading, respectively. From the previous equations, it becomes clear that the number of $jj$ events are:
+
+\begin{equation} \label{eq:jjestimate}
+N_{\text{jj}} &= N_{LL}(1+f_1)(1+f_2).
+\end{equation}
+
+Making a couple more subsitutions in the set of Eqs.~\ref{eq:NEstim}, we have
+
+\begin{equation} \label{eq:gjestim}
+\begin{align}
+    N_{\gamma j} &= N_{TL}(1+f_2)-N_{LL}f_1(1+f_2), \\
+    N_{j\gamma} &= N_{LT}(1+f_1)-N_{LL}f_2(1+f_1). 
+\end{align}
+\end{equation}
+
+To get the number of diphotons $N_{\gamma\gamma}$, we use the equation for $N_{TT}$ which is a function of Eqs.~\ref{eq:gjestim} and get 
+
+\begin{equation} \label{eq:ndiphoton}
+\begin{align}
+   N_{\gamma\gamma} &= N_{TT} - N_{TL}f_2 -  N_{LT}f_1 + N_{LL}f_1f_2 \\
+                    &= N_{TT} - N_{\textnormal{fake}}.
+\end{align}
+\end{equation}
+
+This equation shows the terms that must be subtracted from the tight-tight contributions and we denote them as $N_{\textnormal{fake}}$.  From here we will take $N_{TL}$ as either Loose-Tight or Tight-Loose and write $N_{\textnormal{fake}}$ from Eq.~\label{eq:ndiphoton} as follows:
+
+\begin{equation} \label{eq:ndiphotonRewrite}
+\begin{align}
+   N_{\textnormal{fake}} &= N_{TL}f_2 -  N_{LT}f_1 + N_{LL}f_1f_2,\\
+                    &= N_{TL}f - N_{LL}f_1f_2.
+\end{align}
+\end{equation}
+
+Here, $f$ is the fake rate evaluated at the \pt of the Loose object. The fake background can be estimated as a sum of the $\gamma + j$ and $jj$ components. So, $N_{\textnormal{fake}} =  N_{jj} + N_{\gamma\gamma}$. We arrive at the final expression used for our background estimation for \gj and jj events. 
+
+\begin{equation} \label{eq:nfakederived}
+\begin{align}
+   N_{jj} &= N_{LL}f_1f_2, \\
+   N_{\gamma\textnormal{j}} &= N_{LT}f -  2N_{LL}f_1f_2. 
+\end{align}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+% \noindent Therefore, the $\gamma$j background is estimated by reweighting the $TF$ and $FT$ samples minus twice the $FF$ sample.
+

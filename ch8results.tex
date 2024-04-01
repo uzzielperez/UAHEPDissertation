@@ -212,10 +212,10 @@ For the ADD model, we have the positive and the negative interference convention
 \label{fig:Limits_real}}
 \end{figure}
 
-From Figure~\ref{fig:Limits_real}, we can read the limits on the $M_S$ parameter as intersections with the horizontal line, where the signal strength is equal to 1. The green and yellow bands indicate the $\pm1\sigma$ and $\pm2\sigma$ standard deviation bands, respectively. The limits results from the GRW and Hewett- conventions could be translated to other ADD conventions as explained in Section~\ref{subsec:MC_Signal_ADD}. These are the HLZ conventions of positive interference for $n_{ED}=3,4,5,6,7$ which are obtained by scaling the GRW and the Hewett+ is obtained by scaling the Hewett- results. Table~\ref{Tab:Limits161718} presents the lower limits on $M_S$ scale for all available ADD signal scenarios.
+From Figure~\ref{fig:Limits_real}, we can read the limits on the $M_S$ parameter as intersections with the horizontal line, where the signal strength is equal to 1. The green and yellow bands indicate the $\pm1\sigma$ and $\pm2\sigma$ standard deviation bands, respectively. The limits results from the GRW and Hewett- conventions could be translated to other ADD conventions as explained in Section~\ref{subsec:MC_Signal_ADD}. These are the HLZ conventions of positive interference for $n_{ED}=3,4,5,6,7$ which are obtained by scaling the GRW and the Hewett+ is obtained by scaling the Hewett- results. Table~\ref{Tab:Limits161718} presents the lower limits on $M_S$ scale for all available ADD signal scenarios. The total asymmetric uncertainties are shown on the expected limits.
 \begin{table}[pt]
     \centering
-    \caption{Exclusion limits on the mass scale \Ms (in units of {\TeVns}) for various conventions used in the calculation of the ADD large extra-dimensional scenario using the 2016-2018 CMS detector data corresponding to an integrated luminosity of 138 \fbinv. The total asymmetric uncertainties are shown on the expected limits.}
+    \caption{Exclusion limits on the mass scale \Ms (in units of {\TeVns}) for various conventions used in the calculation of the ADD large extra-dimensional scenario using the 2016-2018 CMS detector data corresponding to an integrated luminosity of 138 \fbinv.}
     \cmsTable{
     \begin{tabular}{ccccccccc}
         \\    
@@ -248,12 +248,21 @@ The strategy for limit setting on the clockwork model (CW) is similar to the ADD
 From Eq.~\ref{eq:rescalingfactorCW}, we see that the CW signal strength normalization scales as $M_5^{-3}$, so a direct translation between an upper limit on the signal strength $\beta$ or in other references $\mu$, a lower limit on $M_5$ can be made for a fixed value of $k$. Figure~\ref{Fig:LIMIT_Clockwork_real} shows the 95\% CL exclusion in the $k$--$M_5$ plane with real data.
 The signal shapes are generated for values of $k$ as low as 0.1 \GeV and up to 5 \TeV. The $k>M_5$ space is non-perturbative so we denote this region of phase-space with blue color in the $k$--$M_5$ plane.
 
-\begin{figure}[h!]\centering
-\includegraphics[width=0.49\linewidth]{fig/LIMITPLOT_BBBE161718_CWk_real.png}
-\includegraphics[width=0.47\linewidth]{fig/LIMITPLOT_BBBE161718_CWk_nonLog_real.png}
-\caption{The exclusion limit for the continuous graviton model in the clockwork framework (CW) over the $k-M_5$ parameter space. The shaded region denotes where the theory becomes non-perturbative. The right plot displays a non-log axis. }
-\label{Fig:LIMIT_Clockwork_real}
+% \begin{figure}[h!]\centering
+% \includegraphics[width=0.49\linewidth]{fig/LIMITPLOT_BBBE161718_CWk_real.png}
+% \includegraphics[width=0.47\linewidth]{fig/LIMITPLOT_BBBE161718_CWk_nonLog_real.png}
+% \caption{The exclusion limit for the continuous graviton model in the clockwork framework (CW) over the $k-M_5$ parameter space. The shaded region denotes where the theory becomes non-perturbative. The right plot displays a non-log axis. }
+% \label{Fig:LIMIT_Clockwork_real}
+% \end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.49\linewidth]{fig/LIMITPLOT_BBBE161718_CWk_real.png}
+    \includegraphics[width=0.47\linewidth]{fig/LIMITPLOT_BBBE161718_CWk_nonLog_real.png}
+    \caption{Exclusion limit for the continuous graviton model in the clockwork framework (CW) over the $k-M_5$ parameter space. The shaded region denotes where the theory becomes non-perturbative. The right plot displays a non-logarithmic axis.}
+    \label{Fig:LIMIT_Clockwork_real}
 \end{figure}
+
 
 \begin{figure}[h!]\centering
 \includegraphics[width=1.\linewidth]{fig/PRED_PRE_CWk_real.png}
@@ -310,13 +319,22 @@ The CLs Method~\cite{Junk:1999kv, Read:2002hq} is also known as the modified fre
 
 To quickly estimate the expected limits we use the Asymptotics Limits statistical method which is implemented in the \COMBINE framework. 
 
-\begin{figure}[tbp!]
-% \begin{center}
-\includegraphics[angle=0,width=1\textwidth]{fig/UnparticlesCountingExperiment.png}
-% \end{center}
-\caption{Limits on the Unparticles signal strength as a function of $\Lambda_{\mathcal{U}}$. The top plots show the Spin-0 case for $d_u$ = 1.1, 1.5, 1.9. The bottom shows the spin-2 case.}
-\label{fig:UnparLimPlots}.
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[angle=0,width=0.8\textwidth]{fig/UnparticlesCountingExperiment.png}
+    \caption{Limits on the Unparticles signal strength as a function of $\Lambda_U$. The top plots show the Spin-0 case for $d_u = 1.1$, $1.5$, and $1.9$. The bottom shows the Spin-2 case.}
+    \label{fig:UnparLimPlots}
 \end{figure}
+
+
+% \begin{figure}[!htbp]
+% \includegraphics[angle=0,width=1\textwidth]{fig/UnparticlesCountingExperiment.png}
+% \caption{Limits on the Unparticles signal strength as a function of $\Lambda_U$. The top plots show the Spin$-0$ case for $d_u$ = 1.1, 1.5, 1.9. The bottom shows the Spin-2 case.}
+% \label{fig:UnparLimPlots}
+% \end{figure}
+% % $k-M_5$
+
+
 
 For this preliminary study, we only make use of the 2017 centrally produced samples listed in Appendix~\ref{ch:appendix_signal_monte_carlo} and normalized them to the total 2016-2018 CMS luminosity. Table~\ref{tab:UnparLimitsPrelim} and Figure~\ref{fig:UnparLimPlots} show the preliminary limits results. Note that these expected limits results do not yet consider systematic uncertainties as well as the real data. 
 

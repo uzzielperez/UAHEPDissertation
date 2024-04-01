@@ -1,11 +1,10 @@
 \chapter{Sample Cards}\label{ch:appendix_sample_cards}
-
+\section{ADD Graviton to $\gamma\gamma$}
+An example Pythia Card for the ADD Graviton to $\gamma\gamma$. 
 Additional cards are found in \href{https://github.com/uzzielperez/Analyses/tree/master/Analysis_v1/Simulation/Pythia}{GitHub}.
 
-
-
-\section{ADD Graviton to $\gamma\gamma$}
-
+\begin{singlespace}
+\begin{small}
 \begin{verbatim}
 import FWCore.ParameterSet.Config as cms 
 
@@ -39,18 +38,25 @@ generator = cms.EDFilter("Pythia8GeneratorFilter",
         )   
 )
 \end{verbatim}
+\end{small}
+\end{singlespace}
 
 
 \section{Unparticles to $\gamma\gamma$}
+\begin{spacing}{2}
+For the \PYTHIA implementation of the Spin-0 case we include both the gluon fusion (\texttt{gg2gammagamma}) and the quark-antiquark (\texttt{ffbar2gammagamma}) annihilation process on. In the Spin-2 case, the (\texttt{ffbar2gammagamma}) is already included in the Unparticles implementation and could be removed from the pythia card.
 
-For the \PYTHIA implementation of the Spin-0 case we include both the \texttt{'PromptPhoton:gg2gammagamma = on'} and \texttt{'PromptPhoton:ffbar2gammagamma = on'}. For the Spin-2 case, we drop the  \texttt{'PromptPhoton:ffbar2gammagamma = on'} as it is already included in the Unparticles implementation.
+% For the \PYTHIA implementation of the Spin-0 case we include both the \texttt{'PromptPhoton:gg2gammagamma = on'} and \texttt{'PromptPhoton:ffbar2gammagamma = on'}. For the Spin-2 case, we drop the  \texttt{'PromptPhoton:ffbar2gammagamma = on'} as it is already included in the Unparticles implementation.
+\end{spacing}
 
+\begin{singlespace}
+\begin{small}
 \begin{verbatim}
 import FWCore.ParameterSet.Config as cms 
 
 from Configuration.Generator.Pythia8CommonSettings_cfi import *
 from Configuration.Generator.MCTunes2017.PythiaCP2Settings_cfi import *
-from Configuration.Generator.PSweightsPythia.PythiaPSweightsSettings_cfi import *
+from Configuration.Generator......
 
 generator = cms.EDFilter("Pythia8GeneratorFilter",
     maxEventsToPrint = cms.untracked.int32(1),
@@ -65,8 +71,8 @@ generator = cms.EDFilter("Pythia8GeneratorFilter",
         processParameters = cms.vstring(
             'ExtraDimensionsUnpart:ffbar2gammagamma = on',
             'ExtraDimensionsUnpart:gg2gammagamma = on',
-            'PromptPhoton:gg2gammagamma = on',
-            'PromptPhoton:ffbar2gammagamma = on',
+            \textbf{'PromptPhoton:gg2gammagamma = on',}
+            \textbf{'PromptPhoton:ffbar2gammagamma = on',}
       'ExtraDimensionsUnpart:LambdaU = 2500.0',
             'ExtraDimensionsUnpart:lambda = 1.0',
             'ExtraDimensionsUnpart:dU = 1.9',
@@ -84,5 +90,9 @@ generator = cms.EDFilter("Pythia8GeneratorFilter",
 )
 
 ProductionFilterSequence = cms.Sequence(generator)
-
 \end{verbatim}
+\end{small}
+\end{singlespace}
+
+
+% \restoregeometry

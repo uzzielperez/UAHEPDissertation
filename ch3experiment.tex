@@ -381,7 +381,7 @@ The HCAL Back-end electronics are responsible for receiving the continuous reado
 
 I was part of the last phase of the ngCCM refurbishing project and I also helped coordinate the start of the front-end and back-end electronic spares bookkeeping and preparation. The refurbishing of the ngCCMs is largely because of a communication issue loss which was attributed to a manufacturing weakness in the VTRxs. The VTRx optical receivers were found to be temperature-sensitive with temperature increases causing outgassing material to obscure the central part of the optical fibers where light is transmitted~\cite{Cummings:2022kgm}. To mitigate the issue, heat sinks were added within the ngCCMs. 
 
-I also began the preparation of the new AMC13s which were production-tested by Chris Cosby from Boston University. I also updated the firmware to match the latest firmware at P5 which was T1, T2 = $0\times2266$ $0\times34$. As there was not a good criteria as to what would qualify as a good spare, I went through several testing steps such as local event building tests and taking local runs with the new AMC13s loaded in the mock up test area of Bldg. 904 at the CERN Prevessin site. We determined that the final step before swapping them at P5~\footnote{Jay Dittman also proposed that we could swap the five spares with the AMC13s that are known to be working well at P5 so we have 'good hot spares'.} was to do a 904 miniDAQ testing. Local runs do not test cDAQ links. As the miniDAQ software was not well configured before my stay at CERN ended, I delegated the tasks to the rest of the team who would take over the project. Figure~\ref{fig:BackendCrate904}.
+I also began the preparation of the new AMC13s which were production-tested by Chris Cosby from Boston University. I also updated the firmware to match the latest firmware at P5 which was T1, T2 = $0\times2266$ $0\times34$. As there was not a good criteria as to what would qualify as a good spare, I went through several testing steps such as local event building tests and taking local runs with the new AMC13s loaded in the mock up test area of Bldg. 904 at the CERN Prevessin site. We determined that the final step before swapping them at P5~\footnote{Jay Dittman also proposed that we could swap the five spares with the AMC13s that are known to be working well at P5 so we have 'good hot spares'.} was to do a 904 miniDAQ testing. Local runs do not test cDAQ links. As the miniDAQ software was not well configured before my stay at CERN ended, I delegated the tasks to the rest of the team who would take over the project. Figure~\ref{fig:BackendCrate9041} and Figure~\ref{fig:BackendCrate9042} shows the reworking and testing setups for the AMC13 and ngCCM testing. Credits to Jay Dittman and Grace Cummings for the set-up.
 
 In the first half 2021, I have also participated DAQ On-call and DCS Technical shifts at P5 as well as in the updating of the firmwares for the igloo2 FPGAs in the HF ngCCMs located at the CMS cavern shown in Figure~\ref{fig:HFIglooReprogramming}. 
 
@@ -420,15 +420,15 @@ In the first half 2021, I have also participated DAQ On-call and DCS Technical s
 	\includegraphics[scale=0.07]{fig/AMC13Reprogramming.jpg}
  \includegraphics[scale=0.07]{fig/904BE.jpg}
 	\caption{On the left is a new AMC13 tested at 904 with the $\mu$HTRs in a selected Back-End Crate shown on the right.}
-	\label{fig:BackendCrate904}
+	\label{fig:BackendCrate9041}
 \end{figure}
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[scale=0.08]{fig/coolingfins.jpg}
      \includegraphics[scale=0.08]{fig/testing.jpg}
-	\caption{The top picture shows an ngCCM being reworked to add heat sinks to mitigate the VTRx RSSI drift issue which was related to the communications loss in the HCAL endcap. The right shows a reworked ngCCM being tested on a spare backplane. Credits to Jay Dittman and Grace Cummings for the setup.}
-	\label{fig:BackendCrate904}
+	\caption{The top picture shows an ngCCM being reworked to add heat sinks to mitigate the VTRx RSSI drift issue which was related to the communications loss in the HCAL endcap. The right shows a reworked ngCCM being tested on a spare backplane.}
+	\label{fig:BackendCrate9042}
 \end{figure}
 
 \begin{figure}[!htb]

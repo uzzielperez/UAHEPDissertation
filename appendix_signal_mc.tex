@@ -1,8 +1,47 @@
 \section{Signal Monte-Carlo}
 \label{ch:appendix_signal_monte_carlo}
-% \usepackage{longtable}
+This appendix contains the full list of signal sample names and their associated cross sections. The same information can also be found on the project's GitHub repository in the file \href{https://github.com/cms-exotica-diphotons/diphoton-analysis/blob/dbd7b7b1ea7210aa55a27dcce8e84a3a5057d265/CommonClasses/interface/CrossSections.h}{CrossSections.h}.
+% This appendix shows the full list of signal sample names and their associated cross sections which are also found in \href{https://github.com/cms-exotica-diphotons/diphoton-analysis/blob/dbd7b7b1ea7210aa55a27dcce8e84a3a5057d265/CommonClasses/interface/CrossSections.h}{GitHub}.
 
-This appendix shows the full list of signal sample names and their associated cross sections which are also found in \href{https://github.com/cms-exotica-diphotons/diphoton-analysis/blob/dbd7b7b1ea7210aa55a27dcce8e84a3a5057d265/CommonClasses/interface/CrossSections.h}{GitHub}.
+The Dataset paths for the signal interpretations used in this analysis are shown below. Nonresonant signal samples were generated for the \texttt{RunIISummer16MiniAODv3}, \texttt{RunIIFall17MiniAODv2}, and \texttt{RunIIAutumn18MiniAOD} campaigns. To span the entire mass spectrum, samples were produced in split mass bins from $\mgg = 500\GeV$ up to the value of $\Lambda_T$.
+The associated cross sections for the Unparticles are found in \url{https://github.com/cms-exotica-diphotons/diphoton-analysis/blob/Unparticles/CommonClasses/interface/CrossSections.h}.
+
+% \begin{table}[!htbp]
+%   \caption{Nonresonant signal samples were generated for the \texttt{RunIISummer16MiniAODv3}, \texttt{RunIIFall17MiniAODv2}, and \texttt{RunIIAutumn18MiniAOD} campaigns. TT
+% he full list of sample names and their associated cross sections are found in Appendix~\ref{ch:appendix_signal_monte_carlo}. To span the entire mass spectrum, samples were
+% e produced in split mass bins from $\mgg = 500\GeV$ up to the value of $\Lambda_T$.
+% }
+
+\begin{table}[!htbp]
+  \caption{Nonresonant signal samples were generated for the Summer 2016, Fall 2017 and Autumn 2018 campaigns.}
+  \centering
+  \vspace{\baselineskip}
+  \begin{tabular}{lc}
+  \hline \hline
+  Data set\\
+  \hline
+  /ADDGravToGG\_NegInt-0\_LambdaT-XXX\_M-XXXToXXXX\_TuneCP2\_13TeV-pythia8 \\
+  /ADDGravToGG\_NegInt-1\_LambdaT-XXX\_M-XXXToXXX\_TuneCP2\_13TeV-pythia8 \\
+  \hline \hline
+  \end{tabular}
+  \label{table:ADDsamples}
+\end{table}
+
+\begin{table}[!htbp]
+	\caption{Unparticles samples were generated with both Fall 2017 and Autumn 2018.
+}
+	\centering
+	\vspace{\baselineskip}
+	\begin{tabular}{lc}
+	\hline \hline
+	Data set\\
+	\hline
+	/UnparToGG\_Spin0\_duXXX\_LambdaU-XXX\_pT70\_MXXX-XXX\_TuneCP2\_13TeV\_pythia8 \\
+	/UnparToGG\_Spin2\_duXXX\_LambdaU-XXX\_pT70\_MXXX-XXX\_TuneCP2\_13TeV\_pythia8 \\
+	\hline \hline
+	\end{tabular}
+	\label{table:UnparticlesSamples}
+\end{table}
 
 \begin{landscape}
 % \begin{longtable}[!htbp]

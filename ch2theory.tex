@@ -49,14 +49,14 @@ In fig.~\ref{fig:SMDiagram}, the gauge bosons, drawn in orange, have the photon,
 % The fermions, organized into three generations characterized by their increasing mass, are essential components of the Standard Model, and their behavior forms the basis for understanding the intricate structure of matter in the universe. In the following chapters, we will delve deeper into the dynamics and interactions of these particles which are summarized in Fig.~\ref{fig:SMTable}.
 
 
-\begin{figure}[ht]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[scale=0.7]{fig/CreativeCommonsSM.png}
     \caption{The Fundamental Particles of the Standard Model of Particle Physics.}
     \label{fig:SMTable}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}
     \centering
     \includegraphics[scale=0.7]{fig/SM.png}
     \caption{The Standard Model of Particle Physics depicting the central role of the Higgs Boson~\cite{QuantaMagNewMap}.}
@@ -77,14 +77,13 @@ In fig.~\ref{fig:SMDiagram}, the gauge bosons, drawn in orange, have the photon,
 % Particle interactions are described intuitively by Feynman diagrams. These Feynman diagrams serve as mathematical book keeping aids which enable physicists to predict the outcomes of particle collision experiments and particle behaviour within the framework of QFT. Each line in a diagram corresponds to a specific particle while the vertices represent the interactions between these particles.
 
 \subsection{QED: Electromagnetic Interaction}
-
 QED or Quantum Electrodynamics is a quantum field theory component of the Standard Model that merges the principles of quantum mechanics with electrodynamics. QED at its core describes the interactions between electrically charged particles via photon exchange and it is described by a basic QED vertex shown in Fig.~\ref{fig:QEDVertex}. 
 
 \begin{figure}
-    \label{fig:QEDVertex}
 	\centering
     \includegraphics[scale=0.6]{fig/QEDfudnamental.png}
 	\caption{QED Feynman diagram basic vertex showing an interaction between a fermion and an anti-fermion emitting a photon.}
+    \label{fig:QEDVertex}
 \end{figure}
 
 The fundamental principle of QED revolves around the preservation of electric charge which implies a U(1) symmetry. It is also an example of an abelian gauge theory which is a type of QFT where the gauge transformations commute. 
@@ -98,6 +97,7 @@ We consider the Lagrangian density of a free Dirac field, $\mathcal{L}_D$ given 
     \mathcal{L}_{\text{Dirac}} = \bar{\psi}(i\gamma^\mu\partial_\mu - m)\psi. 
 \end{equation}
 
+\filbreak
 Here, $\gamma^\mu$ are the Dirac matrices, and $\psi$ are the spin-1/2 fields. This Lagrangian has a global $U(1)$ Abelian symmetry, s.t. it remains invariant under this transformation,
 
 \begin{equation}
@@ -129,13 +129,20 @@ The expression for the QED Lagrangian Density is as follows:
 
 where $\psi$ is a fermion field and Q is the electric charge. Each term of the Lagrangian can be understood as the Dirac Lagrangian~\ref{eq:DiracLag} plus the Maxwell's terms plus the fermion field and photon field interaction. This new covariant derivative introduces $A_{u}$ as a new vector field which we we will see as follows is nothing but the electromagnetic four vector potential. Both $A_\mu$ and $D_\mu$ must be invariant under the $U(1)$ transformation as in Eq.~\ref{eq:U1global} and it follows that the commutator of the covariant derivative is also invariant under the same transformation. Expanding the commutator, we find that we can rewrite it in terms of the Electromagnetic field tensor $F^{\mu\nu}$:
 
-\begin{equation}
+% \begin{equation}
+% \begin{align*}
+%         \label{eq:QEDcommutator}
+%     [D_\mu, D_\nu] &= iQ(\partial_\mu A_\nu + A_\mu \partial_\nu - \partial_\nu A_\mu - A_\nu \partial_\mu) \\
+%     &= iQ(\partial_\mu A_\nu - \partial_\nu A_\mu) \\ &= iQ$F^{\mu\nu}$ .
+% \end{align*}
+% \end{equation}
+
 \begin{align*}
-        \label{eq:QEDcommutator}
     [D_\mu, D_\nu] &= iQ(\partial_\mu A_\nu + A_\mu \partial_\nu - \partial_\nu A_\mu - A_\nu \partial_\mu) \\
-    &= iQ(\partial_\mu A_\nu - \partial_\nu A_\mu) \\ &= iQ$F^{\mu\nu}$ .
+    &= iQ(\partial_\mu A_\nu - \partial_\nu A_\mu) \\ 
+    &= iQ F^{\mu\nu}.
 \end{align*}
-\end{equation}
+
 
 We can now write $\mathcal{L}_{QED}$ in the gauge invariant form by substituting the partial derivative with the covariant derivative in Eq.~\ref{eq:CovariantDerivative}.  The QED Lagrangian can be recast simply as:
 
@@ -146,7 +153,7 @@ We can now write $\mathcal{L}_{QED}$ in the gauge invariant form by substituting
 
 \subsection{QCD: Strong Interactions}
 
-\begin{figure}[ht][!htbp]
+\begin{figure}[ht]
 	\centering
     \includegraphics[scale=0.4]{fig/QCDFundamentalVertices.png}
 	\caption{QCD Fundamental vertices where quark-gluon interactions (left) and gluon self-interactions (middle and right) are shown.}
@@ -368,29 +375,47 @@ In contrast, quark generation is not conserved. Instead, we have the quark doubl
 \end{equation}
 
 The primed coordinates are given by the relation involving the CKM matrix in Eq.~\ref{eq:CKMMatrix}. This flavor state mixing, non-conservation in the case of quarks is captured in the CKM matrix, denoted as V: 
+% \begin{align*}
+% \begin{equation} 
+% \label{eq:CKMMatrix}
+%         \begin{pmatrix}
+%         d' \\
+%         s' \\
+%         b' \\
+%     \end{pmatrix} &=
+%     \begin{pmatrix}
+%          V_{ud} & V_{us} & V_{ub} \\
+%          V_{cd} & V_{cs} & V_{cb} \\
+%          V_{td} & V_{ts} & V_{tb}
+%     \end{pmatrix}
+%      \begin{pmatrix}
+%         d \\
+%         s \\
+%         b \\
+%     \end{pmatrix}
+% \end{equation}
+% \end{align*}
 
-\begin{equation} 
 \begin{align*}
-\label{eq:CKMMatrix}
-        \begin{pmatrix}
-        d' \\
-        s' \\
-        b' \\
-    \end{pmatrix} &=
-    \begin{pmatrix}
-         V_{ud} & V_{us} & V_{ub} \\
-         V_{cd} & V_{cs} & V_{cb} \\
-         V_{td} & V_{ts} & V_{tb}
-    \end{pmatrix}
-     \begin{pmatrix}
-        d \\
-        s \\
-        b \\
-    \end{pmatrix}
-\end{align*}
-\end{equation}
+\begin{pmatrix}
+d' \\
+s' \\
+b' \\
+\end{pmatrix} &=
+\begin{pmatrix}
+V_{ud} & V_{us} & V_{ub} \\
+V_{cd} & V_{cs} & V_{cb} \\
+V_{td} & V_{ts} & V_{tb}
+\end{pmatrix}
+\begin{pmatrix}
+d \\
+s \\
+b \\
+\end{pmatrix}
+\end{align*}~ \label{eq:CKMMatrix}
 
-In this matrix, the elements $V_{ij}$ represent the complex numbers that describe the mixing between different quark flavor states. The indices (i, j) correspond to the initial and final quark flavor states, where "u" stands for up quark, "d" for down quark, "s" for strange quark, "c" for charm quark, "t" for top quark, and "b" for bottom quark. Since this matrix is mostly diagonal, it results in the suppression of couplings between an up-type quark from one generation and a down-type quark from another to the W boson. In the original Standard Model, neutrinos were considered massless, and thus, there was no mixing in the leptonic sector. However, as we now know that neutrinos have mass, one way to account for this is by introducing right-chiral singlets for neutrinos, allowing them to acquire mass in a manner similar to other Standard Model fermions. This introduces a mixing matrix in the leptonic sector known as the PMNS matrix \cite{Maki:1962mu}. 
+
+In this matrix, the elements $V_{ij}$ represent the complex numbers that describe the mixing between different quark flavor states. The indices (i, j) correspond to the initial and final quark flavor states, where ``u" stands for up quark, ``d" for down quark, ``s" for strange quark, ``c" for charm quark, ``t" for top quark, and ``b" for bottom quark. Since this matrix is mostly diagonal, it results in the suppression of couplings between an up-type quark from one generation and a down-type quark from another to the W boson. In the original Standard Model, neutrinos were considered massless, and thus, there was no mixing in the leptonic sector. However, as we now know that neutrinos have mass, one way to account for this is by introducing right-chiral singlets for neutrinos, allowing them to acquire mass in a manner similar to other Standard Model fermions. This introduces a mixing matrix in the leptonic sector known as the PMNS matrix \cite{Maki:1962mu}. 
 
 Historically, the masses of the weak force carriers had been a significant puzzle. The SM of the 1970s or also known as Glashow-Salam-Weinberg theory predicted the existence of the W and Z bosons but did not provide exact predictions of their masses. They were measured later at CERN with the UA1 experiment (W) and the UA2 collaboration (Z-boson). The origin of their masses was elusive and couldn't be incorporated back then into the SM theory in a gauge-invariant matter. This posed as a challenge for achieving true unification. We will see in the next section the significance of the Higgs Mechanism in how particles acquire mass through spontaneous symmetry breaking and preserving the gauge invariance of the theory.
 
@@ -559,7 +584,7 @@ which are in impressive agreement with the predictions of SM.
 	\centering
 % 	\includegraphics[scale=0.038]{fig/H2Bottle.JPG}
     \includegraphics[scale=0.5]{fig/MexicanHat.png}
-	\caption{The infamous "Mexican Hat" Higgs potential for the case of $\mu^2 <0$ and $\lambda >0$. There is a circle of minima of radius v.}
+	\caption{The infamous ``Mexican Hat" Higgs potential for the case of $\mu^2 <0$ and $\lambda >0$. There is a circle of minima of radius v.}
 	\label{fig:MexicanHat}
 \end{figure}
 
@@ -618,7 +643,7 @@ The Higgs boson, being the only scalar particle in the Standard Model, possesses
 \begin{figure}[!htbp]
 	\centering  
     \includegraphics[scale=1.0]{fig/LoopCorrHiggs.png}
-	\caption{One-loop quantum corrections to the Higgs squared mass parameter $m^2$, $H$ , due to (a) a Dirac fermion $f$ , and (b) a scalar $S$ \cite{Martin:1997ns}. }
+	\caption{One-loop quantum corrections to the square of the Higgs mass parameter ($m^2_{H}$) due to a Dirac fermion $f$ in (a), and a scalar (b) $S$ \cite{Martin:1997ns}. }
 	  \label{fig:HiggsQuantumCorr}
 \end{figure}
 
@@ -629,7 +654,7 @@ where $m_H$ is the Higgs boson mass measured to be $125$~GeV, $m_{bare}$ is the 
     \Delta m^2_{H} = - \frac{|\lambda_f|^2}{8\pi^2} \Lambda^2_{\textnormal{cutoff}} + ...
 \end{equation}
 
-Here, $\Lambda_{\textnormal{cutoff}} = \Lambda_{UV}$ refers to the ultraviolet momentum cutoff that is used to regulate the loop integral. It is also the energy scale at which new physics emerges. We can surmise that the SM is an EFT or a low-energy QFT approximation of some higher-energy theory which may include gravity and it is valid up to some cutoff scale. When bridging the hierarchy gap, $\Lambda_{\textnormal{cutoff}} \rightarrow \Lambda_{Planck}$, this contribution becomes too large, notwithstanding that these contributions add up for each fermion in the SM. At the $\Lambda_{Planck}$ scale, the bare mass and the quantum corrections would have to cancel over 30 orders of magnitude to match the measured value of the Higgs at 125 GeV. It seems that these quantum corrections have to be finely tuned and canceled out with an incredible degree of precision. This fine-tuning seems unnatural because it suggests that the observed Higgs mass is a delicate balance between the tree-level mass and the quantum corrections. In other words, it appears unlikely that nature would naturally set the Higgs mass to this specific value, given the sensitivity of the corrections to it. This is known as the Higgs naturalness problem.
+Here, $\Lambda_{\textnormal{cutoff}} = \Lambda_{UV}$ refers to the ultraviolet momentum cutoff that is used to regulate the loop integral. It is also the energy scale at which new physics emerges. We can surmise that the SM is an EFT or a low-energy QFT approximation of some higher-energy theory which may include gravity and it is valid up to some cutoff scale. When bridging the hierarchy gap, $\Lambda_{\textnormal{cutoff}} \rightarrow \Lambda_{Planck}$, this contribution becomes too large, notwithstanding that these contributions add up for each fermion in the SM. At the $\Lambda_{Planck}$ scale, the bare mass and the quantum corrections would need to cancel over 30 orders of magnitude to match the measured value of the Higgs at 125 GeV. It seems that these quantum corrections have to be finely tuned and canceled out with an incredible degree of precision. This fine-tuning seems unnatural because it suggests that the observed Higgs mass is a delicate balance between the tree-level mass and the quantum corrections. In other words, it appears unlikely that nature would naturally set the Higgs mass to this specific value, given the sensitivity of the corrections to it. This is known as the Higgs naturalness problem.
 
 \section{Beyond Standard Model Non-resonant Signals}~\label{sec:BSMNonReso}
 The hierarchy and naturalness problem necessitated extensions to the Standard Model of which the primary and uncontested early candidate was Supersymmetry (SUSY). SUSY posits the existence of yet-to-be-discovered fermionic (bosonic) superpartners to the known bosons and fermions. With this framework, the strong, electromagnetic and weak coupling constants could be extrapolated and converge at a point just below the Planck Scale \cite{Martin:1997ns}.
@@ -822,8 +847,7 @@ The basic mathematical setup of the CW/LD follows from Ref.~\cite{Giudice:2017fm
 \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.5]{fig/ClockworkSchematic.png}
-    \caption{A schematic representation of the clockwork mechanism increasing the interac-
-tion scale of a non-renormalisable operator~\cite{2Clockwork}. }
+    \caption{The ``Clockwork gears" schematic representation of the clockwork mechanism where the gears represent the interacting fields.~\cite{2Clockwork}. }
     \label{fig:ClockworkSchematic}
 \end{figure}
 
@@ -993,11 +1017,11 @@ In this context, incorporating the Unparticles model interpretation into the Sea
 
 \subsection{Previous Searches}
 
-The search for signatures of Large extra dimensions, CW/LD and Unparticles go beyond collider searches. However, we limit the discussion of previous results to collider searches here. The methods and results in this study has a direct precedent from the work published in Ref.~\cite{CMS:2018dqv}. Limits have been placed on the relevant model parameters for the ADD Large Extra Dimensions as shown on Table~\ref{tab:ADD_limits2016}, and the Clockwork model using high-mass diphoton events from the 2016 data from the CMS experiment (see Fig.~\ref{fig:ClockworkCMS2016}) which was at the time the most stringent limits on the ADD Large Extra Dimensions and the Clockwork Model. The total asymmetric uncertainties are shown on the expected limits for Table~\ref{tab:ADD_limits2016}. In Figure~\ref{fig:ClockworkCMS2016}, the shaded bands represent the 1 and 2 standard deviation uncertainty in the expected limit. The shaded region with $k > M_5$ denotes the area where the theory becomes nonperturbative. A complementary search has also been done on dilepton events~\cite{CMS:2021ctt}. Both searches showed no significant deviation from the SM expectation of unity.
+The search for signatures of Large extra dimensions, CW/LD and Unparticles go beyond collider searches. However, we limit the discussion of previous results to collider searches here. The methods and results in this study has a direct precedent from the work published in Ref.~\cite{CMS:2018dqv}. Limits have been placed on the relevant model parameters for the ADD Large Extra Dimensions as shown on Table~\ref{tab:ADD_limits2016}, and the Clockwork model using high-mass diphoton events from the 2016 data from the CMS experiment (see Fig.~\ref{fig:ClockworkCMS2016}) which was at the time the most stringent limits on the ADD Large Extra Dimensions and the Clockwork Model. The total asymmetric uncertainties are shown on the expected limits for Table~\ref{tab:ADD_limits2016}. In Figure~\ref{fig:ClockworkCMS2016}, the shaded green and yellow bands represent the 1 and 2 standard deviation uncertainty in the expected limit. The theory becomes nonperturbative in the $k > M_5$ region denoted by the light purple shaded region. The region below and to the left of the solid line constitutes the excluded region. A complementary search has also been done on dilepton events~\cite{CMS:2021ctt}. Both searches showed no significant deviation from the SM expectation of unity.
 
 \begin{table}[pt]
 	\centering
-	\caption{Exclusion limits on the mass scale \Ms (in units of {\TeVns}) for various conventions used in the calculation of the ADD large extra-dimensional scenario using the 2016 CMS detector data corresponding to an integrated luminosity of 35.9 \fbinv~\cite{CMS:2018dqv}. }
+	\caption{Previous exclusion limits results on the mass scale \Ms in {\TeVns} for various conventions used in the calculation of the ADD large extra-dimensional scenario using the 2016 CMS detector data corresponding to an integrated luminosity of 35.9 \fbinv~\cite{CMS:2018dqv} only. }
 	\cmsTable{
 	\begin{tabular}{cccccccccc}
 		\\	
@@ -1019,7 +1043,7 @@ The search for signatures of Large extra dimensions, CW/LD and Unparticles go be
 \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.5]{fig/ClockworkCMS.png}
-    \caption{The 95\%  CL exclusion limits for the continuous graviton model in the clockwork framework over the $k -M_5$ parameter space.}
+    \caption{2016 95\%  CL exclusion limits results for the continuous clockwork mechanism over the $k -M_5$ parameter space.}
     \label{fig:ClockworkCMS2016}
 \end{figure}
 

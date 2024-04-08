@@ -1,12 +1,12 @@
 \chapter{Scale Factors and Datasets}\label{ch:appendix_scaleFactors}
-\raggedright\parindent=25pt
+% \raggedright\parindent=25pt
 In this chapter we discuss the datasets used for the tag-and-probe method and the final scale factors used in the analysis.
 
 The tag-and-probe method begins by obtaining a set of high purity $Z \to e^{+}e^{-}$ samples from data shown in Table~\ref{table:TnPDatasets}. Events are required to pass an unprescaled single electron trigger, listed on Table~\ref{tab:tagtrig}. These single electron triggers are used to assure that the probe electrons selected are unbiased. Both the tag electrons and the probe electrons are further selected with the following cuts listed in Table~\ref{tab:tnpSelection}. The tag-and-probe system must be within the invariant mass range from 70 GeV to 110 GeV. The tag electrons have \pt cuts greater than the HLT requirements at to avoid ambiguity. The selected probe electrons are further categorized into whether they fail or pass the photon ID. The distributions are binned and \pt and $\eta$ as follows: $p_{T}=[125,200,300,400,500,1000]$~\GeV and $|\eta|=$[0,0.8,1.4442] in the EB and $|\eta|=$[1.566,2.5] in the endcap region. 
 
 In the next step, we apply the same selection procedure on MC samples instead of data. The MC samples are listed in Table~\ref{table:NominalMC}. The choice of using HT-binned Drell-Yann samples are governed by the need for more statistics in the high $p_{T}$ region.
 
-\begin{table}[!htbp]~\label{table:NominalMC}
+\begin{table}[!htbp]
   \centering
   \caption{Nominal MC samples used for TnP}
   \resizebox{0.9\textwidth}{!}{%
@@ -23,7 +23,7 @@ In the next step, we apply the same selection procedure on MC samples instead of
     \hline 
     \end{tabular}
   }
-\end{table}
+\end{table}~\label{table:NominalMC}
 
 The passing and failing probe distributions for each $\eta-\pt$ bins are fitted to get the signal yields. The nominal fitting signal model is the template from MC, Zlineshape, the lineshape of the Z resonance peak is extracted and smeared with the Gaussian. The nominal fitting background model used is the RooCMSShape function which is a special case of the general Crystal Ball function, a pdf which combines a Gaussian core with a power-tail law used to model the invariant mass distribution of a particle resonance decay. We extract the signal yield for data. The MC, which serves as our ground truth, we use a simple cut and count. Using these yields we can subsequently calculate the efficiency which is defined as follows: 
 

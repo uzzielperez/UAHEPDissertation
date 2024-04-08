@@ -11,7 +11,7 @@ To model and interpret the results coming from proton-proton collisions, Monte C
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[scale=0.5]{fig/eventStructure.png}
-	\caption{Schematic representation of the structure of an event. The first diagram (a) is a representation of the oncoming protons or "bags of partons". In (b), the main hard subprocess with the resonance decays are shown. The hard subprocess is represented by matrix elements calculations. Finally, the Parton Shower is shown in( c), where full event is shown with other more components such as the initial and final state radiation and beam remnants. Credits: Sj{\"o}strand, Torbj{\"o}rn}
+	\caption{Schematic representation of the structure of an event. The first diagram (a) is a representation of the oncoming protons or ``bags of partons". In (b), the main hard subprocess with the resonance decays are shown. The hard subprocess is represented by matrix elements calculations. Finally, the Parton Shower is shown in (c), where full event is shown with other more components such as the initial and final state radiation and beam remnants. Credits: Sj{\"o}strand, Torbj{\"o}rn}
 	\label{fig:EventStructure}
 \end{figure}
 
@@ -25,12 +25,14 @@ We use two well-known general purpose event generators in this analysis: \SHERPA
 	\label{fig:sherpaDivideAndConquer}
 \end{figure}
 
-The Monte Carlo generators also makes use of parton distribution functions (PDFs) which have the descriptions of the probability of some struck parton within the proton to carry a fraction $x$ of the proton's momentum $p$. Both \SHERPA and \PYTHIA8 include the NNPDF~\cite{NNPDF:2021uiq} set of parton distribution functions. NNPDF makes use of neural networks to extract PDFs from data to describe the structure of protons in terms of their quark and gluon constituents. These PDFs cannot be computed from first principles and hence must be extracted from data by carefully matching data with their corresponding theoretical predictions dictated by non-perturbative QCD. The PDFs are also a function of the factorization scale $\mu_{f}$ which roughly separates the long-distance (lower energy) and short-distance (higher energy) processes. At short-distances, QCD is perturbative but for longer-distances non-perturbative techniques are employed. The factorization scale is usually set at the scale of the hard scattering interaction $\mu_{f} \approx Q^{2}$ where $Q^2$ is the momentum transfer in the collision.
+The Monte Carlo generators also makes use of parton distribution functions (PDFs) which have the descriptions of the probability of some struck parton within the proton to carry a fraction $x$ of the proton's momentum $p$. Both \SHERPA and \PYTHIA8 include the NNPDF~\cite{NNPDF:2021uiq} set of parton distribution functions. NNPDF makes use of neural networks to extract PDFs from data to describe the structure of protons in terms of their quark and gluon constituents. These PDFs cannot be computed from first principles and hence must be extracted from data by carefully matching data with their corresponding theoretical predictions dictated by non-perturbative QCD. The PDFs are also a function of the factorization scale $\mu_{f}$ which roughly separates the long-distance (lower energy) and short-distance (higher energy) processes. This is typically set at $\mu_{f}\approx Q^{2}$, the hard scattering scale where $Q^2$ represents the scale of the collision momentum transfer. At short-distances, QCD is perturbative but for longer-distances non-perturbative techniques are employed. 
+
+% The factorization scale is usually set at the scale of the hard scattering interaction $\mu_{f} \approx Q^{2}$ where $Q^2$ is the momentum transfer in the collision.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[scale=0.5]{fig/NNPDFGlobalFit.png}
-	\caption{These are the results of the latest global fit by the NNPDF collaboration showing the PDFs at factorization scales of 10 $GeV^{2}$ and 10 $GeV^{4}$. The different PDFs are related by the DGLAP evolution equations~\cite{DelDebbio:2018siw}}
+	\caption{Latest results of the global fit done by the NNPDF collaboration showing the PDFs at factorization scales of 10~$\GeV^{2}$ and 10~$\GeV^{4}$. The different PDFs are related by the DGLAP evolution equations~\cite{DelDebbio:2018siw}}
 	\label{fig:NNPDF}
 \end{figure}
 
@@ -93,7 +95,7 @@ The main source of the background arises from the prompt SM diphoton production,
 \begin{center}
 \includegraphics[angle=0,width=0.7\textwidth]{fig/PromptDiphotonBackground.png}
 \end{center}
-\caption{The irreducible and primary background for the analysis comes from the prompt SM diphoton production which occur via quark annihilation (Born) or through the gluon fusion (Box) process as shown from left to right.}
+\caption{The irreducible and primary background for the analysis comes from the prompt standard model $\gamma\gamma$ production which occur via the q-q$\Bar{q}$ annihilation (Born) or through the gluon fusion (Box)  process as shown from left to right.}
 \label{fig:LOFeynmanBackgroundDiphoton}
 \end{figure}
 
@@ -102,7 +104,7 @@ The main source of the background arises from the prompt SM diphoton production,
 \begin{center}
 \includegraphics[angle=0,width=0.7\textwidth]{fig/FeynmanDiagramsNLO.png}
 \end{center}
-\caption{ Representative Feynman Diagrams for (a) $q\Bar{q}$ and (b) gq-initiated processes for NLO SM diphoton production are shown. \cite{DErrico:2011cgc}}
+\caption{Sample Feynman Diagrams for (a) $q\Bar{q}$ and (b) gq-initiated processes for NLO SM diphoton production are shown. \cite{DErrico:2011cgc}}
 \label{fig:NLOSMBackground}
 \end{figure}
 
@@ -181,7 +183,7 @@ Figure~\ref{fig:kfactor_mgg}, shows the K factor distributions for both barrel-b
 \includegraphics[angle=0,width=0.45\textwidth]{fig/kfactor_comparison_BB_125GeV_NNPDF.pdf}
 \includegraphics[angle=0,width=0.45\textwidth]{fig/kfactor_comparison_BE_125GeV_NNPDF.pdf}
 \end{center}
-\caption{Ratio of diphoton cross section from calculated by MCFM to that obtained from \SHERPA in the barrel-barrel (left) and barrel-endcap (right) regions. The curves indicate different orders of the MCFM calculation, and the dashed lines show the effect of simultaneous variation of the renormalization and factorization scales, as shown in Figure~\ref{fig:kfactor_mgg}.
+\caption{Ratio of diphoton cross sections calculated by MCFM versus the results from \SHERPA in the barrel-barrel (left) and barrel-endcap (right) regions. Different orders of the MCFM calculation are shown and the dashed lines show the variation of the renormalization and factorization scales as shown in Figure~\ref{fig:kfactor_mgg}.
 }
 \label{fig:kfactor_comparison}
 \end{figure}
@@ -272,7 +274,10 @@ While minor backgrounds arise from other SM processes, we have not included them
 \end{figure}
 % \subsection{Overview of Photon Fake Rate Method}
 
-Another source of background in the diphoton signal region comes from 'fake photons'. This term is assigned to events where one or two jets are misidentified as 'real' photons by virtue of passing the high $p_T$ ID. This occurs when jets fragments in such a way that when they decay to two photons; and at sufficiently high momentum they overlap in the detector and resemble a single photon signature. Such jet fragmentation typically happens with $\pi^{0}$ or another neutral meson decaying into two photons~\ref{fig:pi0Decay}. If at the same time there is little hadronic activity around the neutral meson, the reconstructed object can pass the isolation and other identification criteria and could be mislabeled as a 'photon' in our analysis. To estimate this 'fake' contribution, we use a data-based method rather than just MC simulation for such a rare jet fragmentation  process. This method is similar to that used to a previously published analysis of 2016 diphoton data~\cite{Sirunyan:2018wnk} and in the 8 TeV exotica diphoton analysis~\cite{CMS-PAS-EXO-12-045}.
+Another source of background in the diphoton signal region comes from 'fake photons'. This term is assigned to events where one or two jets are misidentified as 'real' photons by virtue of passing the high $p_T$ ID. This occurs when jets fragments in such a way that when they decay to two photons; and at sufficiently high momentum they overlap in the detector and resemble a single photon signature. Such jet fragmentation typically happens with $\pi^{0}$ or another neutral meson decaying into two photons~\ref{fig:pi0Decay}. A neutral meson that has little hadronic activity around it can also be reconsturcted that can pass the photon isolation criteria and be mislabeled as a photon. 
+
+
+% If at the same time there is little hadronic activity around the neutral meson, the reconstructed object can pass the isolation and other identification criteria and could be mislabeled as a 'photon' in our analysis. To estimate this 'fake' contribution, we use a data-based method rather than just MC simulation for such a rare jet fragmentation  process. This method is similar to that used to a previously published analysis of 2016 diphoton data~\cite{Sirunyan:2018wnk} and in the 8 TeV exotica diphoton analysis~\cite{CMS-PAS-EXO-12-045}.
 
 The method used to estimate the 'fake' contribution assumes that dijet or $\gamma + j$ events where these jets fragmented in such a way to produce a fake photon signature could be modeled by other such events where the jet fragmented differently. Here we define two distinct categories of jet fragmentation which we measure. The ratio of these two categories provide us the 'fake rate'. 
 
@@ -393,7 +398,7 @@ Figure~\ref{fig:real_templates} and Figure~\ref{fig:fake_templates} show the \pt
 \centering
 \includegraphics[width=0.49\textwidth]{fig/faketemplatecompEB_jetht_2018.pdf}
 \includegraphics[width=0.49\textwidth]{fig/faketemplatecompEE_jetht_2018.pdf}
-\caption{A comparison of fake templates measured in various \pt bins from the \texttt{JetHT} data set. The left plot shows the fake templates in the EB while the right plot shows the same for the EE.}
+\caption{Fake templates comparison measured in various \pt bins extracted from the \texttt{JetHT} data set for EB (left) and EE (right).}
 \label{fig:fake_templates}
 \end{figure}
 
@@ -429,22 +434,20 @@ An illustration of the template fit for a given \pt bin is shown in Figure~\ref{
 \begin{figure}[!htbp]
 \centering
 \includegraphics[scale=0.80]{fig/fakeRatePlot_jetht_2018_EE_pT130To150_chIso5To10.pdf}
-\caption{A representative template fit from the 2018 \texttt{JetHT} data set using photon objects from the ECAL barrel with $130<\pt<150\GeV$. The left and right plots are displayed with a linear and log scale, respectively, for the y-axis.}
+\caption{A representative template fit extracted from the 2018 \texttt{JetHT} data set using photon objects from the ECAL barrel in the $130<\pt<150\GeV$ range, in linear (left) and log scale (right) for the y-axis.}
 \label{fig:templatefit}
 \end{figure}
 
 \subsection{Fake Rate Denominator}
 
-%% denom defin
-The denominator of the fake rate is simply a \pt-binned count of the number of objects passing our denominator definition. This definition is somewhat arbitrary, but must be chosen such that the denominator objects are similar between the \texttt{JetHT} sample and the \texttt{DoubleEG} sample used in the analysis. Our definition is the following:
+We definee the denominator of the fake rate as a count of the number of objects passing our denominator definition in each $\pt$ bin. While this definition is arbitrary, the denominator objects obtained from the \texttt{JetHT} sample and the \texttt{DoubleEG} samples must be similar with this choice of definition which is defined as follows:
 \begin{enumerate}
-\item The object must \emph{fail} one of the high $\pt$ ID cuts in Table~\ref{table:highptid}
-\item The object must \emph{pass} the conversion-safe electron veto
-\item In the ECAL barrel, both \chiso and \corphoiso must be $< 0.2$ times the object's \pt
-\item In the ECAL endcaps, $\chiso<0.2\pt$ and \corphoiso is required to follow the high \pt ID cut in Table \ref{table:highptid}
-\item The object must have cone-based H/E $< 0.1$ 
-\item The object must have $\RNINE>0.8$, matching the photon preselection cut.
-\end{enumerate} \label{denom_definition}
+    \item Denominator object must \emph{FAIL} one of the high-\pt ID cuts
+    \item Must \emph{PASS} the conversion-safe electron veto (CSEV)
+    \item Both \chiso and \corphoiso must be $< 0.2$ times the object's \pt
+    \item Cone-based H/E $< 0.1$ 
+    \item $\RNINE>0.8$ to match the photon preselection cut.
+\end{enumerate}~ label{denom_definition}
 
 The first criteria requires that the denominator object fails at least one of the Photon ID cuts. This ensures that the denominator sample is orthogonal to the numerator, and is not contaminated by real photons. Additionally, the object must pass the conversion-safe electron veto variable which is a variable designed to reject direct electrons but not electrons that originate from photon conversions. To ensure that the denominator objects are still photon-like-jets, that is they are still reasonably isolated, we require that the isolation variables are not too large ($<20$\% maximum). This is important since we are reweighting the denominator by the fake rate to estimate our fake prediction. The cone-based H/E cut is used in the photon ID at HLT level while the tower-based Had/EM is the more typical offline variable used in our photon ID. Since we are selecting from data, we use the cone-based H/E cut. 
 
@@ -453,7 +456,7 @@ The first criteria requires that the denominator object fails at least one of th
 %%actual fake rate extracted
 \subsection{Extracting the Fake Rate}
 
-The fake rate is just the ratio of the numerator and denominator which we have counted using the procedure described above. The fake rate is primarily a function of \pt and is determined for EB and EE separately. The EE is further split into two bins, which we show later in Sec.~\ref{sec:closure_test} to be an improvement in our fake prediction for the $\eta$ distributions. The fake rates are also dependent on the number of selected primary vertices. This is shown in Figure~\ref{fig:frpileup_EB}, Figure~\ref{fig:frpileup_EE1}, and Figure~\ref{fig:frpileup_EE2} for EB, EE1 and EE2, respectively. EE1 covers the region $1.566 < |\eta| < 2.033$ while EE2 covers $2.033 < \lvert \eta \rvert< 2.5$. We take the average of the fake rates derived from the \texttt{JetHT} and \texttt{DoubleMuon} data sets. As a consequence of the lower statistics in the \texttt{DoubleMuon} dataset, the fake rate derivation have a different \pt binning. We apply the fake rate separately for each of the two data sets at the given \pt, then the two fake rates are averaged. The ranges used for comparison were chosen to reflect a roughly uniform level of statistics between all ranges.
+The fake rate is just the ratio of the numerator and denominator which we have counted using the procedure described above. The fake rate is primarily a function of \pt and is determined for EB and EE separately. The EE is further split into two bins, which we show later in Sec.~\ref{sec:closure_test} to be an improvement in our fake prediction for the $\eta$ distributions. The fake rates are also dependent on the number of selected primary vertices. This is shown in Figure~\ref{fig:frpileup_EB}, Figure~\ref{fig:frpileup_EE1}, and Figure~\ref{fig:frpileup_EE2} for EB, EE1 and EE2, respectively. EE1 covers the region $1.566 < |\eta| < 2.033$ while EE2 covers $2.033 < \lvert \eta \rvert< 2.5$. We take the average of the fake rates derived from the \texttt{JetHT} and \texttt{DoubleMuon} data sets. As a consequence of the lower statistics in the \texttt{DoubleMuon} dataset, the fake rate derivation have a different \pt binning. We apply the fake rate separately for each of the two data sets at the given \pt, then the two fake rates are averaged. We chose ranges for comparison that have a roughly uniform level of statistics between them.
 
 % generated by compare_pv.exe
 \begin{figure}[!htbp]
@@ -464,7 +467,7 @@ The fake rate is just the ratio of the numerator and denominator which we have c
 \includegraphics[width=0.3\textwidth]{fig/compare_pv_EB_2016_doublemuon.pdf}
 \includegraphics[width=0.3\textwidth]{fig/compare_pv_EB_2017_doublemuon.pdf}
 \includegraphics[width=0.3\textwidth]{fig/compare_pv_EB_2018_doublemuon.pdf}
-\caption{A comparison of the fake rate in EB measured as a function of the number of selected primary vertices in the event using the \texttt{JetHT} data set at the top and \texttt{DoubleMuon} data set at the bottom. The fake rates are determined separately for 2016 at the left, 2017 at the center, and 2018 at the right.}
+\caption{A comparison of the fake rate in EB measured as a function of the number of selected primary vertices (nPV) in the event using the \texttt{JetHT} data set (top) and \texttt{DoubleMuon} data set (bottom). The fake rates are determined separately for 2016 at the left, 2017 at the center, and 2018 at the right.}
 \label{fig:frpileup_EB}
 \end{figure}
 
@@ -613,9 +616,8 @@ There are then two sources of fake background events. These are the $jj$ and $\g
 
 More details on the mathematical derivation of Eqs.~\ref{eq:nfake} is shown in Appendix~\ref{ch:appendix_fake_rate_app}. It is important to note that the $\texttt{jj}$ contribution was 100 times smaller than the $\texttt{gj}$ contribution and hence was dropped in the final limits calculation. 
 
-\section{Closure Test to the Photon Fake Rate Method}\label{sec:closure_test}
-
- We validated the fake rate method using an MC-based approach. The general idea is that if we apply the same method to MC, by treating it as if it were data, the results would yield a fake prediction comparable to the results from MC truth information. The MC samples that were treated as data were QCD dijets and GJets listed in Tables~\ref{table:dset-2016-closuretest} and \ref{table:dset-2017-18-closuretest}. These were chosen such that there is a sufficient number of fake photons present. The truth information on the actual number of fakes in the MC sample is obtained by matching each \texttt{pat::Photon} that passed our ID to the best final state (status 1) gen particle within $\Delta R \leq 0.1$ in the pruned collection of generated particles, if possible. In this section, we refer to photons that have been reconstructed and identified by the Particle Flow algorithm as \texttt{pat::Photon}s. If the \texttt{pat::Photon} is matched to a hadron or when the final state gen photon's comes from a hadron then they are fakes. A complication arises when the photon has multiple mothers, which is the usual case. The sole mother is chosen by finding the best match in $\Delta R$ among all of its mothers. In summary, fake photons are tagged as such if they come from hadron decays. Comparing the fake prediction from the fake rate method and using a simple counting method from the truth information, we validate our fake rate.
+\section{Photon Fake Rate Closure Test}\label{sec:closure_test}
+We validated the fake rate method using an MC-based approach. The general idea is that if we apply the same method to MC, by treating it as if it were data, the results would yield a fake prediction comparable to the results from MC truth information. The MC samples that were treated as data were QCD dijets and GJets listed in Tables~\ref{table:dset-2016-closuretest} and \ref{table:dset-2017-18-closuretest}. These were chosen such that there is a sufficient number of fake photons present. The truth information on the actual number of fakes in the MC sample is obtained by matching each \texttt{pat::Photon} that passed our ID to the best final state (status 1) gen particle within $\Delta R \leq 0.1$ in the pruned collection of generated particles, if possible. In this section, we refer to photons that have been reconstructed and identified by the Particle Flow algorithm as \texttt{pat::Photon}s. If the \texttt{pat::Photon} is matched to a hadron or when the final state gen photon's comes from a hadron then they are fakes. A complication arises when the photon has multiple mothers, which is the usual case. The sole mother is chosen by finding the best match in $\Delta R$ among all of its mothers. In summary, fake photons are tagged as such if they come from hadron decays. Comparing the fake prediction from the fake rate method and using a simple counting method from the truth information, we validate our fake rate.
 
  The closure test has three steps. First we determine the accuracy of the fake templates produced using the sideband definition (treating MC as data) and comparing them with the MC truth templates as in Figure~\ref{fig:template_comparisons}. Second, we perform a fitting procedure where we extract the fake yields and compare with the actual yields from the MC truth information as a function of $\pt$ and $\eta$. Third, we use the fake rates from the previous step to reweight denominator objects, or objects that pass a looser photon ID, to predict the kinematics of the actual known fakes. These three steps are sequentially described in more detail below. Here we show that by splitting the EB and EE regions into inner and outer regions, the fake prediction improves as the fake rate is no longer averaged over the entire barrel or endcap region.
 
@@ -647,7 +649,7 @@ The least bias is seen for the $5 < \chiso < 10$ $\GeV$ sideband making it our n
   \label{fig:template_comparisons}
 \end{figure}
 
-\subsection{Testing the Template Fit Method to Extract Fake Yields}
+\subsection{Testing the Template Fit Method for Extracting Fake Yields}
 
 After preparing and validating the fake templates in the previous step, we fit these templates together with the real templates (same as selection as the data) to the numerator $\sieie$ distribution. Figure~\ref{fig:templatefit_closure} illustrates the fit for \pt bin $90 < \pt < 130$ $\GeV$. The numerator templates are filled with objects that pass the photon ID and it contains both real and fake photons. The real and fake templates are fitted to the numerator templates which are by definition contains both real and fake photons that pass the photon ID. In this step we extract the fake yields by fitting the fake templates prepared and validated in the previous step.
 

@@ -193,6 +193,7 @@
         %     \printglossary[toctitle={LIST OF ABBREVIATIONS AND SYMBOLS},title={\textbf{LIST OF ABBREVIATIONS AND SYMBOLS}}]
         %     \glsresetall
 
+        \topskip=1in
         \chapter*{Acknowledgments}
         \addcontentsline{toc}{chapter}{ACKNOWLEDGEMENTS}
         \@acknowledgments
@@ -230,7 +231,7 @@
     \end{spacing}
 
     
-     \renewcommand{\listtablename}{\textnormal{LIST OF FIGURES}}
+     \renewcommand{\listfigurename}{\textnormal{LIST OF FIGURES}}
         \begin{spacing}{1}
         \renewcommand{\cftloftitlefont}{\vspace*{0in}\hspace{.40\linewidth}\MakeTextUppercase}  
         \pagebreak

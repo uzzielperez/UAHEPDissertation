@@ -1,20 +1,48 @@
 \chapter{Results}\label{ch:results} 
 
-This chapter discusses the results comparing the compatibility of the observed data with the background-only versus various signal-plus-background hypotheses using a shape-based Bayesian Marginalization procedure for the ADD Large Extra Dimensions and the Clockwork model. The Unparticles model uses a simpler cut-and-count approach rather than a shape-based analysis for the preliminary investigation.
+This chapter discusses the results comparing the compatibility of the observed data with the background-only versus various signal-plus-background hypotheses using a shape-based Bayesian Marginalization procedure for the ADD Large Extra Dimensions and the Clockwork Framework. The Unparticles model uses a simpler cut-and-count approach (rather than a shape-based approach), with the modified frequentist method, also known as the CLs method, is used according to the prescriptions of Ref.~\cite{ATLAS:1379837}, together with the use of asymptotic formulas~\cite{Cowan:2010js}.
+
+% Self-plagiarizing OUR paper
+
 
 % In the Section~\ref{sec:expected_sensitivity}, we show the expected limits results using pseudodata. These results were obtained prior to unblinding in the signal region $\mgg > 1000$~GeV. In Section~\ref{sec:observed_results}, we perform the unblinding and show the observed limits. 
 
+
+% 321 used to marginalize the nuisance parameters.
+% 322 Figure 5 presents the data and background prediction before the marginalization of the nui-
+% 323 sance parameters, combined for each of the three years. The shaded bands show the system-
+% 324 atic uncertainties, neglecting the normalization of the diphoton prediction. The data and back-
+% 325 ground prediction after the nuisance parameters have been marginalized are shown in Fig. 6.
+% 326 For the ADD model, upper limits are set at the 95% CL on the signal strength, which are trans-
+% 327 lated into lower limits on the mass scale MS. Table 1 summarizes the results for all ADD model
+% 328 conventions probed. The excluded values of MS range from 7.1 to 11.1 TeV, depending on the
+% 329 convention.
+
 \section{\label{sec:bayesian_inference} Bayesian Confidence Intervals}
 
-We use a bayesian inference technique to set upper limits on the ADD Large Extra Dimensions and the Clockwork Signal model using the \texttt{THETA} framework~\cite{THETAFrameworkIntro}. The framework uses the Markov-Chain Monte Carlo (MCMC) method to marginalize or integrate out the nuisance parameters to obtain the posterior distribution for the signal strength that can be integrated to arrive at the 95\% CL exclusion limit.
+A bayesian statistical approach was used to constrain the signal parameters of the ADD Large Extra Dimensions and the Clockwork Framework using the \texttt{THETA} framework~\cite{THETAFrameworkIntro}, with a flat prior on the signal strength assumed and constrained to be positive. By convention in particle physics, a flat prior constrained to be positive is motivated by our lack of prior knowledge on the signal uncertainty and the fact that this is a shape analysis. It is often considered a good choice due to simplicity, ease of implementation, and avoids the introduction of an additional assumption in the analysis. \THETA uses a Markov-Chain method to marginalize the nuisance parameters. In the next parts of this text, we briefly introduce Bayes theorem, and the inputs used to set the limits on the aforementioned models.
+% 314 For the nonresonant analysis, constant bin widths of 100 GeV are used. Similar to the resonant
+% 315 analysis, a simultaneous fit to the mγγ spectrum in six event categories, EBEB and EBEE for
+% 316 each of the three years of data collection, is performed. The mγγ spectrum begins at 500GeV
+% 317 for the ADD interpretation, while this threshold is raised to 1 TeV in the clockwork mechanism
+% 318 analysis to avoid statistical fluctuations in the template construction described in Section 4. A
+% 319 Bayesian statistical approach was taken to constrain the signal parameters with a flat prior on
 
-Given some prior degree of belief in a hypothesis $A$ for an experimental measurement, the probability for a given event to occur can be inferred through Bayes' theorem:
+% We use a bayesian inference technique to set upper limits on the ADD Large Extra Dimensions and the Clockwork Signal model using the \texttt{THETA} framework~\cite{THETAFrameworkIntro}. The framework uses the Markov-Chain Monte Carlo (MCMC) method to marginalize or integrate out the nuisance parameters to obtain the posterior distribution for the signal strength that can be integrated to arrive at the 95\% CL exclusion limit.
+
+Bayes theorem provides a formal mechanism for updating the probability of a hypothesis in light of new evidence which corresponds to an experimental measurement. Mathematically, it is expressed as:
 
 \begin{equation} \label{eq:Bayestheorem}
 P(A|B) = \frac{P(B|A)P(A)}{P(B)}.
 \end{equation}
 
-Here, $P(A|B)$ is the posterior probability of the hypothesis A given B, which in this case is the data. $P(B|A)$ is the called the "marginal likelihood" which indicates the probability of the event/data being true, given A. $P(A)$ corresponds to our knowledge, or what is called the \textit{prior}, which is the measure of the probability of A being true.  $P(B)$, is the marginal likelihood, which is the probability of the data being true. For this limit-setting procedure, we construct a binned likelihood such that the total likelihood $\mathcal{L}$ is equal to the product of the individual likelihoods $\mathcal{L}_{i}$ in each bin $i$. Since we count the number of events occuring in each bin, the likelihood in each bin can be written using the Poisson Distribution formula,
+%STUDY NOTES
+% Bayes' theorem is a fundamental concept in probability theory that provides a formal mechanism for updating the probability of a hypothesis in light of new evidence. It establishes a relationship between the posterior probability of a hypothesis, given observed evidence, and the prior probability of the hypothesis, prior beliefs, and the likelihood of observing the evidence given the hypothesis. Mathematically, it is expressed as P(A∣B)=P(B∣A)⋅P(A)P(B)P(A∣B)=P(B)P(B∣A)⋅P(A)​, where P(A∣B)P(A∣B) represents the posterior probability of hypothesis AA given evidence BB, P(B∣A)P(B∣A) denotes the likelihood of observing evidence BB given hypothesis AA, P(A)P(A) denotes the prior probability of hypothesis AA, and P(B)P(B) is the probability of observing evidence BB (also referred to as the marginal likelihood or total probability). 
+
+Here, $P(A|B)$ is the posterior probability of the hypothesis A given B, which in this case is the data. $P(B|A)$ is the called the ``marginal likelihood" which indicates the probability of the event/data being true, given A. $P(A)$ corresponds to our knowledge, or what is called the \textit{prior}, which is the measure of the probability of A being true.  $P(B)$, is the marginal likelihood, which is the probability of the data being true.
+
+For the shape-based analysis, a binned likelihood is constructed where the total likelihood $\mathcal{L}$ is equal to the product of the individual likelihoods $\mathcal{L}_{i}$ in each bin $i$. Since we count the number of events occuring in each bin, the likelihood in each bin can be written using the Poisson Distribution formula,
+% For this limit-setting procedure, we construct a binned likelihood such that the total likelihood $\mathcal{L}$ is equal to the product of the individual likelihoods $\mathcal{L}_{i}$ in each bin $i$. 
 
 \begin{equation} \label{eq:poisson_likelihood}
 \mathcal{L}(N| \mu_i ) = \prod_{i} \mathcal{L}_{i}(N_i | \mu_i ) = \prod_{i} \frac{\mu_i^{N_i} e^{-(\mu_i)}}{N_i!},
@@ -33,33 +61,53 @@ We can now rewrite Eq.~\ref{eq:Bayestheorem} as follows,
 P(\beta, N) = \frac{\mathcal{L}(N_i| \mu_{i} (\beta) \pi(\beta)}{P(N)} = \mathcal{L}(N_i| \mu_i) \pi(\mu_i).
 \end{equation}
 
-Here, $P(N)$ is treated as a normalization constant that has been absorbed into the likelihood. We see here that the posterior is proportional to the likelihood.
+Treating $P(N)$ as a normalization constant absorbed into the likelihood shows that the posterior is simply proportional to the likelihood.
+% Here, $P(N)$ is treated as a normalization constant absorbed into the likelihood. The results show that the posterior is proportional to the likelihood. 
 
 Both the signal and background have associated systematic uncertainties that affect our knowledge of their associated yields. We assign a separate nuisance parameter $\theta$ for each of these systematic uncertainties which are detailed in Table~\ref{tab:Systematics}. For each of these nuisance parameters, a different choice of prior $\pi(s,b, \theta)$ is made. These constraints allow the signal and background yields to deviate from their nominal values, subject to some cost or penalty on the likelihood in the form of a normal or lognormal distribution. These  individual parameters are described in Sec.~\ref{ch:systematics}. They are either assumed to be fully correlated across the $\mgg$ bins across all the 6 signal regions, i.e. the 3 years for BB and BE. Otherwise, separate nuisance parameters are used for each signal region. 
 
-The $\mgg$ distributions for both the signal and the background are binned in 100 GeV steps from 500 GeV. These, together with the nuisance parameters and additional shape-based uncertainties are extracted from \texttt{root} files to construct the statistical model. The framework then performs a maximum likelihood fit to get estimates for all model parameters. At this step the nuisance parameters are simultaneously marginalized, and a posterior prediction for the combined prompt plus fake ($\gamma\gamma$ + $\gj$) $\mgg$ distribution is produced using the data as a constraint. By convention in particle physics, a flat prior $\pi(\beta)$ with a lower bound of 0 is given for the signal strength. This is motivated by our lack of prior knowledge on its uncertainty and the fact that this is a shape analysis. It is often considered a good choice due to simplicity, ease of implementation, and it provides a more objective approach since it avoids the introduction of additional assumption in the analysis. The other nuisance parameters accounting for the associated systematic uncertainties for the signal and background are marginalized or integrated out as follows:
+We use constant bin widths of 100~\GeV for both the signal and the background $\mgg$ distributions. These, together with the nuisance parameters and additional shape-based uncertainties, are extracted from \texttt{root} files to construct the statistical model. The framework then performs a maximum likelihood fit to get estimates for all model parameters. At this step a simultaneous fit to the $\mgg$ spectrum in six event categories (EBEB) and (EBEE) for each of the three years of data collection, is performed along with the marginalization of the nuisance parameters. This produces updated posterior predictions for the fake and prompt diphoton background distributions. 
+
+% The $\mgg$ distributions for both the signal and the background are binned in 100 GeV steps from 500 GeV. These, together with the nuisance parameters and additional shape-based uncertainties are extracted from \texttt{root} files to construct the statistical model. The framework then performs a maximum likelihood fit to get estimates for all model parameters. At this step, using data as a constraint, the nuisance parameters $\theta$s, are marginalized simultaneously producing the updated posterior predictions for the fake and prompt diphoton distributions. By convention in particle physics, a flat prior constrained to be positive is motivated by our lack of prior knowledge on the signal uncertainty and the fact that this is a shape analysis. It is often considered a good choice due to simplicity, ease of implementation, and avoids the introduction of an additional assumption in the analysis. The other nuisance parameters accounting for the associated systematic uncertainties for the signal and background are marginalized or integrated out as follows:
+
+% UPDATED NOTES FROM OUR PAPER 
+% 314 For the nonresonant analysis, constant bin widths of 100 GeV are used. Similar to the resonant
+% 315 analysis, a simultaneous fit to the mγγ spectrum in six event categories, EBEB and EBEE for
+% 316 each of the three years of data collection, is performed. The mγγ spectrum begins at 500GeV
+% 317 for the ADD interpretation, while this threshold is raised to 1 TeV in the clockwork mechanism
+% 318 analysis to avoid statistical fluctuations in the template construction described in Section 4. A
+% 319 Bayesian statistical approach was taken to constrain the signal parameters with a flat prior on
 
 
+% At this step the nuisance parameters are simultaneously marginalized, and a posterior prediction for the combined prompt plus fake ($\gamma\gamma$ + $\gj$) $\mgg$ distribution is produced using the data as a constraint. By convention in particle physics, a flat prior $\pi(\beta)$ with a lower bound of 0 is given for the signal strength. This is motivated by our lack of prior knowledge on its uncertainty and the fact that this is a shape analysis. It is often considered a good choice due to simplicity, ease of implementation, and it provides a more objective approach since it avoids the introduction of additional assumption in the analysis. The other nuisance parameters accounting for the associated systematic uncertainties for the signal and background are marginalized or integrated out as follows:
+
+Mathematically, the marginalization procedure for the nuisance parameters is done by the following integration:
 \begin{equation}
     P(\beta |N) = \int P(\beta \theta |N_i) d\theta = \int \mathcal{L}(n| \beta, \theta) \pi(\beta,\theta) d\theta, 
 \end{equation}
 
-where  $\pi(s,b, \theta)$ is the chosen prior for each nuisance parameter. To determine the 95\% upper limits on the signal, we need to integrate the posterior prediction to 95\% of the total integral.
+where  $\pi(s,b, \theta)$ is the chosen prior for each nuisance parameter. 
+
+A commonly employed statistical method to express confidence is through the computation of a parameter's upper or lower limit at a 95\% confidence level. This involves excluding any hypotheses where the parameter surpasses (or falls below) a predefined threshold. For determining the 95\% upper limit on a signal hypothesis, characterized by a signal strength denoted as $\beta$, we integrate the posterior prediction up to 95\% of the total integral, as illustrated below:
+
+% A commonly used statistical measure of confidence is calculating the 95\% upper(lower) limit of a parameter, excluding any hypothesis whose parameter exceeds (goes below) that threshold. To calculate the 95\% upper limits on a signal hypothesis, with signal strength $\beta$, we integrate the posterior prediction up to  95\% of the entire integral as shown below: 
+
+% is obtained by integrating the posterior prediction up to 95\% of the entire integral as shown below:
+
+
+% To determine the 95\% upper limits on the signal, we need to integrate the posterior prediction to 95\% of the total integral.
 
 \begin{equation}\label{95CL}
    \int^{\beta}_0 P(\beta |N)  = 0.95\times\int^{\infty}_0 P(\beta |N). 
 \end{equation}
 
 \section{Exclusion Limits: ADD and Clockwork}~\label{sec:ADDCWresults}
-
-% This section presents the results of the non-resonant search which, \ie{}, the data over the background at prefit and postfit estimates, 
-% as well as the interpretation of the results to physics beyond the SM. 
-
-% In Figure~\ref{fig:Prefit_spectra}, we show the out-of-the-box SHERPA SM prompt $\gamma\gamma$ diphoton prediction reweighted by the NNLO k-factor correction, the fake $\gj$ background and the unblinded data. In the signal region above $\mgg > 1$ TeV which is also the range of high sensitivity, the fake background constitutes only 5\%(15\%) for BB (BE) channels. The bottom pads present the "pulls" ( $(\textrm{Data - Pred})/\sigma_{STAT}$) which describe the consistency between data and the MC prediction and the orange bands present the prefit rate systematic uncertainties for the real $\gamma\gamma$ (5\%) and the fake $\gj$ uncertainties (30\%) (See Table~\ref{tab:Systematics}. A fairly good agreement is observed between the prediction within the systematic uncertainties save for some bins which are slightly off the $\pm 1\sigma$ uncertainty band. One thing to note is that these predictions aren't the final prediction of the total SM background. Instead the final prediction would come from the post-fit distributions where the nuisances have been marginalized together with the signal strength. 
+We employ the general bayesian marginalization procedure described in the previous section on the ADD and the Clockwork models. For the ADD interpretation, the \mgg distribution begins at 500~\GeV while the threshold was raised to 1~\TeV in the clockwork mechanism to avoid statistical fluctuations in the template construction described in Ch.~\ref{ch:SignalModelling}. 
 \subsection{Prefit Prediction}~\label{sec:Prefit}
-The unblinded \mgg spectra are shown at Figs.~\ref{fig:Prefit_spectra2016},~\ref{fig:Prefit_spectra2017}, and~\ref{fig:Prefit_spectra2018} together with the prefit prediction. The prediction of real \gmgm background and the fake $\gj,jj$ background are shown in light and dark filled histograms respectively.
-We observe that the fake background, in the range of high sensitivity $\mgg>1\TeV$, amounts approximately only 5\% (15\%) for BB (BE) channels. 
+The unblinded spectra of \mgg are shown in Figs.\ref{fig:Prefit_spectra2016},\ref{fig:Prefit_spectra2017}, and~\ref{fig:Prefit_spectra2018}, together with the prefit prediction. The predictions for the real $\gamma\gamma$ background and the fake $\gamma j, jj$ background are represented by light- and dark-filled histograms, respectively. We observe that the fake background, in the range of high sensitivity $\mgg>1\TeV$, amounts approximately only 5\% (15\%) for BB (BE) channels. 
 The bottom pads present the pulls - the difference between the data and the MC prediction divided by the standard deviation $\sigma_{STAT}$, as well as the magnitude of prefit rate systematic uncertainty, $\sigma_{SYS}$, where for the latter only the 5\% of real and the 30\% of the fake backgrounds uncertainties on rate have been considered.
+
+% The unblinded spectra of \mgg are shown in Figs.\ref{fig:Prefit_spectra2016},\ref{fig:Prefit_spectra2017}, and~\ref{fig:Prefit_spectra2018}, together with the prefit prediction. The predictions for the real $\gamma\gamma$ background and the fake $\gamma j, jj$ background are represented by light- and dark-filled histograms, respectively."
 The data exhibit over all a fair agreement with the prefit background estimate withing the systematics uncertainties, while in some case (for low masses) the data are slightly off the $\pm1\sigma$ uncertainty band for a few sequential bins. The spectra are fit within the range of 500--4000 \GeV, were the last bin includes the overflow events. Additionally, the \mgg background normalization is allowed to float freely within 5\% in the BB and BE categories separately. The low-mass data will easily constrain the nuisance parameters.
 
 \begin{figure}[!htbp]{\centering{
@@ -107,7 +155,7 @@ The final prediction is derived from a fit to the data, a procedure which absorb
 \label{fig:Prefit_spectra2018}}
 \end{figure}
 
-It is important to clarify at this point that the NNLO k-factor-corrected diphoton estimate together with the data-driven fake background estimate do not correspond to the final prediction of the total SM background. Instead, the final prediction is derived from the fit which simultaneously constrains nuisances and the signal strength. Additionally, the \mgg spectra presented in Figs.~\ref{fig:Prefit_spectra2016},~\ref{fig:Prefit_spectra2017}, and~\ref{fig:Prefit_spectra2018}  are the six observables used in the fit and termed as the prefit prediction together with all systematic uncertainties discussed in the previous Ch.~\ref{ch:systematics}. The nuisance parameters are then marginalized with the \THETA framework to derive posterior predictions for the \mgg spectra and signal strength, from which we can derive the 95\% CL exclusion limits on the BSM models probed. %ADD and clockwork models.
+It is important to clarify at this point that the NNLO k-factor-corrected diphoton estimate together with the data-driven fake background estimate do not correspond to the final prediction of the total SM background. Instead, the final prediction is derived from the fit which simultaneously constrains nuisances and the signal strength. Additionally, the \mgg spectra presented in Figs.~\ref{fig:Prefit_spectra2016},~\ref{fig:Prefit_spectra2017}, and~\ref{fig:Prefit_spectra2018}  are the six observables used in the fit and termed as the prefit prediction together with all systematic uncertainties discussed in the previous Ch.~\ref{ch:systematics}. The nuisance parameters are then marginalized with the \THETA framework to derive posterior predictions for the \mgg spectra and signal strength, from which we can derive the 95\% CL (Confidence Level) exclusion limits on the BSM models probed. %ADD and clockwork models.
 
 
 % For the limit setting, the \mgg spectra shown in figures ~\ref{fig:Prefit_spectra2016}, ~\ref{fig:Prefit_spectra2017}, ~\ref{fig:Prefit_spectra2018} are used. The six \mgg spectra are binned in 100 \GeV, starting at 500 \GeV and ending at 4000 \GeV. The last bin contains the overflow above that mass.
@@ -194,7 +242,7 @@ The nuisances are constrained and their priors which are either gaussian or logn
 \caption{The postfit probability distribution function (pdf) of each nuisance used in the six region fit.
 Each plot corresponds to the sources (nuisances) presented of the table \ref{tab:Systematics} (names in labels).
 The statistics panel of each plot contain the mean and the standard deviation of the pdf.
-Text indicates the name of each nuisance, and the parenthesis after that indicates the regions in which this is constrained over (\ie{}, notes the correlations).
+Text indicates the name of each nuisance, and the parenthesis after that indicates the regions in which this is constrained over.
 This information can also be found in table \ref{tab:Systematics}. }
 \label{fig:Postfit_Nuisances_real} }
 \end{figure}
@@ -212,10 +260,11 @@ For the ADD model, we have the positive and the negative interference convention
 \label{fig:Limits_real}}
 \end{figure}
 
-From Figure~\ref{fig:Limits_real}, we can read the limits on the $M_S$ parameter as intersections with the horizontal line, where the signal strength is equal to 1. The green and yellow bands indicate the $\pm1\sigma$ and $\pm2\sigma$ standard deviation bands, respectively. The limits results from the GRW and Hewett- conventions could be translated to other ADD conventions as explained in Section~\ref{subsec:MC_Signal_ADD}. These are the HLZ conventions of positive interference for $n_{ED}=3,4,5,6,7$ which are obtained by scaling the GRW and the Hewett+ is obtained by scaling the Hewett- results. Table~\ref{Tab:Limits161718} presents the lower limits on $M_S$ scale for all available ADD signal scenarios. The total asymmetric uncertainties are shown on the expected limits.
+From Figure~\ref{fig:Limits_real}, we can read the limits on the $M_S$ parameter as intersections with the horizontal line, where the signal strength is equal to 1. The green and yellow bands indicate the $\pm1\sigma$ and $\pm2\sigma$ standard deviation bands, respectively. The limits results from the GRW and Hewett- conventions could be translated to other ADD conventions as explained in Section~\ref{subsec:MC_Signal_ADD}. These are the HLZ conventions of positive interference for $n_{ED}=3,4,5,6,7$ which are obtained by scaling the GRW and the Hewett+ is obtained by scaling the Hewett- results. Table~\ref{Tab:Limits161718} presents the lower limits on $M_S$ scale for all available ADD signal scenarios. The total asymmetric uncertainties are appended to the expected limits.
+% The total asymmetric uncertainties are shown on the expected limits.
 \begin{table}[pt]
     \centering
-    \caption{Exclusion limits on the mass scale \Ms (in units of {\TeVns}) for various conventions used in the calculation of the ADD large extra-dimensional scenario using the 2016-2018 CMS detector data corresponding to an integrated luminosity of 138 \fbinv.}
+    \caption{Full CMS Run II exclusion limits on the mass scale \Ms (in units of {\TeVns}) for various conventions used in the calculation of the ADD large extra-dimensional scenario using the 2016-2018 CMS detector data corresponding to an integrated luminosity of 138 \fbinv.}
     \cmsTable{
     \begin{tabular}{ccccccccc}
         \\    
@@ -232,7 +281,7 @@ From Figure~\ref{fig:Limits_real}, we can read the limits on the $M_S$ parameter
     }
     \label{Tab:Limits161718}
 \end{table}
-The limit code was previously tested with pseudodata and the results were consistent with the 2016 data search. With the unblinded results, we have set the most stringent limits on the ADD Large Extra dimensions in the diphoton channel.
+The limit code was previously tested with pseudodata and the results were consistent with the 2016 data search. With the unblinded results, we have set the most stringent limits up-to-date on the ADD interpretation in the diphoton channel using the full Run-2 CMS data from 2016--2018.
 
 The different trends that GRW and Hewett exhibit are artifacts that the former model predicts an excess while the latter deficit of events in high masses. As the data in the BB region where we are most sensitive indicate small deficit with respect to SM postfit estimate, observed limits behave this way in accordance with our expectations. 
 
@@ -245,7 +294,9 @@ The different trends that GRW and Hewett exhibit are artifacts that the former m
 \subsection{CW Limits}~\label{sec:CWlimits}
 The strategy for limit setting on the clockwork model (CW) is similar to the ADD model as described in the previous section. We use the data \mgg spectra to constrain the resonant excess due to the clockwork model by marginalizing over the aforementioned nuisance parameters assuming a flat prior for the signal strength. One difference with the ADD model is that for the CW we can only use the spectra $\mgg>1000$ \GeV. Since the CW distributions are combinations of the positive and negative interference ADD samples, we are constrained by the samples that are readily available. Below $\mgg>1000$ \GeV, statistical fluctuations dominate such that meaningful conclusions could not be made. 
 
-From Eq.~\ref{eq:rescalingfactorCW}, we see that the CW signal strength normalization scales as $M_5^{-3}$, so a direct translation between an upper limit on the signal strength $\beta$ or in other references $\mu$, a lower limit on $M_5$ can be made for a fixed value of $k$. Figure~\ref{Fig:LIMIT_Clockwork_real} shows the 95\% CL exclusion in the $k$--$M_5$ plane with real data.
+Eq.~\ref{eq:rescalingfactorCW} shows that the CW signal strength normalization scales as  $M_5^{-3}$, hence the upper limit on the signal strength can be directly translated as a lower limit on $M_5$ for a fixed $k$.  Figure~\ref{Fig:LIMIT_Clockwork_real} shows the updated 95\% CL exclusion in the $k$--$M_5$ plane with the full Run II data.
+
+% From Eq.~\ref{eq:rescalingfactorCW}, we see that the CW signal strength normalization scales as $M_5^{-3}$, so a direct translation between an upper limit on the signal strength $\beta$ or in other references $\mu$, a lower limit on $M_5$ can be made for a fixed value of $k$. Figure~\ref{Fig:LIMIT_Clockwork_real} shows the 95\% CL exclusion in the $k$--$M_5$ plane with real data.
 The signal shapes are generated for values of $k$ as low as 0.1 \GeV and up to 5 \TeV. The $k>M_5$ space is non-perturbative so we denote this region of phase-space with blue color in the $k$--$M_5$ plane.
 
 % \begin{figure}[h!]\centering
@@ -259,7 +310,7 @@ The signal shapes are generated for values of $k$ as low as 0.1 \GeV and up to 5
     \centering
     \includegraphics[width=0.49\linewidth]{fig/LIMITPLOT_BBBE161718_CWk_real.png}
     \includegraphics[width=0.47\linewidth]{fig/LIMITPLOT_BBBE161718_CWk_nonLog_real.png}
-    \caption{Exclusion limit for the continuous graviton model in the clockwork framework (CW) over the $k-M_5$ parameter space. The shaded region denotes where the theory becomes non-perturbative. The right plot displays a non-logarithmic axis.}
+    \caption{Exclusion limit for the clockwork framework over the $k-M_5$ parameter space. The shaded region denotes where the theory becomes non-perturbative. The right plot displays a non-logarithmic axis.}
     \label{Fig:LIMIT_Clockwork_real}
 \end{figure}
 
@@ -295,7 +346,7 @@ The CMS clockwork exclusion results shown in Figure~\ref{Fig:LIMIT_Clockwork_RUN
 
 \begin{figure}[h!]\centering
 \includegraphics[width=0.47\linewidth]{fig/CWCMSI.png}
-\caption{The previously published~\cite{cmsdiphoton2016} Run II, 2016-only 95\% CL exclusion limit for the continuous graviton model in the clockwork framework over the $k-M_5$ parameter space. The shaded bands represent the $\pm1$ and $\pm2$ standard deviation uncertainty in the expected limit. The shaded region in purple is where the theory becomes nonperturbative.}
+\caption{The previously published~\cite{cmsdiphoton2016} Run II, 2016-only 95\% CL exclusion limit for the clockwork model in the $k-M_5$ parameter space. The green ($\pm1$) and yellow ($\pm2$) shaded bands represent the standard deviation uncertainties in the expected limit (dashed lines). The shaded region in purple at the lower right is where the theory becomes nonperturbative.}
 \label{Fig:LIMIT_Clockwork_RUN1}
 \end{figure}
 
@@ -360,8 +411,14 @@ We also find in the same figure that for a fixed $d_{u}$ ($\Lambda_{u}$) the sen
 
 \subsection{Comparison with Z+MET search}
 
-The search for Unparticles have also been done in the Z + MET channel where the unparticle appears as the missing energy undetected by CMS. In the latest results from Ref.~\cite{CMS:2020ulv}, upper limits were set at 95\% CL on the cross section with $\Lambda_U$ = 15~\TeV. The observed (expected) limits are 0.5 (0.7) pb, 0.24
-(0.26) pb, and 0.09 (0.07) pb for $d_u$ = 1, $d_u$ = 1.5, and $d_u$ = 2. These limits depend on the choice of $\lambda$ and $\Lambda_{u}$, as the cross section scales with the Wilson coefficient, $\frac{\lambda}{\Lambda_{u}}$, and here $\lambda =1$ is also chosen. To compare this with other results, future limit plots should show how how the limit varies with $d_u$. 
+The search for Unparticles have also been done in the Z + MET channel where the unparticle appears as the missing energy undetected by CMS. In the latest results from Ref.~\cite{CMS:2020ulv}, upper limits were set at 95\% CL on the cross section with $\Lambda_U$ = 15~\TeV. Their observed (expected) limits are 0.5 (0.7) pb, 0.24
+(0.26) pb, and 0.09 (0.07) pb for $d_u$ = 1, $d_u$ = 1.5, and $d_u$ = 2. The limits depend on the choice of $\lambda$ and $\Lambda_{u}$ since the cross section scales with the Wilson coefficient written as $\frac{\lambda}{\Lambda_{u}}$. To compare this with other results, future limit plots should show how how the limit varies with $d_u$. 
+
+
+% Since the cross section scales with the Wilson coefficient,  $\frac{\lambda}{\Lambda_{u}}$, the limits depend on the choice of $\lambda$ and $\Lambda_{u}$. 
+
+
+% These limits depend on the choice of $\lambda$ and $\Lambda_{u}$, as the cross section scales with the Wilson coefficient, $\frac{\lambda}{\Lambda_{u}}$, and here $\lambda =1$ is also chosen. To compare this with other results, future limit plots should show how how the limit varies with $d_u$. 
 
 % \begin{figure}
 %     \centering

@@ -1,6 +1,8 @@
 \chapter{Datasets and Trigger Paths}\label{ch:appendix_datasets_triggerpaths}
-\raggedright\parindent=25pt
+% \raggedright\parindent=25pt
 Events containing two prompt photon events are selected online with \texttt{HLT\_DoublePhoton60} or \texttt{HLT\_DoublePhoton70} trigger paths for 2016 and 2017/2018 data respectively. These two triggers require at least two reconstructed photon candidates with a transverse momentum $p_{T} > 60 (70)$~GeV across the range $|\eta| < 3.0$. At this level, the primary selection requires that each photon candidate must have a ratio of the hadronic to the electromagnetic energy (H/E) $<$ 0.15. The electromagnetic energy here is defined as the corrected supercluster energy while the hadronic energy is the total HCAL energy within a cone of $\Delta R <$  0.15 from the supercluster position. This ratio is also the amount of the HCAL energy in the tower directly behind the photon seed crystal. This trigger is seeded by the logical \texttt{OR} of a suite \texttt{SingleEG}, \texttt{DoubleEG}, \texttt{SingleJet}, and \texttt{SingleTau} L1 seeds with varying trigger thresholds. 
+
+% To quantify the efficiency of the \texttt{HLT_DoublePhoton60/70} triggers, we normalized using the reference trigger \texttt{HLT_DoublePhoton33_CaloIdL}. This trigger selects events with two photons, each having transverse momentum greater than 33 GeV and satisfying the Calorimeter Identification (CaloId) criteria. The efficiency primarily depends on the transverse momentum ($p_{T}$) of the second-leading photon, which is the photon with the second highest $p_{T}$ among the collection. The results of this analysis are presented in Figure~\ref{fig:trigger_efficiency}. Previous studies \cite{ref:AN2016_167} have demonstrated that there are no additional sources of efficiency, and this study serves as a cross-check.
 
 To quantify the efficiency of the \texttt{HLT\_DoublePhoton60/70} triggers, we used the reference trigger \texttt{HLT\_DoublePhoton33\_CaloIdL} for normalization. The \texttt{HLT\_DoublePhoton33\_CaloIdL} trigger selects events that contain two photons, each with transverse momentum greater than 33 GeV and satisfying the Calorimeter Identification (CaloId) criteria. The efficiency is primarily a function of the $p_{T}$ of the second-leading photon, the photon which has the second highest $p_{T}$ among the collection of photons. The results are shown in Figure~\ref{fig:trigger_efficiency}. This procedure only probes the turn-on of the $p_{T}$ leg \cite{ref:AN2016_167} have shown that there is no additional source of efficiency and this study serves as a cross-check. 
 
@@ -18,11 +20,14 @@ Additionally, we use \texttt{HLT\_ECALHT800} as a backup trigger which adds appr
 % \label{fig:trigger_efficiency}
 % \end{figure}
 \section{Data Samples}~\label{Data samples}
-The data samples considered for this analysis are listed in Table~\ref{table:datasets2016-18} and correspond to an integrated luminosity of 138~\fbinv collected by the CMS experiment from 2016 to the end of 2018. The 2016 and 2017 data sets were processed in {\tt CMSSW\_9\_4\_13}, while the 2018 data sets are processed using {\tt CMSSW\_10\_2\_16}. The global tags used to analyze the data are listed in Table~\ref{table:datasets2016-18}. These samples also fulfill standard data quality criteria for all the subdetectors of CMS as specified by the good run JSONs listed in Table~\ref{table:json}. Calculation of the luminosity using the \texttt{HLT\_ECALHT800} trigger gives the same luminosity.
+The data samples considered for this analysis are listed in Table~\ref{table:datasets2016-18} and correspond to an integrated luminosity of 138~\fbinv collected by the CMS experiment from 2016 to the end of 2018. The 2016 and 2017 data sets were processed in {\tt CMSSW\_9\_4\_13}, while the 2018 data sets are processed using {\tt CMSSW\_10\_2\_16}. The global tags used to analyze the data are listed in Table~\ref{table:datasets2016-18}. These samples also fulfill standard data quality criteria for all the subdetectors of CMS as specified by the good run JSONs listed in Table~\ref{table:json}. Calculation of the luminosity using the \texttt{HLT\_ECALHT800} trigger gives the same luminosity. The integrated luminosity of the MINIAOD Data samples where calculated with the \texttt{--hltpath HLT\_DoublePhoton60/70} option of \texttt{brilcalc} and the processed luminosity sections given by \texttt{crab --report}.
 
 %brilcalc lumi --normtag ~lumipro/public/Normtags/normtag DATACERT.json -i JSON 2017/8 data.
+% \begin{table}[!htbp]
+% 	\caption{MINIAOD Data samples analyzed and the corresponding integrated luminosity, calculated with the \texttt{--hltpath HLT\_DoublePhoton60/70} option of \texttt{brilcalc} and the processed luminosity sections given by \texttt{crab --report}.}
+
 \begin{table}[!htbp]
-	\caption{MINIAOD Data samples analyzed and the corresponding integrated luminosity, calculated with the \texttt{--hltpath HLT\_DoublePhoton60/70} option of \texttt{brilcalc} and the processed luminosity sections given by \texttt{crab --report}.}
+	\caption{MINIAOD Data samples analyzed and the corresponding integrated luminosity, calculated with Double Photon Trigger and the processed luminosity sections.}
 	
 	\centering
 	\resizebox{\textwidth}{!}{%
@@ -295,40 +300,40 @@ The Closure test makes use of MC simulations rather than data in validating the 
 \end{table}
 % \end{landscape}
 
-\section{MC Signal Datasets}~\label{MCSignal}
+% \section{MC Signal Datasets}~\label{MCSignal}
 
-The Dataset paths for the signal interpretations used in this analysis are shown below.
+% The Dataset paths for the signal interpretations used in this analysis are shown below.
 
-\begin{table}[!htbp]
-  \caption{Nonresonant signal samples were generated for the \texttt{RunIISummer16MiniAODv3}, \texttt{RunIIFall17MiniAODv2}, and \texttt{RunIIAutumn18MiniAOD} campaigns. TT
-he full list of sample names and their associated cross sections are found in Appendix~\ref{ch:appendix_signal_monte_carlo}. To span the entire mass spectrum, samples were
-e produced in split mass bins from $\mgg = 500\GeV$ up to the value of $\Lambda_T$.
-}
-  \centering
-  \vspace{\baselineskip}
-  \begin{tabular}{lc}
-  \hline \hline
-  Data set\\
-  \hline
-  /ADDGravToGG\_NegInt-0\_LambdaT-XXX\_M-XXXToXXXX\_TuneCP2\_13TeV-pythia8 \\
-  /ADDGravToGG\_NegInt-1\_LambdaT-XXX\_M-XXXToXXX\_TuneCP2\_13TeV-pythia8 \\
-  \hline \hline
-  \end{tabular}
-  \label{table:ADDsamples}
-\end{table}
+% \begin{table}[!htbp]
+%   \caption{Nonresonant signal samples were generated for the \texttt{RunIISummer16MiniAODv3}, \texttt{RunIIFall17MiniAODv2}, and \texttt{RunIIAutumn18MiniAOD} campaigns. TT
+% he full list of sample names and their associated cross sections are found in Appendix~\ref{ch:appendix_signal_monte_carlo}. To span the entire mass spectrum, samples were
+% e produced in split mass bins from $\mgg = 500\GeV$ up to the value of $\Lambda_T$.
+% }
+%   \centering
+%   \vspace{\baselineskip}
+%   \begin{tabular}{lc}
+%   \hline \hline
+%   Data set\\
+%   \hline
+%   /ADDGravToGG\_NegInt-0\_LambdaT-XXX\_M-XXXToXXXX\_TuneCP2\_13TeV-pythia8 \\
+%   /ADDGravToGG\_NegInt-1\_LambdaT-XXX\_M-XXXToXXX\_TuneCP2\_13TeV-pythia8 \\
+%   \hline \hline
+%   \end{tabular}
+%   \label{table:ADDsamples}
+% \end{table}
 
-\begin{table}[!htbp]
-	\caption{Unparticles samples were generated with both \texttt{RunIIFall17MiniAODv2} and \texttt{RunIIAutumn18MiniAOD} campaigns. The associated cross sections are found in \url{https://github.com/cms-exotica-diphotons/diphoton-analysis/blob/Unparticles/CommonClasses/interface/CrossSections.h}.
-}
-	\centering
-	\vspace{\baselineskip}
-	\begin{tabular}{lc}
-	\hline \hline
-	Data set\\
-	\hline
-	/UnparToGG\_Spin0\_duXXX\_LambdaU-XXX\_pT70\_MXXX-XXX\_TuneCP2\_13TeV\_pythia8 \\
-	/UnparToGG\_Spin2\_duXXX\_LambdaU-XXX\_pT70\_MXXX-XXX\_TuneCP2\_13TeV\_pythia8 \\
-	\hline \hline
-	\end{tabular}
-	\label{table:UnparticlesSamples}
-\end{table}
+% \begin{table}[!htbp]
+% 	\caption{Unparticles samples were generated with both \texttt{RunIIFall17MiniAODv2} and \texttt{RunIIAutumn18MiniAOD} campaigns. The associated cross sections are found in \url{https://github.com/cms-exotica-diphotons/diphoton-analysis/blob/Unparticles/CommonClasses/interface/CrossSections.h}.
+% }
+% 	\centering
+% 	\vspace{\baselineskip}
+% 	\begin{tabular}{lc}
+% 	\hline \hline
+% 	Data set\\
+% 	\hline
+% 	/UnparToGG\_Spin0\_duXXX\_LambdaU-XXX\_pT70\_MXXX-XXX\_TuneCP2\_13TeV\_pythia8 \\
+% 	/UnparToGG\_Spin2\_duXXX\_LambdaU-XXX\_pT70\_MXXX-XXX\_TuneCP2\_13TeV\_pythia8 \\
+% 	\hline \hline
+% 	\end{tabular}
+% 	\label{table:UnparticlesSamples}
+% \end{table}

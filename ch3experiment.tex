@@ -1,4 +1,4 @@
-\chapter{The Large Hadron Collider and CMS}~\label{ch:CMSExperiment}
+\chapter{Experimental Setup: The Large Hadron Collider and the CMS Detector}~\label{ch:CMSExperiment}
 
 {\small \rightline{“It doesn't matter how beautiful your theory is, it doesn't matter }
 \vspace{-2ex}
@@ -12,7 +12,7 @@ In this chapter, we discuss the experimental setup. First, in Sec~\ref{sec:LHC} 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[scale=0.3]{fig/lhc_overview.png}
-	\caption{An overview of the location of LHC and its four interaction points~\cite{Mouche:1708847}.}
+	\caption{A bird's eyeview and and schematic depiction of the underground LHC accelerator complex and its four interaction points in Geneva, Switzerland and France~\cite{Mouche:1708847}.}
 	\label{lhc-overview}
 \end{figure}
 
@@ -34,11 +34,11 @@ The full 27-km LHC ring is made up of segments of cryogenically-cooled supercond
 
 \subsubsection{The CERN Accelerator Complex}
 
-Before the protons or lead ions reach the collision points, they first have to go through a series of accelerators shown in Figure~\ref{fig:accelerator_complex} to reach the desired total collision energy of 13 TeV for Run II. For the sake of brevity, we will only consider proton beams at this point but lead ions follow the same route but start from vaporized led. Protons, on the other hand, are sourced from molecular hydrogen which are ionized. Ionized hydrogen (H-) are then extracted and injected to Linac4 where Radiofrequency (RF) cavitites are used to accelerate them to 160 MeV. They are then prepared to enter the first of the circular accelerators called the Proton Synchrotron Booster (PSB). Before they enter the PSB, the ions are stripped of their electrons and the protons are accelerated to 2 GeV. This prepares them for injection to the Proton Synchrotron (PS) which increases the beam energy to 26 GeV. The final step before injection to the LHC is in the Super Proton Synchrotron where the beams are accelerated up to 450 GeV. 
-
+Before the protons or lead ions reach the collision points, they first have to go through a series of accelerators shown in Figure~\ref{fig:accelerator_complex} to reach the desired total collision energy of 13 TeV for Run II. For the sake of brevity, we will only consider proton beams at this point but lead ions follow the same route but start from vaporized led. Protons, on the other hand, are sourced from molecular hydrogen which are ionized. Ionized hydrogen (H-) are then extracted and injected to Linac4 where Radiofrequency (RF) cavitites are used to accelerate them to 160 MeV. They are then prepared to enter the first of the circular accelerators called the Proton Synchrotron Booster (PSB). Before they enter the PSB, the ions are stripped of their electrons and the protons are accelerated to 2~\GeV. This prepares them for injection to the Proton Synchrotron (PS) which increases the beam energy to 26~\GeV. The final step prior to injection to the final LHC ring is in the Super Proton Synchrotron (SPS) where the beams reach up to 450~\GeV.
+The proton beams take around 20 minutes to reach their maximum energy of 6.5~\TeV in the LHC ring and they can circulate for many hours inside the LHC beam pipes during normal operations. During collisions, the counter-rotating beams meat at the interaction points inside the four primary detectors described earlier.
 % This means that the counter-rotating particle beams each have an energy of E = 6.5 TeV \cite{LHCpop}
 
-Once the proton beams are transferred into the two counter-rotating beam pipes of the LHC, it takes around 20 minutes for the protons to reach their maximum energy of 6.5 TeV. The beams can circulate for many hours inside the LHC beam pipes under normal operating conditions and during collisions, they meet at at the interaction points inside the four detectors described earlier. 
+% Once the proton beams are transferred into the two counter-rotating beam pipes of the LHC, it takes around 20 minutes for the protons to reach their maximum energy of 6.5 TeV. The beams can circulate for many hours inside the LHC beam pipes under normal operating conditions and during collisions, they meet at at the interaction points inside the four detectors described earlier. 
 
 
 % \begin{figure}[!htbp]
@@ -143,8 +143,8 @@ While higher luminosities provide us more data, it comes with challenges. In eac
 \includegraphics[angle=0,width=0.45\textwidth]{fig/PileupAcrossTheYears.png}
 \includegraphics[angle=0,width=0.45\textwidth]{fig/LuminosityAcrossTheYears.png}
 \end{center}
-\caption{Distribution of the mean number of inelastic interactions per crossing or pileup in data
-for pp collisions for various years (left). A total inelastic pp collision
+\caption{The mean number of pileup or inelastic interactions per proton bunch crossing in data
+for proton-proton (pp) collisions for various years (left). A total inelastic pp collision
 cross section of 69.2 mb is chosen~\cite{CMS:2020ebo}. The Luminosity is shown for various time with white spaces for periods the LHC is not operating (right).}
 \label{fig:LHCBeam}
 \end{figure}
@@ -385,14 +385,22 @@ I also began the preparation of the new AMC13s which were production-tested by C
 
 In the first half 2021, I have also participated DAQ On-call and DCS Technical shifts at P5 as well as in the updating of the firmwares for the igloo2 FPGAs in the HF ngCCMs located at the CMS cavern shown in Figure~\ref{fig:HFIglooReprogramming}. 
 
-\begin{figure}[tbp!]
-\label{fig:DataFlowHCAL}
-\begin{center}
+% \begin{figure}[tbp!]
+% \label{fig:DataFlowHCAL}
+% \begin{center}
+% \includegraphics[scale=0.6]{fig/CalorimeterTrigger.png}
+% \end{center}
+% \caption{ Schematic diagram of the data flow in HB/HE starting from the photomultipliers through the QIE, FPGA and to the backend and AMC13 and to the CMS DAQ~\cite{Cooper:2016kef}.
+% }
+% \end{figure}
+
+\begin{figure}
+\centering
 \includegraphics[scale=0.6]{fig/CalorimeterTrigger.png}
-\end{center}
-\caption{ Schematic diagram of the data flow in HB/HE starting from the photomultipliers through the QIE, FPGA and to the backend and AMC13 and to the CMS DAQ~\cite{Cooper:2016kef}.
-}
+\caption{Schematic diagram of the data flow in HB/HE starting from the photomultipliers through the QIE, FPGA and to the backend and AMC13 and to the CMS DAQ~\cite{Cooper:2016kef}.}
+\label{fig:DataFlowHCAL}
 \end{figure}
+
 
 \begin{figure}[!htb]
 	\centering
@@ -567,49 +575,6 @@ To determine exactly the time boundary between the states is ascertained from th
 % Physics coordination would like to see a citation to the paper CMS-LUM-17-003 in all CMS papers. The BibTeX for the other two PASes is also given below. 
 
 
-% \begin{figure}[!htb]
-% 	\centering
-% 	\includegraphics[scale=0.7]{fig/TimeDelay.png}
-% 	\caption{An overview of the location of LHC and its four interaction points~\cite{Mouche:1708847}.}
-% 	\label{lhc-overview}
-% \end{figure}
-
-
-% \begin{figure}[!htb]
-% 	\centering
-% 	\includegraphics[scale=0.7]{fig/Backend.png}
-% 	\caption{An overview of the location of LHC and its four interaction points~\cite{Mouche:1708847}.}
-% 	\label{lhc-overview}
-% \end{figure}
-
-% \begin{figure}[!htb]
-% 	\centering
-% 	\includegraphics[scale=0.3]{fig/BackEndAMC13.png}
-% 	\caption{An overview of the location of LHC and its four interaction points~\cite{Mouche:1708847}.}
-% 	\label{lhc-overview}
-% \end{figure}
-
-% \begin{figure}[!htb]
-% 	\centering
-% 	\includegraphics[scale=0.3]{fig/BackendFE.png}
-% 	\caption{An overview of the location of LHC and its four interaction points~\cite{Mouche:1708847}.}
-% 	\label{lhc-overview}
-% \end{figure}
-
-% \begin{figure}[!htb]
-% 	\centering
-% 	\includegraphics[scale=0.3]{fig/BackendRMs.png}
-% 	\caption{An overview of the location of LHC and its four interaction points~\cite{Mouche:1708847}.}
-% 	\label{lhc-overview}
-% \end{figure}
-
-
-% \begin{figure}[!htb]
-% 	\centering
-% 	\includegraphics[scale=0.3]{fig/RBX_RM_QIE.png}
-% 	\caption{An overview of the location of LHC and its four interaction points~\cite{Mouche:1708847}.}
-% 	\label{lhc-overview}
-% \end{figure}
 
 
 

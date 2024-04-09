@@ -62,7 +62,11 @@ Uncertainties due to the photon energy scale and resolution shown in Figure~\ref
 
 % \textbf{For photon energy scale and resolution}~\ref{fig:E_scale_sys}, we include the efficiency and the energy scale gains. 
 
-\begin{figure}[!htbp]{ \centering{
+\begin{figure}[!htbp]{ 
+\caption{The resulting uncertainties from first 25 of the 50 variations of the PDFs eigenvectors. 
+The variation over central estimate is shown versus the \mgg. 
+(Plots shown stand for BB, while the corresponding for BE, as they are very similar, have been omitted).} 
+\centering{
 \includegraphics[width=0.16\textwidth]{fig/spectra__pdf1_BB18_ADDGRW.png}
 \includegraphics[width=0.16\textwidth]{fig/spectra__pdf2_BB18_ADDGRW.png}
 \includegraphics[width=0.16\textwidth]{fig/spectra__pdf3_BB18_ADDGRW.png}
@@ -115,43 +119,14 @@ Uncertainties due to the photon energy scale and resolution shown in Figure~\ref
 % \includegraphics[width=0.16\textwidth]{fig/spectra__pdf48_BB18_ADDGRW.png}
 % \includegraphics[width=0.16\textwidth]{fig/spectra__pdf49_BB18_ADDGRW.png}
 % \includegraphics[width=0.16\textwidth]{fig/spectra__pdf50_BB18_ADDGRW.png}\\}
-\caption{The resulting uncertainties from first 25 of the 50 variations of the PDFs eigenvectors. 
-The variation over central estimate is shown versus the \mgg. 
-(Plots shown stand for BB, while the corresponding for BE, as they are very similar, have been omitted).
-} 
 \label{Fig:PDFs_Sys1} }
 \end{figure}
 
-\begin{figure}[!htbp]{ \centering{
-% \includegraphics[width=0.16\textwidth]{fig/spectra__pdf1_BB18_ADDGRW.png}
-% \includegraphics[width=0.16\textwidth]{fig/spectra__pdf2_BB18_ADDGRW.png}
-% \includegraphics[width=0.16\textwidth]{fig/spectra__pdf3_BB18_ADDGRW.png}
-% \includegraphics[width=0.16\textwidth]{fig/spectra__pdf4_BB18_ADDGRW.png}
-% \includegraphics[width=0.16\textwidth]{fig/spectra__pdf5_BB18_ADDGRW.png}\\
-% \includegraphics[width=0.16\textwidth]{fig/spectra__pdf6_BB18_ADDGRW.png}
-% \includegraphics[width=0.16\textwidth]{fig/spectra__pdf7_BB18_ADDGRW.png}
-% \includegraphics[width=0.16\textwidth]{fig/spectra__pdf8_BB18_ADDGRW.png}
-% \includegraphics[width=0.16\textwidth]{fig/spectra__pdf9_BB18_ADDGRW.png}
-% \includegraphics[width=0.16\textwidth]{fig/spectra__pdf10_BB18_ADDGRW.png}\\
-% \includegraphics[width=0.16\textwidth]{fig/spectra__pdf11_BB18_ADDGRW.png}
-% \includegraphics[width=0.16\textwidth]{fig/spectra__pdf12_BB18_ADDGRW.png}
-% \includegraphics[width=0.16\textwidth]{fig/spectra__pdf13_BB18_ADDGRW.png}
-% \includegraphics[width=0.16\textwidth]{fig/spectra__pdf14_BB18_ADDGRW.png}
-% \includegraphics[width=0.16\textwidth]{fig/spectra__pdf15_BB18_ADDGRW.png}\\
-% \includegraphics[width=0.16\textwidth]{fig/spectra__pdf16_BB18_ADDGRW.png}
-% \includegraphics[width=0.16\textwidth]{fig/spectra__pdf17_BB18_ADDGRW.png}
-% \includegraphics[width=0.16\textwidth]{fig/spectra__pdf18_BB18_ADDGRW.png}
-% \includegraphics[width=0.16\textwidth]{fig/spectra__pdf19_BB18_ADDGRW.png}
-% \includegraphics[width=0.16\textwidth]{fig/spectra__pdf20_BB18_ADDGRW.png}\\
-% \includegraphics[width=0.16\textwidth]{fig/spectra__pdf21_BB18_ADDGRW.png}
-% \includegraphics[width=0.16\textwidth]{fig/spectra__pdf22_BB18_ADDGRW.png}
-% \includegraphics[width=0.16\textwidth]{fig/spectra__pdf23_BB18_ADDGRW.png}
-% \includegraphics[width=0.16\textwidth]{fig/spectra__pdf24_BB18_ADDGRW.png}
-% \includegraphics[width=0.16\textwidth]{fig/spectra__pdf25_BB18_ADDGRW.png}\\
-
-
-
-
+\begin{figure}[!htbp]{
+\caption{The resulting uncertainties from the last 25 of 50 variations of the PDFs eigenvectors. 
+The variation over central estimate is shown versus the \mgg. 
+(Plots shown stand for BB, while the corresponding for BE, as they are very similar, have been omitted).} 
+\centering{
 \includegraphics[width=0.16\textwidth]{fig/spectra__pdf26_BB18_ADDGRW.png}
 \includegraphics[width=0.16\textwidth]{fig/spectra__pdf27_BB18_ADDGRW.png}
 \includegraphics[width=0.16\textwidth]{fig/spectra__pdf28_BB18_ADDGRW.png}
@@ -177,14 +152,11 @@ The variation over central estimate is shown versus the \mgg.
 \includegraphics[width=0.16\textwidth]{fig/spectra__pdf48_BB18_ADDGRW.png}
 \includegraphics[width=0.16\textwidth]{fig/spectra__pdf49_BB18_ADDGRW.png}
 \includegraphics[width=0.16\textwidth]{fig/spectra__pdf50_BB18_ADDGRW.png}\\}
-\caption{The resulting uncertainties from the last 25 of 50 variations of the PDFs eigenvectors. 
-The variation over central estimate is shown versus the \mgg. 
-(Plots shown stand for BB, while the corresponding for BE, as they are very similar, have been omitted).
-} 
 \label{Fig:PDFs_Sys2} }
 \end{figure}
 
 \section{Fake Background Systematics}~\label{sec:fakeBKGSYS}
+\RaggedRight \parindent=25pt
 We assign a 30\% systematic uncertainty to the normalization of the fake $gj$ background covering the degree of variation in the fake rate in bins of photon $\eta$, number of primary vertices, pileup, and the choice of the sideband definition and template variable. Six different nuisances have been assigned, one for each of the six signal regions, with a 30\% magnitude and a lognormal prior. Figure~\ref{fig:FakeSampleSys} shows the effect of the "fake sample" systematic uncertainty listed in Table~\ref{tab:Systematics}. We've decided to drop the jj contribution since it is 2 orders of magnitude smaller than the gj contribution. The 30\% rate also covers the non-closure seen in the fake rate closure test, and the differences between the fake rate derived from the jet-triggered and muon-triggered data samples. The jet-triggered and the muon-triggered data samples resulted in slightly different fake rate estimates and the mean of the two was taken as the central value for the fake rate estimate. The maximum and minimum extremes were used to assign two (plus and minus) alternative predictions for the fake background. This source of uncertainty accounts for the difference in the quark and gluon contents of the two data sets. The details of these studies are found in Sec.~\ref{sec:bkg_fake} and Sec.~\ref{sec:closure_test}. 
 
 \section{Signal Systematics}~\label{sec:sigSYS}
@@ -244,10 +216,11 @@ The signal distributions are normalized to the integrated luminosity. We assign 
 
 % \section{Real and Fake Background Systematic Uncertainties}
 
-\begin{figure}[!htbp]{ \centering{
+\begin{figure}[!htbp]{
+\caption{The uncertainty on the real \gmgm background that arises from PDFs (parton distribution function) uncertainties, displayed separately for the barrel-barrel and barrel-endcap regions, for evaluations at LO (left) and NLO (right).} 
+\centering{
 \includegraphics[width=0.45\textwidth]{fig/pdf_uncertainty_band_LO.pdf}% generated by pdf_uncertainty.exe
 \includegraphics[width=0.45\textwidth]{fig/pdf_uncertainty_band_nlo.pdf} }
-\caption{The uncertainty on the real \gmgm background that arises from PDFs (parton distribution function) uncertainties, displayed separately for the barrel-barrel and barrel-endcap regions, for evaluations at LO (left) and NLO (right).} 
 \label{Fig:sys_pdf} }
 \end{figure}
 
@@ -263,31 +236,34 @@ The signal distributions are normalized to the integrated luminosity. We assign 
 % PDFs 1-50 hessians    & 50, each corr. across 6 SRs & Shape        & B (\gmgm)      & 6 SRs               \\
 % Pileup                & 1 corr. across SRs          & Shape        & S \& B (\gmgm) & 6 SRs               \\ \hline
 
-\begin{figure}[!htbp]{ \centering{
+\begin{figure}[!htbp]
+\centering
+\caption{Top: NNLO (MCFM) k-factors for different factorization and renormalization (QCD) scales. Bottom: Ratio of these variations over the central value as a function of \mgg. Plots for the BB (barrel-barrel) on the left, and BE (barrel-endcap) on the right.}
 \includegraphics[width=0.4\linewidth]{fig/kfactorScaleVariations_BB_preliminary_NNPDF.pdf} %generated by kfactorScaleVariations.exe
 \includegraphics[width=0.4\linewidth]{fig/kfactorScaleVariations_BE_preliminary_NNPDF.pdf}
 \includegraphics[width=0.4\linewidth]{fig/spectra__diphotonkfactorScalesBB_BB18_ADDGRW.png}
-\includegraphics[width=0.4\linewidth]{fig/spectra__diphotonkfactorScalesBE_BE18_ADDGRW.png} }
-\caption{Top: the NNLO (MCFM) k-factors for different factorization and renormalization (QCD) scales.
-Bottom: the ratio of these variations over the central value as a function of \mgg.
-Plots for the BB (barrel-barrel) on the left, and BE (barrel-endcap) on the right.}\label{Fig:sys_fs}
-}\end{figure}
+\includegraphics[width=0.4\linewidth]{fig/spectra__diphotonkfactorScalesBE_BE18_ADDGRW.png}
+\label{Fig:sys_fs}
+\end{figure}
 
-\begin{figure}[!htbp]{ \centering{
+
+\begin{figure}[!htbp]
+\centering
+\caption{The effect of ``fake sample" systematic uncertainty over the fake background $\gj,jj$ vs the \mgg spectra. Top (bottom) the BB (BE) channels, left to right for years 2016, 2017, and 2018 respectively.}
 \includegraphics[width=0.32\linewidth]{fig/spectra__fakesample_BB16_ADDGRW.png}
 \includegraphics[width=0.32\linewidth]{fig/spectra__fakesample_BB17_ADDGRW.png}
 \includegraphics[width=0.32\linewidth]{fig/spectra__fakesample_BB18_ADDGRW.png}
 \includegraphics[width=0.32\linewidth]{fig/spectra__fakesample_BE16_ADDGRW.png}
 \includegraphics[width=0.32\linewidth]{fig/spectra__fakesample_BE17_ADDGRW.png}
-\includegraphics[width=0.32\linewidth]{fig/spectra__fakesample_BE18_ADDGRW.png} }
-\caption{The effect of ``fake sample" systematic uncertainty over the fake background $\gj,jj$ vs the \mgg spectra. Top (bottom) the BB (BE) channels, left to right for years 2016, 2017, and 2018 respectively.
-} \label{fig:FakeSampleSys}
-}\end{figure}
+\includegraphics[width=0.32\linewidth]{fig/spectra__fakesample_BE18_ADDGRW.png}
+\label{fig:FakeSampleSys}
+\end{figure}
 
 
 % \section{Signal Systematic Uncertainties}
 
 \begin{figure}[!htbp]
+\caption{The left shows the systematic uncertainty trends of ``variation/central" ratios of real \gmgm background vs \mgg for the sources of: ``efficiency", and right for ``energy scale gain". Top to bottom: the six SRs of BB16, ..., BE18 respectively.}
 \centering
 \includegraphics[width=0.24\linewidth, height=1in]{fig/spectra__eff_BB16_ADDGRW.png}
 \includegraphics[width=0.24\linewidth, height=1in]{fig/spectra__energyScaleGain_BB16_ADDGRW.png}\\
@@ -301,7 +277,6 @@ Plots for the BB (barrel-barrel) on the left, and BE (barrel-endcap) on the righ
 \includegraphics[width=0.24\linewidth, height=1in]{fig/spectra__energyScaleGain_BB18_ADDGRW.png}\\
 \includegraphics[width=0.24\linewidth, height=1in]{fig/spectra__eff_BE18_ADDGRW.png}
 \includegraphics[width=0.24\linewidth, height=1in]{fig/spectra__energyScaleGain_BE18_ADDGRW.png}
-\caption{The left shows the systematic uncertainty trends of ``variation/central" ratios of real \gmgm background vs \mgg for the sources of: ``efficiency", and right for ``energy scale gain". Top to bottom: the six SRs of BB16, ..., BE18 respectively.}
 \label{fig:E_scale_sys}
 \end{figure}
 

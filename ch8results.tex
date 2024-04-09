@@ -1,5 +1,5 @@
-\chapter{Results}\label{ch:results} 
-
+\chapter{Results}\label{ch:results}
+\RaggedRight \parindent=25pt
 This chapter discusses the results comparing the compatibility of the observed data with the background-only versus various signal-plus-background hypotheses using a shape-based Bayesian Marginalization procedure for the ADD Large Extra Dimensions and the Clockwork Framework. The Unparticles model uses a simpler cut-and-count approach (rather than a shape-based approach), with the modified frequentist method, also known as the CLs method, is used according to the prescriptions of Ref.~\cite{ATLAS:1379837}, together with the use of asymptotic formulas~\cite{Cowan:2010js}.
 
 % Self-plagiarizing OUR paper
@@ -19,7 +19,6 @@ This chapter discusses the results comparing the compatibility of the observed d
 % 329 convention.
 
 \section{\label{sec:bayesian_inference} Bayesian Confidence Intervals}
-
 A bayesian statistical approach was used to constrain the signal parameters of the ADD Large Extra Dimensions and the Clockwork Framework using the \texttt{THETA} framework~\cite{THETAFrameworkIntro}, with a flat prior on the signal strength assumed and constrained to be positive. By convention in particle physics, a flat prior constrained to be positive is motivated by our lack of prior knowledge on the signal uncertainty and the fact that this is a shape analysis. It is often considered a good choice due to simplicity, ease of implementation, and avoids the introduction of an additional assumption in the analysis. \THETA uses a Markov-Chain method to marginalize the nuisance parameters. In the next parts of this text, we briefly introduce Bayes theorem, and the inputs used to set the limits on the aforementioned models.
 % 314 For the nonresonant analysis, constant bin widths of 100 GeV are used. Similar to the resonant
 % 315 analysis, a simultaneous fit to the mγγ spectrum in six event categories, EBEB and EBEE for
@@ -110,7 +109,11 @@ The bottom pads present the pulls - the difference between the data and the MC p
 % The unblinded spectra of \mgg are shown in Figs.\ref{fig:Prefit_spectra2016},\ref{fig:Prefit_spectra2017}, and~\ref{fig:Prefit_spectra2018}, together with the prefit prediction. The predictions for the real $\gamma\gamma$ background and the fake $\gamma j, jj$ background are represented by light- and dark-filled histograms, respectively."
 The data exhibit over all a fair agreement with the prefit background estimate withing the systematics uncertainties, while in some case (for low masses) the data are slightly off the $\pm1\sigma$ uncertainty band for a few sequential bins. The spectra are fit within the range of 500--4000 \GeV, were the last bin includes the overflow events. Additionally, the \mgg background normalization is allowed to float freely within 5\% in the BB and BE categories separately. The low-mass data will easily constrain the nuisance parameters.
 
-\begin{figure}[!htbp]{\centering{
+\begin{figure}[!htbp]{
+\caption{The \mgg spectra in the prefit estimate for 2016; left the BB and right the BE channels.
+These are the six observables used in the fit.
+The final prediction is derived from a fit to the data, a procedure which absorbs residual mismodeling present at these plots.}
+\centering{
 \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BB16_6000_ADDGRW_0_0.png}
 \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BE16_6000_ADDGRW_0_0.png}
 % \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BB17_6000_ADDGRW_0_0.png}
@@ -118,14 +121,14 @@ The data exhibit over all a fair agreement with the prefit background estimate w
 % \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BB18_6000_ADDGRW_0_0.png}
 % \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BE18_6000_ADDGRW_0_0.png}
 }
-\caption{The \mgg spectra in the prefit estimate for 2016; left the BB and right the BE channels.
-These are the six observables used in the fit.
-The final prediction is derived from a fit to the data, a procedure which absorbs residual mismodeling present at these plots.
-}
 \label{fig:Prefit_spectra2016}}
 \end{figure}
 
-\begin{figure}[!htbp]{\centering{
+\begin{figure}[!htbp]{
+\caption{The \mgg spectra in the prefit estimate for 2017; left the BB and right the BE channels.
+These are the six observables used in the fit.
+The final prediction is derived from a fit to the data, a procedure which absorbs residual mismodeling present at these plots.}
+\centering{
 % \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BB16_6000_ADDGRW_0_0.png}
 % \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BE16_6000_ADDGRW_0_0.png}
 \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BB17_6000_ADDGRW_0_0.png}
@@ -133,24 +136,20 @@ The final prediction is derived from a fit to the data, a procedure which absorb
 % \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BB18_6000_ADDGRW_0_0.png}
 % \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BE18_6000_ADDGRW_0_0.png}
 }
-\caption{The \mgg spectra in the prefit estimate for 2017; left the BB and right the BE channels.
-These are the six observables used in the fit.
-The final prediction is derived from a fit to the data, a procedure which absorbs residual mismodeling present at these plots.
-}
 \label{fig:Prefit_spectra2017}}
 \end{figure}
 
-\begin{figure}[!htbp]{\centering{
+\begin{figure}[!htbp]{
+\caption{The \mgg spectra in the prefit estimate for 2018; left the BB and right the BE channels.
+These are the six observables used in the fit.
+The final prediction is derived from a fit to the data, a procedure which absorbs residual mismodeling present at these plots.}
+\centering{
 % \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BB16_6000_ADDGRW_0_0.png}
 % \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BE16_6000_ADDGRW_0_0.png}
 % \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BB17_6000_ADDGRW_0_0.png}
 % \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BE17_6000_ADDGRW_0_0.png}
 \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BB18_6000_ADDGRW_0_0.png}
 \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BE18_6000_ADDGRW_0_0.png}
-}
-\caption{The \mgg spectra in the prefit estimate for 2018; left the BB and right the BE channels.
-These are the six observables used in the fit.
-The final prediction is derived from a fit to the data, a procedure which absorbs residual mismodeling present at these plots.
 }
 \label{fig:Prefit_spectra2018}}
 \end{figure}
@@ -186,64 +185,68 @@ After the marginalization procedure, \THETA returns postfit distributions, the n
 % A benefit we gain in this procedure is that we are able to absorb higher-order corrections to the diphoton prediction that are (in principle) unknown 
 % directly into the background model under the assumption that those higher-order corrections result in a relatively flat k-factor.
 
-Note that prior to unblinding the $\mgg$ region, we made use of pseudodata to run the full \textrm{THETA} limits machinery code and produce the expected results. The pseudodata are generated using the sum of the real $\gamma\gamma$ and fake $\gj$ and $jj$ spectra, which are the prefit background estimates, are used as the mean for poisson random number\footnote{https://root.cern.ch/doc/master/classTRandom.html#a1529ed28e6ce1230d135548460b12c19} generator from \ROOT. In this way, the pseudodata feature realistic systematic structures and fluctuations and we can check whether prefit pull trends are covered by our current parametrization. The results of the pseudodata used are found in Appendix~\ref{ch:appendix_pseudodata}.
+Note that prior to unblinding the $\mgg$ region, we made use of pseudodata to run the full \textrm{THETA} limits machinery code and produce the expected results. The pseudodata are generated using the sum of the real $\gamma\gamma$ and fake $\gj$ and $jj$ spectra, which are the prefit background estimates, are used as the mean for poisson random number (see: \href{https://root.cern.ch/doc/master/classTRandom.html#a1529ed28e6ce1230d135548460b12c19}{TRandom}) generator from \ROOT. In this way, the pseudodata feature realistic systematic structures and fluctuations and we can check whether prefit pull trends are covered by our current parametrization. The results of the pseudodata used are found in Appendix~\ref{ch:appendix_pseudodata}.
 
 \subsection{ADD Postfit results}~\label{sec:ADDPostfits}
  The ADD postfit results are shown in Figs.~\ref{fig:Postfit_Real2016ADD},~\ref{fig:Postfit_Real2017ADD},~\ref{fig:Postfit_Real2018ADD}, where we use light and dark blue for the real and fake background estimates respectively.
 We observe from the bottom pads that various systematic trends initially present in prefit pulls are smoothened out in the postfit version. The post fit pulls exhibits only statistical fluctuations around one, and thus the \mgg parametrization absorbs the systematic effects. Figure \ref{fig:Postfit_Real_Inc} illustrates prefit and postfit results for all three years of data taking inclusively for the ADD scenario.
 
-\begin{figure}[!htbp]{\centering{
+\begin{figure}[!htbp]{
+\caption{The ADD GRW postfit spectra (with real data) for BB (left) and BE (right) for 2016.}
+\centering{
 \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BB16_6000_ADDGRW_1_0.png}
 \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BE16_6000_ADDGRW_1_0.png}
 % \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BB17_6000_ADDGRW_1_0.png}
 % \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BE17_6000_ADDGRW_1_0.png}
 % \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BB18_6000_ADDGRW_1_0.png}
 % \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BE18_6000_ADDGRW_1_0.png}  }
-\caption{The ADD GRW postfit spectra (with real data) for BB (left) and BE (right) for 2016.}
 \label{fig:Postfit_Real2016ADD} }
 \end{figure}
 
-\begin{figure}[!htbp]{\centering{
+\begin{figure}[!htbp]{
+\caption{The ADD GRW postfit spectra (with real data) for BB (left) and BE (right) for 2017.}
+\centering{
 % \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BB16_6000_ADDGRW_1_0.png}
 % \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BE16_6000_ADDGRW_1_0.png}
 \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BB17_6000_ADDGRW_1_0.png}
 \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BE17_6000_ADDGRW_1_0.png}
 % \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BB18_6000_ADDGRW_1_0.png}
 % \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BE18_6000_ADDGRW_1_0.png}  }
-\caption{The ADD GRW postfit spectra (with real data) for BB (left) and BE (right) for 2017.}
 \label{fig:Postfit_Real2017ADD} }
 \end{figure}
 
-\begin{figure}[!htbp]{\centering{
+\begin{figure}[!htbp]{
+\caption{The ADD GRW postfit spectra (with real data) for BB (left) and BE (right) for 2018.}
+\centering{
 % \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BB16_6000_ADDGRW_1_0.png}
 % \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BE16_6000_ADDGRW_1_0.png}
 % \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BB17_6000_ADDGRW_1_0.png}
 % \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BE17_6000_ADDGRW_1_0.png}
 \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BB18_6000_ADDGRW_1_0.png}
 \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BE18_6000_ADDGRW_1_0.png}  }
-\caption{The ADD GRW postfit spectra (with real data) for BB (left) and BE (right) for 2018.}
 \label{fig:Postfit_Real2018ADD} }
 \end{figure}
 
-\begin{figure}[!htbp]{\centering{
+\begin{figure}[!htbp]{
+\caption{The prefit (top) and the postfit (bottom) spectra with real data for BB (left) and BE (right) for the three years of data taking inclusively. The plot shown in red at the bottom shows a representative signal plot for the ADD model with the GRW convention.}
+\centering{
 \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BB161718_6000_ADDGRW_0_0.pdf}
 \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BE161718_6000_ADDGRW_0_0.pdf}
 \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BB161718_6000_ADDGRW_1_0.pdf}
 \includegraphics[width=0.49\textwidth]{fig/PLOT_PRED_PULL_BE161718_6000_ADDGRW_1_0.pdf}}
-\caption{The prefit (top) and the postfit (bottom) spectra with real data for BB (left) and BE (right) for the three years of data taking inclusively. The plot shown in red at the bottom shows a representative signal plot for the ADD model with the GRW convention.}
 \label{fig:Postfit_Real_Inc} }
 \end{figure}
 
 
-The nuisances are constrained and their priors which are either gaussian or lognormal probability distribution function transforms into their corresponding postfit version. While \COMBINE provides summary tables with the means and the standard deviations of the nuisances postfit pdfs, \THETA provides the full postfit pdfs spectra of each nuisance. The postfit probability distribution function (pdfs) of nuisances are presented in Figure~\ref{fig:Postfit_Nuisances_real}. In this figure, we see that signal strength named \texttt{beta\_signal} on the top-left, is strongly constrained near zero for GRW, $M_S=6\TeV$ as expected. Normalization nuisances of real \gmgm and fake $\gj,jj$ background events are constrained and their postfit pdfs are close to zero or some other value dictated by the fit on the data correcting prefit trends. The Postfit nuisances corresponding to the 50 pdfs of the PDFs nuisances; are all close to the prefit, that is it is a gaussian with mean zero and standard deviation of one, as this set of data can not constrain them further.
+The nuisances are constrained and their priors which are either gaussian or lognormal probability distribution function transforms into their corresponding postfit version. While \COMBINE provides summary tables with the means and the standard deviations of the nuisances postfit pdfs, \THETA provides the full postfit pdfs spectra of each nuisance. The postfit probability distribution function (pdfs) of nuisances are presented in Figure~\ref{fig:Postfit_Nuisances_real}. Each plot corresponds to the sources (nuisances) presented of the table \ref{tab:Systematics} (names in labels). The statistics panel of each plot contain the mean and the standard deviation of the pdf.
+Text indicates the name of each nuisance, and the parenthesis after that indicates the regions in which this is constrained over. This information can also be found in table \ref{tab:Systematics}. In this figure, we see that signal strength named \texttt{beta\_signal} on the top-left, is strongly constrained near zero for GRW, $M_S=6\TeV$ as expected. Normalization nuisances of real \gmgm and fake $\gj,jj$ background events are constrained and their postfit pdfs are close to zero or some other value dictated by the fit on the data correcting prefit trends. The Postfit nuisances corresponding to the 50 pdfs of the PDFs nuisances; are all close to the prefit, that is it is a gaussian with mean zero and standard deviation of one, as this set of data can not constrain them further.
 
-\begin{figure}[!htbp]{\centering{
+
+
+\begin{figure}[!htbp]{
+\caption{The postfit probability distribution function (pdf) of each nuisance used for the fits for each of the 6 signal regions that have been fitted. The upper right panel corresponds to the statistics panel indicating the mean and standard deviation of the pdfs.}
+\centering{
 \includegraphics[width=1.0\textwidth]{fig/POST_All_BBBE161718_ADDGRW_real.png} }
-\caption{The postfit probability distribution function (pdf) of each nuisance used in the six region fit.
-Each plot corresponds to the sources (nuisances) presented of the table \ref{tab:Systematics} (names in labels).
-The statistics panel of each plot contain the mean and the standard deviation of the pdf.
-Text indicates the name of each nuisance, and the parenthesis after that indicates the regions in which this is constrained over.
-This information can also be found in table \ref{tab:Systematics}. }
 \label{fig:Postfit_Nuisances_real} }
 \end{figure}
 
@@ -253,10 +256,11 @@ This information can also be found in table \ref{tab:Systematics}. }
 For the ADD model, we have the positive and the negative interference conventions which have significant shape differences. These are referred to as the GRW and Hewett- conventions respectively. We ran the limit code for all available $\Lambda_T$ values, which are equivalent to $M_s$ depending on the model convention. \THETA then provides us the upper limit on the signal strength at 95\% CL for each $M_S$ scenario. Instances of $M_s$ with postfit signal strength $<1$ are excluded at 95\% CL. The results for the ADD GRW model after fitting all six signal regions from BB16,..., BE18 are presented in Figure~\ref{fig:Limits_real}.
 % We also plot the upper limit on signal strength vs the $M_S$ parameter in order to translate the upper limit on signal strength to lower limit on $M_S$. 
 
-\begin{figure}[!htbp]{\centering{
+\begin{figure}[!htbp]{
+\caption{The 95\% CL limits on signal strength (y-axis) vs the $M_S$ (x-axis) and the limits on $M_S$ in legend for the ADD GRW model left, and Hewett negative right. These results are using real data. }
+\centering{
 \includegraphics[width=0.49\textwidth]{fig/LIMITPLOT_BBBE161718_ADDGRW_real.png}
 \includegraphics[width=0.49\textwidth]{fig/LIMITPLOT_BBBE161718_ADDHew_real.png}}
-\caption{The 95\% CL limits on signal strength (y-axis) vs the $M_S$ (x-axis) and the limits on $M_S$ in legend for the ADD GRW model left, and Hewett negative right. These results are using real data. }
 \label{fig:Limits_real}}
 \end{figure}
 
@@ -307,25 +311,27 @@ The signal shapes are generated for values of $k$ as low as 0.1 \GeV and up to 5
 % \end{figure}
 
 \begin{figure}[h!]
+     \caption{Exclusion limit for the clockwork framework over the $k-M_5$ parameter space. The shaded region denotes where the theory becomes non-perturbative. The right plot displays a non-logarithmic axis.}
     \centering
     \includegraphics[width=0.49\linewidth]{fig/LIMITPLOT_BBBE161718_CWk_real.png}
     \includegraphics[width=0.47\linewidth]{fig/LIMITPLOT_BBBE161718_CWk_nonLog_real.png}
-    \caption{Exclusion limit for the clockwork framework over the $k-M_5$ parameter space. The shaded region denotes where the theory becomes non-perturbative. The right plot displays a non-logarithmic axis.}
     \label{Fig:LIMIT_Clockwork_real}
 \end{figure}
 
 
-\begin{figure}[h!]\centering
-\includegraphics[width=1.\linewidth]{fig/PRED_PRE_CWk_real.png}
-\includegraphics[width=1.\linewidth]{fig/PRED_POST_CWk_real.png}
+\begin{figure}[!htbp]
 \caption{The CW prefit (top two rows) and the postfit (bottom two rows) \mgg spectra.
 Columns left to right correspond to the years 2016, 2017, and 2018 respectively. }
+\centering
+\includegraphics[width=1.\linewidth]{fig/PRED_PRE_CWk_real.png}
+\includegraphics[width=1.\linewidth]{fig/PRED_POST_CWk_real.png}
 \label{Fig:Postift_mgg_Clockwork_real}
 \end{figure}
 
-\begin{figure}[h!]\centering
-\includegraphics[width=1.\linewidth]{fig/POST_All_BBBE161718_CWk_real.png}
+\begin{figure}[!htbp]
 \caption{The postfit pdfs for the 25 nuisance parameters used in the six SRs fit with CW model signal.}
+\centering
+\includegraphics[width=1.\linewidth]{fig/POST_All_BBBE161718_CWk_real.png}
 \label{Fig:Postift_Nuisances_Clockwork_real}
 \end{figure}
 
@@ -344,15 +350,19 @@ The pull effects are milder compared to the ADD as we fit $\mgg>1000~\GeV$ where
 The CMS clockwork exclusion results shown in Figure~\ref{Fig:LIMIT_Clockwork_RUN1} show Run 1 results which excludes values of $M_5$ lower than 5 TeV for $k$ values in the range of 0.2 GeV to 2.0 TeV. With increased data in Run II, the limits were pushed further with values of $M_5$ lower than 5.5 TeV for k values from 0.1 to 2 TeV, and $M_5$ values lower than 11 TeV[8 TeV expected] to 1 TeV for $k$ values from 100 GeV to 5 TeV.  ATLAS~\cite{ATLAS:2023hbp}, have published their results on the CW model using a different signal generation and limit setting techniques. Figure~\ref{Fig:LIMIT_Clockwork_ATLAS} show that the ATLAS limits results without mass threshold is comparable results with ours.
 
 
-\begin{figure}[h!]\centering
+\begin{figure}[htbp]
+\centering
 \includegraphics[width=0.47\linewidth]{fig/CWCMSI.png}
-\caption{The previously published~\cite{cmsdiphoton2016} Run II, 2016-only 95\% CL exclusion limit for the clockwork model in the $k-M_5$ parameter space. The green ($\pm1$) and yellow ($\pm2$) shaded bands represent the standard deviation uncertainties in the expected limit (dashed lines). The shaded region in purple at the lower right is where the theory becomes nonperturbative.}
+\caption{The previously published~\cite{cmsdiphoton2016} Run II, 2016-only 95\% CL exclusion limit for the clockwork model in the $k{-}M_5$ parameter space. The green ($\pm1$) and yellow ($\pm2$) shaded bands represent the standard deviation uncertainties in the expected limit (dashed lines). The shaded region in purple at the lower right is where the theory becomes nonperturbative.}
 \label{Fig:LIMIT_Clockwork_RUN1}
 \end{figure}
 
-\begin{figure}[h!]\centering
-\includegraphics[width=0.9\linewidth]{fig/ATLASComp.png}
+
+
+\begin{figure}[!htbp]
 \caption{ATLAS~\cite{ATLAS:2023hbp} Run II exclusion limits with mass cut and without mass cut shown with flipped CMS results for comparative purposes.}
+\centering
+\includegraphics[width=0.9\linewidth]{fig/ATLASComp.png}
 \label{Fig:LIMIT_Clockwork_ATLAS}
 \end{figure}
 
@@ -371,9 +381,9 @@ The CLs Method~\cite{Junk:1999kv, Read:2002hq} is also known as the modified fre
 To quickly estimate the expected limits we use the Asymptotics Limits statistical method which is implemented in the \COMBINE framework. 
 
 \begin{figure}[!htbp]
+    \caption{Limits on the Unparticles signal strength as a function of $\Lambda_U$. The top plots show the Spin-0 case for $d_u = 1.1$, $1.5$, and $1.9$. The bottom shows the Spin-2 case.}
     \centering
     \includegraphics[angle=0,width=0.8\textwidth]{fig/UnparticlesCountingExperiment.png}
-    \caption{Limits on the Unparticles signal strength as a function of $\Lambda_U$. The top plots show the Spin-0 case for $d_u = 1.1$, $1.5$, and $1.9$. The bottom shows the Spin-2 case.}
     \label{fig:UnparLimPlots}
 \end{figure}
 
@@ -447,24 +457,22 @@ The search for Unparticles have also been done in the Z + MET channel where the 
 % \end{figure}
 
 \begin{figure}[!htbp]
+\caption{Top: Spin-0 (red) and spin-2 (blue), $\mathcal{U}{\rightarrow}\gamma\gamma$ generator-only histograms with the same $\Lambda_u = 1000$~\GeV{} and $d_{u} = 1.1$.
+The middle plot shows various $d_u$ values with a fixed $\Lambda_u = 2500$~\GeV. On the bottom, is a plot that has a fixed $d_u = 1.8$~\GeV, and $\Lambda$ is varied. The leading-order Standard Model Prompt Diphoton Background is shown in cyan.}
 	\centering
 % 	\includegraphics[scale=0.038]{fig/H2Bottle.JPG}
     \includegraphics[scale=0.34]{fig/UnparticlesSpinSensitivity.png}
     \includegraphics[scale=0.4]{fig/UnparticlesConstantLambda_U.png}
     \includegraphics[scale=0.4]{fig/UnparticlesConstant_du.png}
-   
-	\caption{
-  In the top, the red and blue are the spin-0 and spin-2, $\mathcal{U}\rightarrow \gamma\gamma$ histograms with the same $\Lambda_u = 1000$~\GeV and $d_{u} = 1.1$.
- The middle plot shows various $d_u$ values with a fixed $\Lambda_u = 2500$~\GeV. On the bottom, is a plot that has a fixed $d_u = 1.8$~\GeV, and $\Lambda$ is varied. The leading-order Standard Model Prompt Diphoton Background is shown in cyan. These are generator-only simulations.}
 	\label{fig:UnparHistogSensitivity}
 \end{figure}
 
 \begin{figure}[!htbp]
+\caption{This figure shows $\cos \theta^*$ plots of $U{\rightarrow}\gamma\gamma$ versus the leading order SM only background (cyan). The right plot shows a different $d_u$ for spin-2, curved differently from the SM background.}
 	\centering
 % 	\includegraphics[scale=0.038]{fig/H2Bottle.JPG}
     \includegraphics[scale=0.4]{fig/cosThetaStar.png}
 	\label{fig:UnparCosThetaStar}
- \caption{This figure shows $\cos \theta^*$ plots of $U\rightarrow \gamma\gamma$ versus the leading order SM only background (cyan). The right plot shows a different $d_u$ for spin-2, curved differently from the SM background.}
 \end{figure}
 
 % \begin{figure}[!htbp]

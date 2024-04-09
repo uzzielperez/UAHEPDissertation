@@ -1,10 +1,10 @@
 \chapter{Datasets and Trigger Paths}\label{ch:appendix_datasets_triggerpaths}
-% \raggedright\parindent=25pt
+\RaggedRight \parindent=25pt
 Events containing two prompt photon events are selected online with \texttt{HLT\_DoublePhoton60} or \texttt{HLT\_DoublePhoton70} trigger paths for 2016 and 2017/2018 data respectively. These two triggers require at least two reconstructed photon candidates with a transverse momentum $p_{T} > 60 (70)$~GeV across the range $|\eta| < 3.0$. At this level, the primary selection requires that each photon candidate must have a ratio of the hadronic to the electromagnetic energy (H/E) $<$ 0.15. The electromagnetic energy here is defined as the corrected supercluster energy while the hadronic energy is the total HCAL energy within a cone of $\Delta R <$  0.15 from the supercluster position. This ratio is also the amount of the HCAL energy in the tower directly behind the photon seed crystal. This trigger is seeded by the logical \texttt{OR} of a suite \texttt{SingleEG}, \texttt{DoubleEG}, \texttt{SingleJet}, and \texttt{SingleTau} L1 seeds with varying trigger thresholds. 
 
 % To quantify the efficiency of the \texttt{HLT_DoublePhoton60/70} triggers, we normalized using the reference trigger \texttt{HLT_DoublePhoton33_CaloIdL}. This trigger selects events with two photons, each having transverse momentum greater than 33 GeV and satisfying the Calorimeter Identification (CaloId) criteria. The efficiency primarily depends on the transverse momentum ($p_{T}$) of the second-leading photon, which is the photon with the second highest $p_{T}$ among the collection. The results of this analysis are presented in Figure~\ref{fig:trigger_efficiency}. Previous studies \cite{ref:AN2016_167} have demonstrated that there are no additional sources of efficiency, and this study serves as a cross-check.
 
-To quantify the efficiency of the \texttt{HLT\_DoublePhoton60/70} triggers, we used the reference trigger \texttt{HLT\_DoublePhoton33\_CaloIdL} for normalization. The \texttt{HLT\_DoublePhoton33\_CaloIdL} trigger selects events that contain two photons, each with transverse momentum greater than 33 GeV and satisfying the Calorimeter Identification (CaloId) criteria. The efficiency is primarily a function of the $p_{T}$ of the second-leading photon, the photon which has the second highest $p_{T}$ among the collection of photons. The results are shown in Figure~\ref{fig:trigger_efficiency}. This procedure only probes the turn-on of the $p_{T}$ leg \cite{ref:AN2016_167} have shown that there is no additional source of efficiency and this study serves as a cross-check. 
+To quantify the efficiency of the \texttt{HLT\_DoublePhoton60/70} triggers, we used the reference trigger \texttt{HLT\_DoublePhoton33\_CaloIdL} for normalization. The latter trigger selects events that contain two photons, each with transverse momentum greater than 33 GeV and satisfying the Calorimeter Identification (CaloId) criteria. The efficiency is primarily a function of the $p_{T}$ of the second-leading photon, the photon which has the second highest $p_{T}$ among the collection of photons. The results are shown in Figure~\ref{fig:trigger_efficiency}. This procedure only probes the turn-on of the $p_{T}$ leg \cite{ref:AN2016_167} have shown that there is no additional source of efficiency and this study serves as a cross-check. 
 
 Additionally, we use \texttt{HLT\_ECALHT800} as a backup trigger which adds approximately 0.2$\%$ in yield across the entire 2016-2018 data set. Although this comprises only a small fraction of the total event yield, we choose to use it anyway in cases where the diphoton triggers lose efficiency specifically at high diphoton invariant masses. We calculate only the yield over the full analysis region with several thousand events, without viewing any distributions to avoid bias during the blinded phase of the analysis. The trigger efficiency is fully efficient at $p_T > 125$ GeV, which is the photon $p_{T}$ selection used in this analysis. 
 
@@ -156,13 +156,13 @@ Table~\ref{table:dset-JetHTFakeRate} and Table~\ref{table:dset-DoubleMuonFakeRat
 \begin{table}[!htbp]
 	\caption{The \JetHT Datasets used for constructing the fake templates and for deriving the fake rates. The fake rate is derived from the average of the rates obtained independently from the \JetHT and \DoubleMuon dataset}
 	\centering
-	\resizebox{\0.8\textwidth}{!}{%
+	\resizebox{0.8\textwidth}{!}{%
 	\vspace{\baselineskip}
 	\begin{tabular}{l}
 	\hline \hline
 	Data set \\
 	\hline
-
+{\small
   /JetHT/Run2016B-17Jul2018\_ver1-v1/MINIAOD \\
   /JetHT/Run2016B-17Jul2018\_ver2-v2/MINIAOD \\
   /JetHT/Run2016C-17Jul2018-v1/MINIAOD  \\
@@ -182,7 +182,7 @@ Table~\ref{table:dset-JetHTFakeRate} and Table~\ref{table:dset-DoubleMuonFakeRat
   /JetHT/Run2018B-17Sep2018-v1/MINIAOD \\
   /JetHT/Run2018C-17Sep2018-v1/MINIAOD \\
   /JetHT/Run2018D-PromptReco-v2/MINIAOD \\
-
+}
 	\hline \hline
 	\end{tabular}}
 	\label{table:dset-JetHTFakeRate}
@@ -191,13 +191,13 @@ Table~\ref{table:dset-JetHTFakeRate} and Table~\ref{table:dset-DoubleMuonFakeRat
 \begin{table}[!htbp]
 	\caption{The \texttt{DoubleMuon} datasets for fake rate estimation. The fake rate is derived from the average of the rates obtained independently from the \JetHT and \DoubleMuon datasets.}
 	\centering
-	\resizebox{0.9\textwidth}{!}{%
+	\resizebox{0.8\textwidth}{!}{%
 	\vspace{\baselineskip}
 	\begin{tabular}{l}
 	\hline \hline
 	Data set \\
 	\hline
-
+  {\small
   /DoubleMuon/Run2016B-17Jul2018\_ver1-v1/MINIAOD \\
   /DoubleMuon/Run2016B-17Jul2018\_ver2-v1/MINIAOD \\
   /DoubleMuon/Run2016C-17Jul2018-v1/MINIAOD \\
@@ -217,7 +217,7 @@ Table~\ref{table:dset-JetHTFakeRate} and Table~\ref{table:dset-DoubleMuonFakeRat
   /DoubleMuon/Run2018B-17Sep2018-v1/MINIAOD \\
   /DoubleMuon/Run2018C-17Sep2018-v1/MINIAOD \\
   /DoubleMuon/Run2018D-PromptReco-v2/MINIAOD \\
-
+ }
 	\hline \hline
 	\end{tabular}}
 	\label{table:dset-DoubleMuonFakeRate}

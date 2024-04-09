@@ -48,6 +48,7 @@
 \usepackage{setspace}
 \usepackage{textcase}
 \usepackage{tocloft}
+\usepackage{flushend} % To avoid references from splitting pages 
 \usepackage[nonumberlist,xindy,toc,nopostdot,nogroupskip]{glossaries}
 \usepackage{glossary-longragged}
 \setlength{\glsdescwidth}{1.25\textwidth}%
@@ -65,7 +66,7 @@
 \cftsetindents{chapter}{0em}{6.5em}
 \setlength{\cftbeforechapskip}{0pt}
 
-\renewcommand{\contentsname}{\textbf{CONTENTS}}
+\renewcommand{\contentsname}{CONTENTS}
 
 \renewcommand{\cftloftitlefont}{\pagebreak\hfill\MakeTextUppercase}
 \renewcommand{\cftafterloftitle}{\hfill}
@@ -74,7 +75,11 @@
 \renewcommand{\cftafterlottitle}{\hfill}
 
 %% Title spacings.
-\titlespacing{\chapter}{0pt}{2in}{1in}
+% \titlespacing{\chapter}{0pt}{2in}{1in}
+
+\titlespacing{\chapter}{0pt}{\baselineskip}{\baselineskip}
+\titlespacing{\section}{0pt}{\baselineskip}{\baselineskip}
+\titlespacing{\subsection}{0pt}{\baselineskip}{\baselineskip}
 
 %% Thesis committee
 \newcommand\committee[1]{\renewcommand\@committee{#1}}
@@ -313,10 +318,12 @@
   {
     \vspace*{50\p@}%
     \begin{center}
-      \MakeTextUppercase{ \textbf{ \@chapapp\space \thechapter } }
+      \MakeTextUppercase{ \@chapapp\space \thechapter }
+        % \MakeTextUppercase{ \textbf{ \@chapapp\space \thechapter } }
       \linebreak
       \begin{spacing}{1}
-      \MakeTextUppercase{ \textbf{ ##1 } }
+      % \MakeTextUppercase{ \textbf{ ##1 } }
+      \MakeTextUppercase{ ##1 }
       \end{spacing}
     \end{center}
   }
@@ -341,6 +348,56 @@
 {
   \end{doublespace}
 }
+% 
+% \makeatletter
+% \renewcommand{\chapter}{%
+%   \clearpage
+%   \if@openright
+%     \cleardoublepage
+%   \else
+%     \clearpage
+%   \fi
+%   \thispagestyle{plain}%
+%   \global\@topnum\z@
+%   \@afterindenttrue
+%   \secdef\@chapter\@schapter
+% }
+
+% \renewcommand\@chapter[2]{
+%   \ifnum \c@secnumdepth >\m@ne
+%     \if@mainmatter
+%       \refstepcounter{chapter}%
+%       \typeout{\@chapapp\space\thechapter.}%
+%       \addtocontents{toc}{\protect\addvspace{12\p@}}%
+%     \else
+%       \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1}%
+%     \fi
+%   \else
+%     \addcontentsline{toc}{chapter}{#1}%
+%   \fi
+%   \chaptermark{#1}%
+%   \addtocontents{lof}{\protect\addvspace{10\p@}}%
+%   \addtocontents{lot}{\protect\addvspace{10\p@}}%
+%   \@makechapterhead{#2}%
+%   \if@twocolumn
+%     \@topnewpage[\@makechapterhead{#2}]%
+%   \else
+%     \@makechapterhead{#2}%
+%     \@afterheading
+%   \fi
+% }
+
+% \renewcommand\section{\@startsection{section}{1}{0mm}%
+%   {4ex}%  % <-- Space before section title
+%   {2ex}%  % <-- Space after section title
+%   {\normalsize\bfseries}}
+
+% \renewcommand\subsection{\@startsection{subsection}{1}{0mm}%
+%   {1mm}%  % <-- Space before subsection title
+%   {1mm}%  % <-- Space after subsection title
+%   {\normalsize\bfseries}}
+% \makeatother
+
 
 \makeglossaries
 

@@ -1,27 +1,24 @@
-\chapter{Background Prediction}~\label{ch:background}
-
-% \FIXME{Join the two chapters together and write introduction to both} NO
-
+\chapter{Background Prediction}~\label{ch:background}\RaggedRight \parindent=25pt
 In this Chapter, we give a brief introduction to Monte Carlo Event generation in high-energy physics and the tools that are commonly used. In the succeeding sections, we will then discuss the modelling of the SM Prompt Diphoton Background and the process for including the next-to-next-to-leading-order corrections to the overall prediction. 
 
 \section{Monte Carlo Event Generation}
 
 To model and interpret the results coming from proton-proton collisions, Monte Carlo event generators are indispensable tools for high-energy physicists. Their results, together with detector simulation are used to estimate signals and backgrounds in high-energy processes \cite{Tanabashi:2018oca}. To model a complicated event or the collision of two protons, which are composed of quarks and gluons, a ``divide and conquer" strategy must be employed.  
 
-\begin{figure}[!htb]
+\begin{figure}[!htbp]
+    \caption{Schematic representation of the structure of an event. The first diagram (a) is a representation of the oncoming protons or ``bags of partons". In (b), the main hard subprocess with the resonance decays are shown. The hard subprocess is represented by matrix elements calculations. Finally, the Parton Shower is shown in (c), where full event is shown with other more components such as the initial and final state radiation and beam remnants. Credits: Sj{\"o}strand, Torbj{\"o}rn}
 	\centering
 	\includegraphics[scale=0.5]{fig/eventStructure.png}
-	\caption{Schematic representation of the structure of an event. The first diagram (a) is a representation of the oncoming protons or ``bags of partons". In (b), the main hard subprocess with the resonance decays are shown. The hard subprocess is represented by matrix elements calculations. Finally, the Parton Shower is shown in (c), where full event is shown with other more components such as the initial and final state radiation and beam remnants. Credits: Sj{\"o}strand, Torbj{\"o}rn}
 	\label{fig:EventStructure}
 \end{figure}
 
 
 We use two well-known general purpose event generators in this analysis: \SHERPA~\cite{Gleisberg:2008ta} and \PYTHIA8.2~\cite{bierlich2022comprehensive, Sjostrand:2008za}. In both generators, the phase space is split into domains, each having their own technologies. See for example \SHERPA's Event Generator Framework in Figure~\ref{fig:sherpaDivideAndConquer}. These domains include the hard process interaction, the parton shower and the hadronization part. The hard process, which occurs at $\mathcal{O}(1)$ TeV, is represented by the matrix element (ME). At  $\mathcal{O}(1)$ TeV, softer scattering particles emerge from parton-parton interactions, beam remnants and initial and final state radiation. These come from quarks and gluons not participating in the main hard process. They radiate gluons and split into quark-antiquark pairs in a splitting process called fragmentation. Fragmentation is dominated by the emission of soft and collinear radiation until the $\Lambda_{QCD} \approx 1 $GeV scale is reached, and via the strong interaction, these fragments snap back into confinement within hadrons. This process is called Hadronization. These domains taken together comprise a full event picture which are represented schematically in Figure~\ref{fig:EventStructure}.
 
-\begin{figure}[!htb]
+\begin{figure}[!htbp]
+    \caption{This image shows the Sherpa Event Generator Framework with the various elements that are needed to produce simulation, from user inputs, to matrix elements to additional interfaces.}
 	\centering
 	\includegraphics[scale=0.5]{fig/SHERPAD&C.png}
-	\caption{This image shows the Sherpa Event Generator Framework with the various elements that are needed to produce simulation, from user inputs, to matrix elements to additional interfaces.}
 	\label{fig:sherpaDivideAndConquer}
 \end{figure}
 
@@ -29,10 +26,10 @@ The Monte Carlo generators also makes use of parton distribution functions (PDFs
 
 % The factorization scale is usually set at the scale of the hard scattering interaction $\mu_{f} \approx Q^{2}$ where $Q^2$ is the momentum transfer in the collision.
 
-\begin{figure}[!htb]
+\begin{figure}[!htbp]
+    \caption{Latest results of the global fit done by the NNPDF collaboration showing the PDFs at factorization scales of 10~$\GeV^{2}$ and 10~$\GeV^{4}$. The different PDFs are related by the DGLAP evolution equations~\cite{DelDebbio:2018siw}}
 	\centering
 	\includegraphics[scale=0.5]{fig/NNPDFGlobalFit.png}
-	\caption{Latest results of the global fit done by the NNPDF collaboration showing the PDFs at factorization scales of 10~$\GeV^{2}$ and 10~$\GeV^{4}$. The different PDFs are related by the DGLAP evolution equations~\cite{DelDebbio:2018siw}}
 	\label{fig:NNPDF}
 \end{figure}
 
@@ -91,20 +88,20 @@ This dissertation searches for non-resonant BSM signatures decaying into the two
 \section{Nonresonant Prompt Diphoton Background}\label{sec:bkg_real}
 The main source of the background arises from the prompt SM diphoton production, $pp\longrightarrow \gamma\gamma$, which occurs via quark annihilation (``Born'') or the gluon fusion process (``Box''). These are illustrated in Figure~\ref{fig:LOFeynmanBackgroundDiphoton}. The Born process dominates over the box process due to large quark PDFs. These processes constitute the irreducible background for this search. We use the \SHERPA event-generator to prepare diphoton+jets (GGJets) Monte Carlo sample which include the effects of detector simulation. 
 
-\begin{figure}[tbp!]
+\begin{figure}[!htbp]
+\caption{The irreducible and primary background for the analysis comes from the prompt standard model $\gamma\gamma$ production which occur via the q-q$\Bar{q}$ annihilation (Born) or through the gluon fusion (Box)  process as shown from left to right.}
 \begin{center}
 \includegraphics[angle=0,width=0.7\textwidth]{fig/PromptDiphotonBackground.png}
 \end{center}
-\caption{The irreducible and primary background for the analysis comes from the prompt standard model $\gamma\gamma$ production which occur via the q-q$\Bar{q}$ annihilation (Born) or through the gluon fusion (Box)  process as shown from left to right.}
 \label{fig:LOFeynmanBackgroundDiphoton}
 \end{figure}
 
 
-\begin{figure}[tbp!]
+\begin{figure}[htbp!]
+\caption{Sample Feynman Diagrams for (a) $q\Bar{q}$ and (b) gq-initiated processes for NLO SM diphoton production are shown. \cite{DErrico:2011cgc}}
 \begin{center}
 \includegraphics[angle=0,width=0.7\textwidth]{fig/FeynmanDiagramsNLO.png}
 \end{center}
-\caption{Sample Feynman Diagrams for (a) $q\Bar{q}$ and (b) gq-initiated processes for NLO SM diphoton production are shown. \cite{DErrico:2011cgc}}
 \label{fig:NLOSMBackground}
 \end{figure}
 
@@ -125,11 +122,11 @@ It must be noted that \SHERPA only includes the real radiation component of thes
 Higher order corrections have been shown to substantially reduce scale uncertainties estimated from scale variations on total cross section predictions \cite{Badger:2013ava}. Additional final state jets are important in sampling the diphoton phase space as shown in Ref.~\cite{CMS-PAS-EXO-12-045}. It was found that the separation in $\phi$ of the two photons are sensitive to the presence of the additional jets and using an leading-order LO simulation was insufficient for calculating the process. \SHERPA applies event weights to the additional final state partons. These weights are accounted for in the analysis. Final state photons could also come from non-perturbative contributions, i.e. fragmentations from a quark or gluon, where soft or collinear photons are emitted from harder jets through a QED $q\longrightarrow q\gamma$ splittings. \SHERPA interlaces photons into the QCD + QED parton shower. This fragmentation is represented in Figure~\ref{fig:NLOSMBackgroundFragmentation}
 
 
-\begin{figure}[tbp!]
+\begin{figure}[htbp!]
+\caption{Representative Feynman Diagrams for NLO diphoton production through quark or gluon fragmentation \cite{DErrico:2011cgc}}
 \begin{center}
 \includegraphics[angle=0,width=0.7\textwidth]{fig/GluonOrQuarkFragmentation.png}
 \end{center}
-\caption{Representative Feynman Diagrams for NLO diphoton production through quark or gluon fragmentation \cite{DErrico:2011cgc}}
 \label{fig:NLOSMBackgroundFragmentation}
 \end{figure}
 
@@ -148,11 +145,11 @@ To avoid bias, K-factor is calculated separately for the diphoton barrel-barrel 
 
 If the invariant mass range is too large, larger invariant mass bins within the range wouldn't be adequately sampled. This is because the stopping criteria for the estimated accuracy of the numerical integration will be satisfied early. These separate bins, weighted by their cross-sections are ultimately stitched together to form a continuous and smooth distribution. 
 
-\begin{figure}[tbp!]
+\begin{figure}[htbp!]
+\caption{Shown here are the out-of-the-box SHERPA prompt simulated \mgg prediction reweighted with the K-factor in light teal. The fake prediction is shown with a darker shade of teal.}
 \begin{center}
 \includegraphics[angle=0,width=0.9\textwidth]{fig/diphotonblinded.png}
 \end{center}
-\caption{Shown here are the out-of-the-box SHERPA prompt simulated \mgg prediction reweighted with the K-factor in light teal. The fake prediction is shown with a darker shade of teal.}
 \label{fig:SMBackgroundKfactorreweighted}
 \end{figure}
 
@@ -162,7 +159,10 @@ Figure~\ref{fig:kfactor_mgg}, shows the K factor distributions for both barrel-b
 
 
 % generated by Tools/bin/plotKFactor.cc
-\begin{figure}[tbp!]
+\begin{figure}[htbp!]
+\caption{NNLO k-factor for the $m_{\gamma\gamma}$ distribution for barrel-barrel
+  diphotons (left) and barrel-endcap diphotons (right) for the real diphoton k-factor. The
+  renormalization $\mu_{r}$ and factorization $\mu_{f}$ scales have been varied as follows: $\mu_{r}=\mu_{f}=$ 0.5$m_{\gamma\gamma}$ (top), 1.0$m_{\gamma\gamma}$ (middle), and 2.0$m_{\gamma\gamma}$(bottom). The cuts on the generator-level photons are the same as the kinematic cuts used offline.}
 \begin{center}
 \includegraphics[angle=0,width=0.33\textwidth]{fig/BB_hist1_R0p5F0p5_125GeV_NNPDF.pdf}
 \includegraphics[angle=0,width=0.33\textwidth]{fig/BE_hist1_R0p5F0p5_125GeV_NNPDF.pdf}
@@ -171,24 +171,20 @@ Figure~\ref{fig:kfactor_mgg}, shows the K factor distributions for both barrel-b
 \includegraphics[angle=0,width=0.33\textwidth]{fig/BB_hist1_R2F2_125GeV_NNPDF.pdf}
 \includegraphics[angle=0,width=0.33\textwidth]{fig/BE_hist1_R2F2_125GeV_NNPDF.pdf}
 \end{center}
-\caption{NNLO k-factor for the $m_{\gamma\gamma}$ distribution for barrel-barrel
-  diphotons (left) and barrel-endcap diphotons (right) for the real diphoton k-factor. The
-  renormalization $\mu_{r}$ and factorization $\mu_{f}$ scales have been varied as follows: $\mu_{r}=\mu_{f}=$ 0.5$m_{\gamma\gamma}$ (top), 1.0$m_{\gamma\gamma}$ (middle), and 2.0$m_{\gamma\gamma}$(bottom). The cuts on the generator-level photons are the same as the kinematic cuts used offline.}
 \label{fig:kfactor_mgg}
 \end{figure}
 
 % generated by Tools/bin/draw_kfactor.cc
-\begin{figure}[tbp!]
+\begin{figure}[htbp!]
+\caption{Ratio of diphoton cross sections calculated by MCFM versus the results from \SHERPA in the barrel-barrel (left) and barrel-endcap (right) regions.}
 \begin{center}
 \includegraphics[angle=0,width=0.45\textwidth]{fig/kfactor_comparison_BB_125GeV_NNPDF.pdf}
 \includegraphics[angle=0,width=0.45\textwidth]{fig/kfactor_comparison_BE_125GeV_NNPDF.pdf}
 \end{center}
-\caption{Ratio of diphoton cross sections calculated by MCFM versus the results from \SHERPA in the barrel-barrel (left) and barrel-endcap (right) regions. Different orders of the MCFM calculation are shown and the dashed lines show the variation of the renormalization and factorization scales as shown in Figure~\ref{fig:kfactor_mgg}.
-}
 \label{fig:kfactor_comparison}
 \end{figure}
 
-Figure~\ref{fig:kfactor_comparison} shows a summary of the ratios of the diphoton cross section from MCFM to that from \SHERPA. The nominal ratios are shown in full lines while the dashed lines show the effect of the simultaneous renormalization and factorization variations. This effect is treated as a systematic uncertainty and will be discussed more in Ch.~\ref{ch:systematics}.
+Figure~\ref{fig:kfactor_comparison} shows a summary of the ratios of the diphoton cross section from MCFM to that from \SHERPA. Different orders of the MCFM calculation are shown and the dashed lines show the variation of the renormalization and factorization scales as shown in Figure~\ref{fig:kfactor_mgg}. The nominal ratios are shown in full lines while the dashed lines show the effect of the simultaneous renormalization and factorization variations. This effect is treated as a systematic uncertainty and will be discussed more in Ch.~\ref{ch:systematics}. 
 
 In MCFM, the fragmentation scale is set to the renormalization scale by default. The fragmentation scale is the scale of the fragmentation functions that describe the probability for a parton to fragment into a hadron. This contribution is negligible when using the Frixione isolation which is discussed more in \cite{Frixione:1998jh}. The fragmentation scale is a parameter that describes the energy scale at which a high-energy quark or gluon (parton) fragments into a jet of hadrons, which are composite particles made up of quarks and gluons. Note that the fragmentation scale and the renormalization scale are both important concepts in theoretical particle physics, but they refer to different aspects of the theory. The fragmentation process is a non-perturbative phenomenon, which means it cannot be calculated using standard perturbative techniques. Instead, it is described using phenomenological models that are tuned to experimental data. The fragmentation scale is typically on the order of a few GeV to tens of GeV, depending on the process being studied. The renormalization scale, on the other hand, is a parameter that describes the energy scale at which the coupling constants in the theory are defined. In quantum field theory, the coupling constants are typically dependent on the energy scale at which they are probed. This is due to the effects of virtual particles that are created and annihilated in the vacuum. To account for these effects, the coupling constants are "renormalized", which means they are adjusted at different energy scales to remove divergences in the theory. The renormalization scale is typically chosen to be on the order of the energy scale at which the process of interest is taking place. In summary, the fragmentation scale and the renormalization scale are two different energy scales that are used in different contexts in theoretical particle physics. The fragmentation scale is used to describe the energy scale at which partons fragment into hadrons, while the renormalization scale is used to describe the energy scale at which the coupling constants in the theory are defined.
 
@@ -265,11 +261,11 @@ While minor backgrounds arise from other SM processes, we have not included them
 \section{Background from Fake Photons}\label{sec:bkg_fake}
 
 
-\begin{figure}[tbp!]
+\begin{figure}[htbp!]
+\caption{Schematic of a $\pi^{0}$ decaying into two photons that deposit energy that mimics energy-deposit features of prompt photons.}
 \begin{center}
 \includegraphics[angle=0,width=0.7\textwidth]{fig/SchematicOfJetFakingPhoton.png}
 \end{center}
-\caption{Schematic of a $\pi^{0}$ decaying into two photons that deposit energy that mimics energy-deposit features of prompt photons.}
 \label{fig:pi0Decay}
 \end{figure}
 % \subsection{Overview of Photon Fake Rate Method}
@@ -386,19 +382,19 @@ Figure~\ref{fig:real_templates} and Figure~\ref{fig:fake_templates} show the \pt
 
 % % generated by FakeRateAnalysis/RooFitTemplateFitting/analysis/makePlotsNew.py
 \begin{figure}[!htbp]
+\caption{Representative real templates derived from MC in EB and EE for different \pt bins.}
 \centering
 \includegraphics[width=0.49\textwidth]{fig/realtemplatecompEB_2018.pdf}
 \includegraphics[width=0.49\textwidth]{fig/realtemplatecompEE_2018.pdf}
-\caption{Representative real templates derived from MC in EB and EE for different \pt bins.}
 \label{fig:real_templates}
 \end{figure}
 
 % % % generated by FakeRateAnalysis/RooFitTemplateFitting/analysis/makePlotsNew.py
 \begin{figure}[!htbp]
+\caption{Fake templates comparison measured in various \pt bins extracted from the \texttt{JetHT} data set for EB (left) and EE (right).}
 \centering
 \includegraphics[width=0.49\textwidth]{fig/faketemplatecompEB_jetht_2018.pdf}
 \includegraphics[width=0.49\textwidth]{fig/faketemplatecompEE_jetht_2018.pdf}
-\caption{Fake templates comparison measured in various \pt bins extracted from the \texttt{JetHT} data set for EB (left) and EE (right).}
 \label{fig:fake_templates}
 \end{figure}
 
@@ -406,16 +402,17 @@ There is very little dependence of the template shape on the year. This is shown
 
 % % % generated by FakeRateAnalysis/python/plot_templates_by_year.py
 \begin{figure}[!htbp]
+\caption{Comparison of normalized real template shape among the three analysis years, for EB (left), EE1 ($1.566 < |\eta| < 2.033$)(center), and EE2 ($2.033 < \lvert \eta \rvert< 2.5$)(right).}
 \centering
 \includegraphics[width=0.3\textwidth]{fig/sieie_comparison_EB_diphoton_fake_rate_real_templates_all_GGJets_GJets_pt130To150_chIso5To10.pdf}
 \includegraphics[width=0.3\textwidth]{fig/sieie_comparison_EE1_diphoton_fake_rate_real_templates_all_GGJets_GJets_pt130To150_chIso5To10.pdf}
 \includegraphics[width=0.3\textwidth]{fig/sieie_comparison_EE2_diphoton_fake_rate_real_templates_all_GGJets_GJets_pt130To150_chIso5To10.pdf}
-\caption{Comparison of normalized real template shape among the three analysis years, for EB (left), EE1 ($1.566 < |\eta| < 2.033$)(center), and EE2 ($2.033 < \lvert \eta \rvert< 2.5$)(right).}
 \label{fig:real_templates_by_year}
 \end{figure}
 
 % % % generated by FakeRateAnalysis/python/plot_templates_by_year.py
 \begin{figure}[!htbp]
+\caption{Comparison of normalized fake template shape among the three analysis years, for EB (left), EE1 ($1.566 < |\eta| < 2.033$)(center), and EE2 ($2.033 < \lvert \eta \rvert< 2.5$)(right). The top (bottom) row shows the templates derived from the \texttt{JetHT} (\texttt{DoubleMuon}) dataset.}
 \centering
 \includegraphics[width=0.3\textwidth]{fig/sieie_comparison_EB_jetht_pt130To150_chIso5To10.pdf}
 \includegraphics[width=0.3\textwidth]{fig/sieie_comparison_EE1_jetht_pt130To150_chIso5To10.pdf}
@@ -423,7 +420,6 @@ There is very little dependence of the template shape on the year. This is shown
 \includegraphics[width=0.3\textwidth]{fig/sieie_comparison_EB_doublemuon_pt130To150_chIso5To10.pdf}
 \includegraphics[width=0.3\textwidth]{fig/sieie_comparison_EE1_doublemuon_pt130To150_chIso5To10.pdf}
 \includegraphics[width=0.3\textwidth]{fig/sieie_comparison_EE2_doublemuon_pt130To150_chIso5To10.pdf}
-\caption{Comparison of normalized fake template shape among the three analysis years, for EB (left), EE1 ($1.566 < |\eta| < 2.033$)(center), and EE2 ($2.033 < \lvert \eta \rvert< 2.5$)(right). The top (bottom) row shows the templates derived from the \texttt{JetHT} (\texttt{DoubleMuon}) dataset.}
 \label{fig:fake_templates_by_year}
 \end{figure}
 
@@ -432,9 +428,9 @@ An illustration of the template fit for a given \pt bin is shown in Figure~\ref{
 
 % % % generated by fakeRateCalculation.exe
 \begin{figure}[!htbp]
+\caption{A representative template fit extracted from the 2018 \texttt{JetHT} data set using photon objects from the ECAL barrel in the $130<\pt<150\GeV$ range, in linear (left) and log scale (right) for the y-axis.}
 \centering
 \includegraphics[scale=0.80]{fig/fakeRatePlot_jetht_2018_EE_pT130To150_chIso5To10.pdf}
-\caption{A representative template fit extracted from the 2018 \texttt{JetHT} data set using photon objects from the ECAL barrel in the $130<\pt<150\GeV$ range, in linear (left) and log scale (right) for the y-axis.}
 \label{fig:templatefit}
 \end{figure}
 
@@ -460,6 +456,7 @@ The fake rate is just the ratio of the numerator and denominator which we have c
 
 % generated by compare_pv.exe
 \begin{figure}[!htbp]
+\caption{A comparison of the fake rate in EB measured as a function of the number of selected primary vertices (nPV) in the event using the \texttt{JetHT} data set (top) and \texttt{DoubleMuon} data set (bottom). The fake rates are determined separately for 2016 at the (left), 2017 (center), and 2018 (right).}
 \centering
 \includegraphics[width=0.3\textwidth]{fig/compare_pv_EB_2016_jetht.pdf}
 \includegraphics[width=0.3\textwidth]{fig/compare_pv_EB_2017_jetht.pdf}
@@ -467,12 +464,12 @@ The fake rate is just the ratio of the numerator and denominator which we have c
 \includegraphics[width=0.3\textwidth]{fig/compare_pv_EB_2016_doublemuon.pdf}
 \includegraphics[width=0.3\textwidth]{fig/compare_pv_EB_2017_doublemuon.pdf}
 \includegraphics[width=0.3\textwidth]{fig/compare_pv_EB_2018_doublemuon.pdf}
-\caption{A comparison of the fake rate in EB measured as a function of the number of selected primary vertices (nPV) in the event using the \texttt{JetHT} data set (top) and \texttt{DoubleMuon} data set (bottom). The fake rates are determined separately for 2016 at the left, 2017 at the center, and 2018 at the right.}
 \label{fig:frpileup_EB}
 \end{figure}
 
 % % generated by compare_pv.exe
 \begin{figure}[!htbp]
+\caption{A comparison of the fake rate in EE1 ($1.566 < |\eta| < 2.033$) measured as a function of the number of selected primary vertices in the event using the \texttt{JetHT} data set (top) and \texttt{DoubleMuon} data set (bottom). The fake rates are determined separately for 2016 (left), 2017 (center), and 2018 (right).}
 \centering
 \includegraphics[width=0.3\textwidth]{fig/compare_pv_EE1_2016_jetht.pdf}
 \includegraphics[width=0.3\textwidth]{fig/compare_pv_EE1_2017_jetht.pdf}
@@ -480,13 +477,13 @@ The fake rate is just the ratio of the numerator and denominator which we have c
 \includegraphics[width=0.3\textwidth]{fig/compare_pv_EE1_2016_doublemuon.pdf}
 \includegraphics[width=0.3\textwidth]{fig/compare_pv_EE1_2017_doublemuon.pdf}
 \includegraphics[width=0.3\textwidth]{fig/compare_pv_EE1_2018_doublemuon.pdf}
-\caption{A comparison of the fake rate in EE1 ($1.566 < |\eta| < 2.033$) measured as a function of the number of selected primary vertices in the event using the \texttt{JetHT} data set (top) and \texttt{DoubleMuon} data set (bottom). The fake rates are determined separately for 2016 (left), 2017 (center), and 2018 (right). The ranges used for comparison were chosen to reflect a roughly uniform level of statistics between all ranges.}
 \label{fig:frpileup_EE1}
 \end{figure}
 
 
 % generated by compare_pv.exe
 \begin{figure}[!htbp]
+\caption{A comparison of the fake rate in EE2 ($2.033 \mathopen< \lvert \eta \rvert \mathclose< 2.5$) measured as a function of the number of selected primary vertices in the event using the \texttt{JetHT} data set (top) and \texttt{DoubleMuon} data set (bottom). The fake rates are determined separately for 2016 (left), 2017 (center), and 2018 (right). The ranges used for comparison were chosen to reflect a roughly uniform level of statistics between all ranges.}
 \centering
 \includegraphics[width=0.3\textwidth]{fig/compare_pv_EE2_2016_jetht.pdf}
 \includegraphics[width=0.3\textwidth]{fig/compare_pv_EE2_2017_jetht.pdf}
@@ -494,7 +491,6 @@ The fake rate is just the ratio of the numerator and denominator which we have c
 \includegraphics[width=0.3\textwidth]{fig/compare_pv_EE2_2016_doublemuon.pdf}
 \includegraphics[width=0.3\textwidth]{fig/compare_pv_EE2_2017_doublemuon.pdf}
 \includegraphics[width=0.3\textwidth]{fig/compare_pv_EE2_2018_doublemuon.pdf}
-\caption{A comparison of the fake rate in EE2 ($2.033 < \lvert \eta \rvert< 2.5$) measured as a function of the number of selected primary vertices in the event using the \texttt{JetHT} data set (top) and \texttt{DoubleMuon} data set (bottom). The fake rates are determined separately for 2016 (left), 2017 (center), and 2018 (right). The ranges used for comparison were chosen to reflect a roughly uniform level of statistics between all ranges.}
 \label{fig:frpileup_EE2}
 \end{figure}
 
@@ -507,7 +503,9 @@ We emphasize that the \texttt{JetHT} and \texttt{DoubleMuon} are not MC samples 
 
 %% 2016 MC closure test confirmation of overall systematics?
 \begin{table}[!htbp]
-       \caption{ There are three nPV bins for 2016. The 28-200 bin are further split into 3 additional bins for 2017 and 2018. The ranges are $0 < n_{PV} \leq 22$ (left), $23 \leq n_{PV} \leq 27$ (center), and $28 \leq n_{PV} \leq 200$ (right). The ranges used for comparison were chosen to reflect a roughly uniform level of statistics between all ranges.}
+   \caption{There are three $n_{PV}$ bins for 2016. The 28-200 bin are further split into 3 additional bins for 2017 and 2018. The ranges are $0 \mathopen< n_{PV} \leq 22$ (left), $23 \leq n_{PV} \leq 27$ (center), and $28 \leq n_{PV} \leq 200$ (right). The ranges used for comparison were chosen to reflect a roughly uniform level of statistics between all ranges.}
+
+
        \centering
        \vspace{\baselineskip}
        \begin{tabular}{lc}
@@ -535,6 +533,7 @@ Multiple interactions in each proton bunch crossings also affect our estimates o
 
 % generated by compare_pv_bin.exe
 \begin{figure}[!htbp]
+\caption{A comparison of the 2016 fake rate in EB (top), EE1 ($1.566 \mathopen< |\eta| \mathclose< 2.033$)(middle), and EE2 ($2.033 \mathopen< \lvert \eta \rvert \mathclose< 2.5$)(bottom) measured as a function of the number of selected primary vertices in the event. The ranges are $0 \mathopen< n_{PV}\mathclose\leq 22$ (left), $23 \leq n_{PV} \mathclose\leq 27$ (center), and $28 \leq n_{PV}\mathclose\leq 200$ (right). The ranges used for comparison were chosen to reflect a roughly uniform level of statistics between all ranges.}
 \centering
 \includegraphics[width=0.3\textwidth]{fig/compare_pv_EB_2016_0to22.pdf}
 \includegraphics[width=0.3\textwidth]{fig/compare_pv_EB_2016_23to27.pdf}
@@ -545,12 +544,13 @@ Multiple interactions in each proton bunch crossings also affect our estimates o
 \includegraphics[width=0.3\textwidth]{fig/compare_pv_EE2_2016_0to22.pdf}
 \includegraphics[width=0.3\textwidth]{fig/compare_pv_EE2_2016_23to27.pdf}
 \includegraphics[width=0.3\textwidth]{fig/compare_pv_EE2_2016_28to200.pdf}
-\caption{A comparison of the fake rate in EB (top), EE1 ($1.566 < |\eta| < 2.033$)(middle), and EE2 ($2.033 < \lvert \eta \rvert< 2.5$)(bottom) measured as a function of the number of selected primary vertices in the event. The ranges are $0 < n_{PV} \leq 22$ (left), $23 \leq n_{PV} \leq 27$ (center), and $28 \leq n_{PV} \leq 200$ (right). The ranges used for comparison were chosen to reflect a roughly uniform level of statistics between all ranges.}
+
 \label{fig:frpileup_compare_dataset_2016}
 \end{figure}
 
 % % generated by compare_pv_bin.exe
 \begin{figure}[!htbp]
+\caption{A comparison of the 2017 fake rate in EB (top), EE1 ($1.566 \mathopen< \mathopen| \eta \mathclose| \mathclose< 2.033$)(middle), and EE2 ($2.033 \mathopen< \mathopen| \eta \mathclose| \mathclose< 2.5$)(bottom) measured as a function of the number of selected primary vertices in the event. From left to right, the ranges are $0 \mathopen< n_{PV} \mathclose\leq 22$, $23 \leq n_{PV} \mathclose\leq 27$, $28 \leq n_{PV} \mathclose\leq 32$, $33 \leq n_{PV} \mathclose\leq 37$, and $38 \leq n_{PV} \mathclose\leq 200$. The ranges used for comparison were chosen to reflect a roughly uniform level of statistics between all ranges.}
 \centering
 \includegraphics[width=0.19\textwidth]{fig/compare_pv_EB_2017_0to22.pdf}
 \includegraphics[width=0.19\textwidth]{fig/compare_pv_EB_2017_23to27.pdf}
@@ -567,12 +567,13 @@ Multiple interactions in each proton bunch crossings also affect our estimates o
 \includegraphics[width=0.19\textwidth]{fig/compare_pv_EE2_2017_28to32.pdf}
 \includegraphics[width=0.19\textwidth]{fig/compare_pv_EE2_2017_33to37.pdf}
 \includegraphics[width=0.19\textwidth]{fig/compare_pv_EE2_2017_38to200.pdf}
-\caption{A comparison of the fake rate in EB (top), EE1 ($1.566 < |\eta| < 2.033$)(middle), and EE2 ($2.033 < \lvert \eta \rvert< 2.5$)(bottom) measured as a function of the number of selected primary vertices in the event. From left to right, the ranges are $0 < n_{PV} \leq 22$, $23 \leq n_{PV} \leq 27$, $28 \leq n_{PV} \leq 32$,  $33 \leq n_{PV} \leq 37$, and  $38 \leq n_{PV} \leq 200$. The ranges used for comparison were chosen to reflect a roughly uniform level of statistics between all ranges.}
 \label{fig:frpileup_compare_dataset_2017}
 \end{figure}
 
 % generated by compare_pv_bin.exe
 \begin{figure}[!htbp]
+\caption{A comparison of the 2018 fake rate in EB (top), EE1 ($1.566 \mathopen< |\eta| \mathclose< 2.033$)(middle), and EE2 ($2.033 \mathopen< \lvert \eta \rvert \mathclose< 2.5$)(bottom) measured as a function of the number of selected primary vertices in the event. From left to right, the ranges are $0 \mathopen< n_{PV} \mathclose\leq 22$, $23 \mathopen\leq n_{PV} \mathclose\leq 27$, $28 \mathopen\leq n_{PV} \mathclose\leq 32$, $33 \mathopen\leq n_{PV} \leq 37$, and $38 \mathopen\leq n_{PV} \mathclose\leq 200$.}
+
 \centering
 \includegraphics[width=0.19\textwidth]{fig/compare_pv_EB_2018_0to22.pdf}
 \includegraphics[width=0.19\textwidth]{fig/compare_pv_EB_2018_23to27.pdf}
@@ -589,7 +590,6 @@ Multiple interactions in each proton bunch crossings also affect our estimates o
 \includegraphics[width=0.19\textwidth]{fig/compare_pv_EE2_2018_28to32.pdf}
 \includegraphics[width=0.19\textwidth]{fig/compare_pv_EE2_2018_33to37.pdf}
 \includegraphics[width=0.19\textwidth]{fig/compare_pv_EE2_2018_38to200.pdf}
-\caption{A comparison of the fake rate in EB (top), EE1 ($1.566 < |\eta| < 2.033$)(middle), and EE2 ($2.033 < \lvert \eta \rvert< 2.5$)(bottom) measured as a function of the number of selected primary vertices in the event. From left to right, the ranges are $0 < n_{PV} \leq 22$, $23 \leq n_{PV} \leq 27$, $28 \leq n_{PV} \leq 32$,  $33 \leq n_{PV} \leq 37$, and  $38 \leq n_{PV} \leq 200$. The ranges used for comparison were chosen to reflect a roughly uniform level of statistics between all ranges.}
 \label{fig:frpileup_compare_dataset_2018}
 \end{figure}
 
@@ -642,10 +642,10 @@ The least bias is seen for the $5 < \chiso < 10$ $\GeV$ sideband making it our n
 
 %%%% Template Comparisons
 \begin{figure}[!htbp]
+ \caption{Representative \sieie templates for the ECAL barrel (left) and endcap (right) for 2017 in the 50-70~\GeV \pt-bin are shown here. The distributions in gold show the MC truth while the black and red show the fake templates in the $5 \mathopen< \chiso \mathclose< 10$ $\GeV$ and $10 \mathopen< \chiso \mathclose< 15$ $\GeV$ sidebands.}
   \centering
   \includegraphics[width=0.49\textwidth]{fig/MCtemplates_pT50To70EB2017.pdf}
   \includegraphics[width=0.49\textwidth]{fig/MCtemplates_pT50To70EE2017.pdf}
-  \caption{Representative \sieie templates for the ECAL barrel (left) and endcap (right) for 2017 in the 50-70~\GeV \pt-bin are shown here. The distributions in gold shows the MC truth while the black and red show the fake templates in the $5 < \chiso < 10$ $\GeV$ and $10 < \chiso < 15$ $\GeV$ sidebands.}
   \label{fig:template_comparisons}
 \end{figure}
 
@@ -663,28 +663,28 @@ In general, we observe an underprediction within an uncertainty of about 30\% as
 
 % %%%%  Template Fit
 \begin{figure}[!htbp]
+\caption{A representative template fit from the 2018 shows using photon objects from the ECAL barrel that have \pT from 50 to 70 GeV in the \chiso sideband $5 \mathopen< \text{GeV} < 10$.}
 \centering
 \includegraphics[scale=0.83]{fig/fakeRatePlot_all_2017_EB_pT50To70_chIso5To10.pdf}
-\caption{A representative template fit from the 2018 shows using photon objects from the ECAL barrel that have \pT from 50 to 70 GeV in the \chiso sideband 5 to 10 GeV.}
 \label{fig:templatefit_closure}
 \end{figure}
 
 % %%%%% Fake Rates
 \begin{figure}[!htbp]
+ \caption{The 2017 MC Truth fake rates and the MC fake rates shows a generally good agreement with each other for both EB and EE. The MC Truth was obtained by a 'counting' procedure whereas the fake rate was obtained through a series of steps which involves a template fitting.}
   \centering
   \includegraphics[width=0.49\textwidth]{fig/closureTest_MCTruth_comparisonsEB_2017_adjustrange.pdf}
   \includegraphics[width=0.49\textwidth]{fig/closureTest_MCTruth_comparisonsEE_2017_adjustrange.pdf}
-  \caption{The 2017 MC Truth fake rates and the MC fake rates shows a generally good agreement with each other for both EB and EE. The MC Truth was obtained by a 'counting' procedure whereas the fake rate was obtained through a series of steps which involves a template fitting.}
   \label{fig:fakerates_2017}
 \end{figure}
 
 
 
 \begin{figure}[!htbp]
+ \caption{The 2018 MC Truth fake rates and the MC fake rates shows a generally good agreement with each other for both EB and EE. The MC Truth was obtained by a 'counting' procedure whereas the fake rate was obtained through a series of steps which involves a template fitting.}
   \centering
   \includegraphics[width=0.49\textwidth]{fig/closureTest_MCTruth_comparisonsEB_2018_adjustrange.pdf}
   \includegraphics[width=0.49\textwidth]{fig/closureTest_MCTruth_comparisonsEE_2018_adjustrange.pdf}
-  \caption{The 2018 MC Truth fake rates and the MC fake rates shows a generally good agreement with each other for both EB and EE. The MC Truth was obtained by a 'counting' procedure whereas the fake rate was obtained through a series of steps which involves a template fitting.}
   \label{fig:fakerates_2018}
 \end{figure}
 
@@ -713,6 +713,7 @@ Figure~\ref{fig:kinematics17} and Figure~\ref{fig:kinematics18} shows single pho
 % \end{figure}
 
 \begin{figure}[!htbp]
+\caption{The two columns show the EB (left) and EE (right) single photon kinematic plots for reweighted objects for 2017.}
 \centering
 \includegraphics[width=0.85\textwidth]{fig/closure_test_photon_kinematics_eta_2017sans_Denom.pdf}\\
 % \includegraphics[width=0.45\textwidth]{fig/closure_test_photon_kinematics_eta_2018sans_Denom.pdf}\\
@@ -720,7 +721,6 @@ Figure~\ref{fig:kinematics17} and Figure~\ref{fig:kinematics18} shows single pho
 % \includegraphics[width=0.45\textwidth]{fig/closure_test_photon_kinematics_phi_2018sans_Denom.pdf} \\
 \includegraphics[width=0.85\textwidth]{fig/closure_test_photon_kinematics_pt_2017.pdf}
 % \includegraphics[width=0.45\textwidth]{fig/closure_test_photon_kinematics_pt_2018.pdf}
-\caption{The two columns show the EB (left) and EE (right) single photon kinematic plots for reweighted objects for 2017.}
 \label{fig:kinematics17}
 \end{figure}
 
@@ -752,6 +752,7 @@ Figure~\ref{fig:kinematics17} and Figure~\ref{fig:kinematics18} shows single pho
 
 
 \begin{figure}[!htbp]
+\caption{The two columns show the EB (left) and EE (right) single photon kinematic plots for reweighted objects for 2018.}
 \centering
 % \includegraphics[width=0.9\textwidth]{fig/closure_test_photon_kinematics_eta_2017sans_Denom.pdf}\\
 \includegraphics[width=0.9\textwidth]{fig/closure_test_photon_kinematics_eta_2018sans_Denom.pdf}\\
@@ -759,7 +760,6 @@ Figure~\ref{fig:kinematics17} and Figure~\ref{fig:kinematics18} shows single pho
 \includegraphics[width=0.9\textwidth]{fig/closure_test_photon_kinematics_phi_2018sans_Denom.pdf} \\
 % \includegraphics[width=0.9\textwidth]{fig/closure_test_photon_kinematics_pt_2017.pdf}
 \includegraphics[width=0.9\textwidth]{fig/closure_test_photon_kinematics_pt_2018.pdf}
-\caption{The two columns show the EB (left) and EE (right) single photon kinematic plots for reweighted objects for 2018.}
 \label{fig:kinematics18}
 \end{figure}
 
@@ -773,27 +773,27 @@ Figure~\ref{fig:kinematics17} and Figure~\ref{fig:kinematics18} shows single pho
 
 % %
 \begin{figure}[!htbp]
+\caption{A representative template fit from the 2017.}
 \centering
 \includegraphics[scale=0.85]{fig/fakeRatePlot_all_2017_EB1_pT50To70_chIso5To10.pdf}
-\caption{A representative template fit from the 2017.}
 \label{fig:templatefit_2017_etabinned}
 \end{figure}
 
 % %%%%% Fake Rates
 \begin{figure}[!htbp]
+  \caption{The Fake Rates were recalculated with the splitting of the barrel region into inner and outer regions. The inner barrel (EB1) corresponds to $|\eta| <  0.7221$. The outer barrel (EB2) corresponds to $0.7221 < |\eta| < 1.4442$. This was done to improve the agreement between the fake prediction and the MC Truth fake prediction for the last step of the closure test.}
   \centering
   \includegraphics[width=0.49\textwidth]{fig/closureTest_MCTruth_comparisonsEB1_2017_adjustrange.pdf}
   \includegraphics[width=0.49\textwidth]{fig/closureTest_MCTruth_comparisonsEB2_2017_adjustrange.pdf}
-  \caption{The Fake Rates were recalculated with the splitting of the barrel region into inner and outer regions. The inner barrel (EB1) corresponds to $|\eta| <  0.7221$. The outer barrel (EB2) corresponds to $0.7221 < |\eta| < 1.4442$. This was done to improve the agreement between the fake prediction and the MC Truth fake prediction for the last step of the closure test.}
   \label{fig:templates_2017_etaBinnedEB}
 \end{figure}
 
 \begin{figure}[!htbp]
+  \caption{We also split the endcaps into inner and outer regions to improve the fake prediction. The inner endcap (EE1) $1.566 < |\eta| < 2.033$ while the outer endcap corresponds to $2.033 < \lvert \eta \rvert< 2.5$.}
   \centering
   \includegraphics[width=0.49\textwidth]{fig/closureTest_MCTruth_comparisonsEE1_2017_adjustrange.pdf}
   \includegraphics[width=0.49\textwidth]{fig/closureTest_MCTruth_comparisonsEE2_2017_adjustrange.pdf}
   % \includegraphics[width=0.3\textwidth]{fig/closureTest_MCTruth_comparisonsEE3_2017_adjustrange.pdf}
-  \caption{We also split the endcaps into inner and outer regions to improve the fake prediction. The inner endcap (EE1) $1.566 < |\eta| < 2.033$ while the outer endcap corresponds to $2.033 < \lvert \eta \rvert< 2.5$.}
   \label{fig:templates_2017_etaBinnedEE}
 \end{figure}
 
@@ -801,9 +801,10 @@ Figure~\ref{fig:kinematics17} and Figure~\ref{fig:kinematics18} shows single pho
 
 \begin{figure}[!htbp]
 \centering
+\caption{Splitting the barrel and endcap regions shows some improvements in the agreement between the fake rate reweighted Fake Prediction and the MC Truth Prediction for 2017. A similar result is observed for 2018. The inner barrel (EB1) corresponds to $|\eta| < 0.7221$. The outer barrel (EB2) corresponds to $0.7221 < |\eta| < 1.4442$. The inner endcap (EE1) $1.566 < |\eta| < 2.033$ while the outer endcap corresponds to $2.033 < |\eta| < 2.5$.}
 \includegraphics[width=0.8\textwidth]{fig/closure_test_photon_kinematics_eta_2017_withEtaBin.pdf}\\
 \includegraphics[width=0.8\textwidth]{fig/closure_test_photon_kinematics_phi_2017_withEtaBin.pdf}\\
-\includegraphics[width=0.8\textwidth]{fig/closure_test_photon_kinematics_pt_2017_withEtaBin.pdf}}\caption{Splitting the barrel and endcap regions show some improvements in the agreement between the fake rate reweighted Fake Prediction and the MC Truth Prediction for 2017. A similar result is observed for 2018. The inner barrel (EB1) corresponds to $|\eta| <  0.7221$. The outer barrel (EB2) corresponds to $0.7221 < |\eta| < 1.4442$. The inner endcap (EE1) $1.566 < |\eta| < 2.033$ while the outer endcap corresponds to $2.033 < \lvert \eta \rvert< 2.5$. }
+\includegraphics[width=0.8\textwidth]{fig/closure_test_photon_kinematics_pt_2017_withEtaBin.pdf}
 \label{fig:EtaBinned}
 \end{figure}
 

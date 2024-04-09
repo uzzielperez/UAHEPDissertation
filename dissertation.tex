@@ -28,6 +28,7 @@
 \usepackage{slashed}
 \usepackage{notoccite}
 \usepackage{subcaption}
+\usepackage{flushend} % To avoid references from splitting pages 
 % \usepackage{float}
 % \usepackage[tableposition=top]{caption}
 % \usepackage{floatrow}
@@ -98,12 +99,19 @@
 
 %% Note the use of \and to create line breaks and the
 %% inverted pyramid style requested by the graduate school.
-\begin{center}
 \title{
-\begin{spacing}{2}
 Search for non-resonant new physics in high-mass diphoton events from pp collisions at $\sqrt{s} = 13\TeV$ with the CMS \hfill \and Detector and Highlights from HCAL Upgrades 
-\end{spacing}
 }
+% \title{Title of the thesis: the top line should be the longest \and
+%   the middle one is second longest \and
+%   and the last is shortest}
+
+% \begin{center}
+% \title{
+% \begin{spacing}{2}
+% Search for non-resonant new physics in high-mass diphoton events from pp collisions at $\sqrt{s} = 13\TeV$ with the CMS \hfill \and Detector and Highlights from HCAL Upgrades 
+% \end{spacing}
+% }
 
 
 % \title{Search for Non-resonant Signatures of Beyond Standard Model Physics in high-mass diphoton events from proton-proton collisions $\sqrt{s} = 13\TeV$ with the CMS Detector \hfill \and and Selected Notes on HCAL \hfill \and \hfill LS2 Upgrades \hfill}
@@ -136,8 +144,7 @@ Search for non-resonant new physics in high-mass diphoton events from pp collisi
 
 \abstract{
 \begin{spacing}{2}
-% \raggedright
-% \raggedright\parindent=25pt
+\RaggedRight
 Results are presented from a search for non-resonant or broad signatures of beyond the standard model physics in the high-mass diphoton spectrum from proton-proton collisions at $\sqrt{s}=13$~TeV. The analysis uses data collected in 2016--2018 with the CMS detector at the LHC and corresponds to 138~\fbinv. Events with a diphoton invariant mass above 500~GeV are considered. A first-principles calculation of the standard model diphoton spectrum at next-to-next-to-leading order in perturbative quantum chromodynamics calculations was used to estimate the irreducible standard model background. The full data are used to constrain the large extra dimensions model of Arkani--Hamed, Dimopoulos, and Dvali, and the continuum clockwork mechanism. Preliminary studies and limits on the scenario of Unparticles decaying into two photons are also presented. Additionally, work on various hardware and software upgrades are discussed. Software support for improved timing information from the CMS Hadron Calorimeter Barrel for the creation of a Level-1 trigger for Long-Lived Particles are highlighted. 
 
 
@@ -153,14 +160,14 @@ Results are presented from a search for non-resonant or broad signatures of beyo
 }
 
 \acknowledgments{
-% \raggedright\parindent=25pt
+\raggedright\parindent=15pt
 The call to adventure to pursue a PhD was not for the faint of heart. It was a serious undertaking, rife with challenges and temptations that could only be surpassed with the support of many others. We have a proverb in the Philippines that says ``Ang hindi lumingon sa pinanggalingan, ay hindi makararating sa paroroonan" which in English means, ``Those who do not look back at where they came from will not reach their destination". I am grateful to everyone whom I have crossed paths with along the way and helped me get to the finish line which once seemed so far off or kept moving an inch away with every half-inch I tried to get closer. I have arrived.
 
 % The call to adventure to pursue a PhD is not for the faint of heart. It is a serious undertaking, rife with challenges and temptations that can only be surpassed with the support of many others. We have a proverb in the Philippines that says, "Ang hindi lumingon sa pinanggalingan, ay hindi makararating sa paroroonan" which in English means, "Those who do not look back at where they came from will not reach their destination). I am grateful to everyone I have crossed paths with along the way, who helped me overcome obstacles that once seemed insurmountable. Today, I stand at the finish line, a testament to their support and my perseverance. I have arrived, having completed my PhD journey.
 
 First, I'd like to express my deep gratitude to my advisor, Conor Henderson, for going above and beyond his role as an educator. He not only imparted technical and physics knowledge but also opened doors for me within the CMS experiment. He kept me grounded and focused throughout my PhD journey, providing unwavering support during challenging times. Looking back, I couldn't have asked for a better adviser. I am forever grateful for our honest communication and his commitment to my well-being and success. I'm also thankful to Paolo Rumerio for his kindness and continuous support, despite having many roles to play. His presence and timely support was invaluable to me during my PhD. Sergei Gleyzer, my co-adviser, for his pep talks and sharing his experiences, which played a crucial role in helping me complete my dissertation. I'm grateful for the opportunity to learn machine learning from him and his team. I've also had the pleasure of having Dr. Corrinne Mills as my CMS mentor. Her inputs and connections helped guide me find my way when I was lost. She reminded me to maintain a personal life and not simply drown in physics responsibilities. 
 
-I owe an enormous debt of gratitude to the members of the diphoton analysis team, including John Paul Chou, Antonios Agapitos, and Hsin-Yeh Wu, whose encouragement, expertise, agile working style and humor were instrumental in ushering the analysis in the last steps of the CMS publication journey. I also appreciate the contributions of  Otmane Charaf, Andrew Buccilli, Christopher West, and Seth Cooper, who supported me in various aspects of my research. Working with Grace Cummings, Jay Dittman, Sebastian Yan, and Mary Hadley on the HCAL detector was a dream come true, and I'm thankful for the camaraderie and everything I have learned from them.
+I owe an enormous debt of gratitude to the members of the diphoton analysis team, including John Paul Chou, Antonios Agapitos, Hsin-Yeh Wu, and formerly Chris West, whose encouragement, expertise, agile working style and humor were instrumental in ushering the analysis in the last steps of the CMS publication journey. I truly think that I would not have finished the analysis without them. I also appreciate the contributions of  Otmane Charaf, Andrew Buccilli, and Seth Cooper, who paved the way for me to make enormous progress in my PhD journey. Without them, there were no building blocks to start with. Working with Grace Cummings, Jay Dittman, Sebastian Yan, and Mary Hadley on the HCAL detector was a dream come true, and I'm thankful for the camaraderie and everything I have learned from them.
 
 I extend my gratitude to the UA Physics Department, Patrick LeClair, Preethi Nair, Adam Hauser, and the rest of my dissertation committee members, Nobu Okada, Dawn Williams for the financial and moral support, physics discussions and feedback. I also owe a great deal to the HCAL Operations, CERN Social Affairs - particularly Sophie Charpie, HUG for their various forms of support during my extended stay in Geneva.
 
@@ -200,7 +207,7 @@ Lastly, I want to express gratitude to André David, Delia, Michael Andrews, Afi
 \include{ch8results}
 \include{ch9conclusions}
 
-\renewcommand{\bibsection}{\topskip=32pt\chapter*{References}\topskip=0pt \addcontentsline{toc}{chapter}{References}\vspace*{6pt}}
+\renewcommand{\bibsection}{\topskip=32pt\chapter*{REFERENCES}\topskip=0pt \addcontentsline{toc}{chapter}{REFERENCES}\vspace*{6pt}}
 
 \bibliographystyle{lucas_unsrt}
 
@@ -212,7 +219,7 @@ Lastly, I want to express gratitude to André David, Delia, Michael Andrews, Afi
 \begin{appendices}
 
 \addtocontents{toc}{\setlength{\cftchapnumwidth}{14.4pt}}
-\renewcommand{\appendixname}{Appendix}
+\renewcommand{\appendixname}{APPENDIX}
 \addtocontents{toc}{\protect\renewcommand{\protect\cftchappresnum}{}}
 
 \include{appendix_scaleFactors}

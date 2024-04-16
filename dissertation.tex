@@ -32,7 +32,8 @@
 % \usepackage{float}
 % \usepackage[tableposition=top]{caption}
 % \usepackage{floatrow}
-
+% \usepackage{nowidow}
+\usepackage[all]{nowidow}
 
 \usepackage{ragged2e} % to justify the text
 
@@ -102,6 +103,9 @@
 \title{
 Search for non-resonant new physics in high-mass diphoton events from pp collisions at $\sqrt{s} = 13\TeV$ with the CMS \hfill \and Detector and Highlights from HCAL Upgrades 
 }
+
+
+
 % \title{Title of the thesis: the top line should be the longest \and
 %   the middle one is second longest \and
 %   and the last is shortest}
@@ -133,8 +137,6 @@ Search for non-resonant new physics in high-mass diphoton events from pp collisi
 % \end{spacing}
 % }
 
-\vspace{2\baselineskip} % Adjust the vertical space here
-
 
 
 \end{center}
@@ -145,7 +147,19 @@ Search for non-resonant new physics in high-mass diphoton events from pp collisi
 \abstract{
 \begin{spacing}{2}
 \RaggedRight
-Results are presented from a search for non-resonant or broad signatures of beyond the standard model physics in the high-mass diphoton spectrum from proton-proton collisions at $\sqrt{s}=13$~TeV. The analysis uses data collected in 2016--2018 with the CMS detector at the LHC and corresponds to 138~\fbinv. Events with a diphoton invariant mass above 500~GeV are considered. A first-principles calculation of the standard model diphoton spectrum at next-to-next-to-leading order in perturbative quantum chromodynamics calculations was used to estimate the irreducible standard model background. The full data are used to constrain the large extra dimensions model of Arkani--Hamed, Dimopoulos, and Dvali, and the continuum clockwork mechanism. Preliminary studies and limits on the scenario of Unparticles decaying into two photons are also presented. Additionally, work on various hardware and software upgrades are discussed. Software support for improved timing information from the CMS Hadron Calorimeter Barrel for the creation of a Level-1 trigger for Long-Lived Particles are highlighted. 
+Results are presented from a search for non-resonant or broad signatures of beyond the standard model physics in the high-mass diphoton spectrum from proton-proton collisions $\sqrt{s}=13$~TeV. The analysis uses data collected in Run 2 from 2016 to 2018 with the CMS detector at the LHC and corresponds to 138~\fbinv. Events containing two photons with an invariant mass above 500~\GeV are considered. To estimate the irreducible standard model background, a first-principles calculation of the standard model diphoton spectrum at next-to-next-to-leading order in perturbative quantum chromodynamics was used. The reducible background contribution arising from photon-faking jets being misidentified in the detector was estimated using control samples in the data. The results are consistent with the background-only hypothesis and the full data are used to constrain the large extra dimensions and the continuum clockwork mechanism. Exclusion limits on the mass scale $M_{\text{S}}$ range between 7.1 to 11.1\TeV for various ADD model conventions. These are the strongest limits on the model to date. For the two-dimensional space of the continuum clockwork model, values below  8.0\TeV for $k$ values between 0.2\GeV and 2.0\TeV are excluded. Preliminary limits and studies on the scenario of Unparticles decaying into two photons are also presented. Additionally, work on various hardware and software upgrades are discussed. Software support for improved timing information from the CMS Hadron Calorimeter Barrel for the creation of a Level-1 trigger for Long-lived Particles are highlighted.
+
+%  exclusion limits on the mass scale $M_{\text{S}}$ range between 7.1 to 11.1\TeV, depending on the specific convention.
+% Additionally, exclusion limits are set in the two-dimensional space of the continuum clockwork model, with the fundamental scale $M_5$ excluded at the 95\% confidence level below 8.0\TeV for $k$ values between 0.2\GeV and 2.0\TeV.
+% In the previous CMS result~\cite{Sirunyan:2018wnk}, the mass scale $M_{\text{S}}$ was excluded between 5.6 and 9.7\TeV, and $M_5$ was excluded below 5.0\TeV for the same $k$ range.
+% These results are the strongest limits on ADD extra dimensions and RS gravitons with $\tilde{k}\ge 0.1$ to date.
+
+
+
+% The large extra dimensions model of Arkani--Hamed, Dimopoulos, and Dvali, the continuum clockwork mechanism, and the Unparticles scenario are the three new physics model interpretations considered in the analysis. 
+
+
+% Results are presented from a search for non-resonant or broad signatures of beyond the standard model physics in the high-mass diphoton spectrum from proton-proton collisions at $\sqrt{s}=13$~TeV. The analysis uses data collected in 2016--2018 with the CMS detector at the LHC and corresponds to 138~\fbinv. Events with a diphoton invariant mass above 500~GeV are considered. A first-principles calculation of the standard model diphoton spectrum at next-to-next-to-leading order in perturbative quantum chromodynamics calculations was used to estimate the irreducible standard model background. The full data are used to constrain the large extra dimensions model of Arkani--Hamed, Dimopoulos, and Dvali, and the continuum clockwork mechanism. Preliminary studies and limits on the scenario of Unparticles decaying into two photons are also presented. Additionally, work on various hardware and software upgrades are discussed. Software support for improved timing information from the CMS Hadron Calorimeter Barrel for the creation of a Level-1 trigger for Long-Lived Particles are highlighted. 
 
 
 % The analysis uses data corresponding to 138~\fbinv collected by the CMS detector at the Large Hadron Collider from 2016--2018. Monte Carlo simulations corrected to next-to-next-to-leading order are used to predict the irreducible diphoton background. A data-driven technique is used to estimate the backgrounds from jets faking photons. The data are consistent with the background-only hypothesis. The full data are used to constrain the large extra dimensions model of Arkani--Hamed, Dimopoulos, and Dvali, and the continuum graviton model in the clockwork framework. Preliminary studies and limits on the scenario of Unparticles decaying to two photons are also presented. Additionally, the work on various hardware upgrades and software support for improved timing information from the CMS Hadron Calorimeter Barrel for the creation of a Level-1 trigger for Long-Lived Particles are discussed.
@@ -207,7 +221,12 @@ Lastly, I want to express gratitude to André David, Delia, Michael Andrews, Afi
 \include{ch8results}
 \include{ch9conclusions}
 
-\renewcommand{\bibsection}{\topskip=32pt\chapter*{REFERENCES}\topskip=0pt \addcontentsline{toc}{chapter}{REFERENCES}\vspace*{6pt}}
+% \renewcommand{\bibsection}{\topskip=32pt\chapter*{REFERENCES}\topskip=0pt \addcontentsline{toc}{chapter}{REFERENCES}\vspace*{6pt}}
+
+\renewcommand{\bibsection}{\topskip=1.3in\chapter*{\textnormal{REFERENCES}}\topskip=0pt \addcontentsline{toc}{chapter}{REFERENCES}\vspace*{6pt}}
+
+% \renewcommand{\bibsection}{\vspace*{0.5in}\hspace{.40\linewidth}\MakeTextUppercase}  
+%         \pagebreak
 
 \bibliographystyle{lucas_unsrt}
 
@@ -227,7 +246,7 @@ Lastly, I want to express gratitude to André David, Delia, Michael Andrews, Afi
 \include{appendix_fake_rate_application}
 \include{appendix_signal_mc}
 \include{appendix_sample_cards}
-\include{appendix_pseudodata}
+% \include{appendix_pseudodata}
 
 \end{appendices}
 

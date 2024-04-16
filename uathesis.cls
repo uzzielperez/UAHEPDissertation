@@ -56,7 +56,7 @@
 
 \renewcommand{\glossaryname}{LIST OF ABBREVIATIONS AND SYMBOLS}
 
-\renewcommand{\cfttoctitlefont}{\pagebreak\vspace*{1in}\hspace{.43\linewidth}\MakeTextUppercase}
+\renewcommand{\cfttoctitlefont}{\pagebreak\vspace*{1.2in}\hspace{.43\linewidth}\MakeTextUppercase}
 \renewcommand{\cftaftertoctitle}{\hfill}
 \renewcommand{\cftchapfont}{ }
 \renewcommand{\cftdot}{.}
@@ -77,7 +77,13 @@
 %% Title spacings.
 % \titlespacing{\chapter}{0pt}{2in}{1in}
 
-\titlespacing{\chapter}{0pt}{\baselineskip}{\baselineskip}
+% \titlespacing{\chapter}{0pt}{\baselineskip}{\baselineskip}
+% \titlespacing{\section}{0pt}{\baselineskip}{\baselineskip}
+% \titlespacing{\subsection}{0pt}{\baselineskip}{\baselineskip}
+
+% margins
+% \usepackage[top=2in,bottom=1in,left=1in,right=1in]{geometry}
+\titlespacing{\chapter}{0pt}{2in}{1in}
 \titlespacing{\section}{0pt}{\baselineskip}{\baselineskip}
 \titlespacing{\subsection}{0pt}{\baselineskip}{\baselineskip}
 
@@ -144,9 +150,8 @@
   \begin{center}
     \begin{doublespace}
     \renewcommand{\and}{\NoCaseChange{\\}}
-    \MakeTextUppercase{\@title} \linebreak \linebreak
-    \vspace*{2\baselineskip} % Increase space by two double-spaced lines
-    by \linebreak
+    \MakeTextUppercase{\@title} \linebreak \linebreak 
+    by \linebreak 
     \MakeTextUppercase{\@author}
     \begin{singlespace}
       \MakeTextUppercase{\@adviser, Committee Chair \and \@committee}
@@ -176,33 +181,33 @@
   \end{center}
   \pagebreak
 
-    
-    \begin{frontmatter}
-        \topskip=1in
+
+       \begin{frontmatter}
+        \topskip=1.3in
             \chapter*{ABSTRACT}
             \addcontentsline{toc}{chapter}{ABSTRACT}
         \topskip=-1in
             \@abstract
     
-        \topskip=1in
+        \topskip=1.3in
             \chapter*{DEDICATION}
             \addcontentsline{toc}{chapter}{DEDICATION} 
             \topskip=-1in
             \@dedication
 
-        %\pagebreak
-        % \renewcommand{\glossarypreamble}{\topskip=-1in}
-        %     \topskip=1in
-        %     %% Print everything in the glossary.
-        %     \glsaddall
-        %     \printglossary[toctitle={LIST OF ABBREVIATIONS AND SYMBOLS},title={\textbf{LIST OF ABBREVIATIONS AND SYMBOLS}}]
-        %     \glsresetall
-
-        \topskip=1in
-        \chapter*{Acknowledgments}
-        \addcontentsline{toc}{chapter}{ACKNOWLEDGEMENTS}
-        \@acknowledgments
+        \topskip=1.3in
+            \chapter*{ACKNOWLEDGEMENTS}
+            \addcontentsline{toc}{chapter}{ACKNOWLEDGEMENTS}
         \topskip=-1in
+             \@acknowledgments
+
+        % \topskip=1.3in
+        % \chapter*{Acknowledgments}
+        % \topskip=1in
+        % \addcontentsline{toc}{chapter}{ACKNOWLEDGEMENTS}
+        % \@acknowledgments
+        % \topskip=1in
+        
         
     %% ToC entries have double spaced but only longer-than-1-lines have single space.
     \renewcommand\cftchapafterpnum{\vskip12pt}
@@ -225,7 +230,7 @@
 
        \renewcommand{\listtablename}{\textnormal{LIST OF TABLES}}
         \begin{spacing}{1}
-        \renewcommand{\cftlottitlefont}{\vspace*{0in}\hspace{.40\linewidth}\MakeTextUppercase}  
+        \renewcommand{\cftlottitlefont}{\vspace*{0.5in}\hspace{.40\linewidth}\MakeTextUppercase}  
         \pagebreak
         % \addcontentsline{toc}{chapter}{LIST OF TABLES}
         \renewcommand{\cftafterlottitleskip}{0.3in} %added to adjust the spacing 11/17/2021
@@ -238,7 +243,7 @@
     
      \renewcommand{\listfigurename}{\textnormal{LIST OF FIGURES}}
         \begin{spacing}{1}
-        \renewcommand{\cftloftitlefont}{\vspace*{0in}\hspace{.40\linewidth}\MakeTextUppercase}  
+        \renewcommand{\cftloftitlefont}{\vspace*{0.5in}\hspace{.40\linewidth}\MakeTextUppercase}  
         \pagebreak
         % \addcontentsline{toc}{chapter}{LIST OF TABLES}
         \renewcommand{\cftafterloftitleskip}{0.3in} %added to adjust the spacing 11/17/2021
@@ -248,27 +253,6 @@
         %\end{doublespacing}
     \end{spacing}
 		
-
-
-% \renewcommand{\listtablename}{LIST OF TABLES}
-%     \begin{spacing}{2}
-%         \renewcommand{\cftlottitlefont}{\vspace*{0in}\hspace{.40\linewidth}\MakeTextUppercase}  
-%         \pagebreak
-%         % \addcontentsline{toc}{chapter}{LIST OF TABLES} 
-%         \patchcmd{\@caption}{\footnotesize}{\footnotesize\linespread{1}\selectfont}{}{} % Patch \@caption to make it single-spaced
-%         \listoftables 
-%     \end{spacing}
-     
-
-% \renewcommand{\listfigurename}{LIST OF FIGURES}
-%     \renewcommand{\cftloftitlefont}{\vspace*{0in}\hspace{.40\linewidth}\MakeTextUppercase}  
-%     \pagebreak
-%     % \addcontentsline{toc}{chapter}{LIST OF FIGURES}
-%     \begin{spacing}{2}
-%         \patchcmd{\@caption}{\footnotesize}{\footnotesize\linespread{1}\selectfont}{}{} % Patch \@caption to make it single-spaced
-%         \listoffigures
-%     \end{spacing}
-
     \end{frontmatter}
 
 }

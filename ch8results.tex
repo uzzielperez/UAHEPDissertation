@@ -1,6 +1,6 @@
-\chapter{Results}\label{ch:results}
+\chapter{RESULTS}\label{ch:results}
 \RaggedRight \parindent=25pt
-This chapter discusses the results comparing the compatibility of the observed data with the background-only versus various signal-plus-background hypotheses using a shape-based Bayesian Marginalization procedure for the ADD Large Extra Dimensions and the Clockwork Framework. The Unparticles model uses a simpler cut-and-count approach (rather than a shape-based approach), with the modified frequentist method, also known as the CLs method, is used according to the prescriptions of Ref.~\cite{ATLAS:1379837}, together with the use of asymptotic formulas~\cite{Cowan:2010js}.
+This chapter discusses the results comparing the compatibility of the observed data with the background-only versus various signal-plus-background hypotheses using a shape-based Bayesian Marginalization procedure for the ADD Large Extra Dimensions and the Clockwork Framework. The Unparticles model uses a simpler cut-and-count approach rather than a shape-based approach, with the modified frequentist method, also known as the CLs method, is used according to the prescriptions of Ref.~\cite{ATLAS:1379837}, together with the use of asymptotic formulas~\cite{Cowan:2010js}.
 
 % Self-plagiarizing OUR paper
 
@@ -101,7 +101,30 @@ A commonly employed statistical method to express confidence is through the comp
 \end{equation}
 
 \section{Exclusion Limits: ADD and Clockwork}~\label{sec:ADDCWresults}
-We employ the general bayesian marginalization procedure described in the previous section on the ADD and the Clockwork models. For the ADD interpretation, the \mgg distribution begins at 500~\GeV while the threshold was raised to 1~\TeV in the clockwork mechanism to avoid statistical fluctuations in the template construction described in Ch.~\ref{ch:SignalModelling}. 
+We employ the general bayesian marginalization procedure described in the previous section on the ADD and the Clockwork models. For the ADD interpretation, the \mgg distribution begins at 500~\GeV while the threshold was raised to 1~\TeV in the clockwork mechanism to avoid statistical fluctuations in the template construction described in Ch.~\ref{ch:SignalModelling}. Figure~\ref{fig:Prefit} presents the data and background prediction before the marginalization of the nuisance parameters, combined for each of the three years from 2016-2018. 
+The shaded bands show the systematic uncertainties, neglecting the normalization of the diphoton prediction. The pull distributions, defined as the data minus prediction divided by the statistical uncertainty, are shown in the lower panel.
+The shaded bands show the systematic uncertainties, neglecting the normalization of the diphoton prediction.
+The last bin contains the overflow of events beyond $\mgg>3.5$\TeV.
+The data and background prediction after the nuisance parameters have been marginalized are shown in Fig.~\ref{fig:Postfit}. The prefit and postfit for individual years are shown in the succeeding sections.
+
+\begin{figure}[!htbp]{\centering{
+\caption{The \mgg spectra and the background estimate before nuisance parameter marginalization (``pre-fit'') due to SM diphoton production ($\gamma\gamma$) and misidentified photon production (j$\gamma$, jj) for the EBEB (left) and EBEE (right) cases, combining the 2016, 2017, and 2018 data sets. The pull distributions are shown in the lower panel, and the shaded bands depict the systematic uncertainties. 
+The pull distributions, defined as the data minus prediction divided by the statistical uncertainty, are shown in the lower panel.
+\label{fig:Prefit}}}}
+\includegraphics[width=0.45\textwidth]{fig/Figure_005-a-1.png}
+\includegraphics[width=0.45\textwidth]{fig/Figure_005-b-1.png}
+\end{figure}
+
+\begin{figure}[!htbp]{
+\centering{
+\caption{The \mgg spectra and background prediction after nuisance parameter marginalization (``post-fit'') due to prompt SM diphoton production ($\gamma\gamma$) and jets misidentified as photons (j$\gamma$, jj) for the EBEB (left) and EBEE (right) using the combined 2016-2018 datasets. A representative ADD signal is shown in red, and the pull distributions are shwon in the lower panel.
+The prediction with an ADD signal (GRW convention with $M_{\text{S}}=6$~TeV) is also shown.
+\label{fig:Postfit}}}}
+\includegraphics[width=0.45\textwidth]{fig/Figure_006-a-1.png}
+\includegraphics[width=0.45\textwidth]{fig/Figure_006-b-1.png}
+\end{figure}
+
+
 \subsection{Prefit Prediction}~\label{sec:Prefit}
 The unblinded spectra of \mgg are shown in Figs.\ref{fig:Prefit_spectra2016},\ref{fig:Prefit_spectra2017}, and~\ref{fig:Prefit_spectra2018}, together with the prefit prediction. The predictions for the real $\gamma\gamma$ background and the fake $\gamma j, jj$ background are represented by light- and dark-filled histograms, respectively. We observe that the fake background, in the range of high sensitivity $\mgg>1\TeV$, amounts approximately only 5\% (15\%) for BB (BE) channels. 
 The bottom pads present the pulls - the difference between the data and the MC prediction divided by the standard deviation $\sigma_{STAT}$, as well as the magnitude of prefit rate systematic uncertainty, $\sigma_{SYS}$, where for the latter only the 5\% of real and the 30\% of the fake backgrounds uncertainties on rate have been considered.
@@ -185,7 +208,9 @@ After the marginalization procedure, \THETA returns postfit distributions, the n
 % A benefit we gain in this procedure is that we are able to absorb higher-order corrections to the diphoton prediction that are (in principle) unknown 
 % directly into the background model under the assumption that those higher-order corrections result in a relatively flat k-factor.
 
-Note that prior to unblinding the $\mgg$ region, we made use of pseudodata to run the full \textrm{THETA} limits machinery code and produce the expected results. The pseudodata are generated using the sum of the real $\gamma\gamma$ and fake $\gj$ and $jj$ spectra, which are the prefit background estimates, are used as the mean for poisson random number (see: \href{https://root.cern.ch/doc/master/classTRandom.html#a1529ed28e6ce1230d135548460b12c19}{TRandom}) generator from \ROOT. In this way, the pseudodata feature realistic systematic structures and fluctuations and we can check whether prefit pull trends are covered by our current parametrization. The results of the pseudodata used are found in Appendix~\ref{ch:appendix_pseudodata}.
+Note that prior to unblinding the $\mgg$ region, we made use of pseudodata to run the full \textrm{THETA} limits machinery code and produce the expected results. The pseudodata are generated using the sum of the real $\gamma\gamma$ and fake $\gj$ and $jj$ spectra, which are the prefit background estimates, are used as the mean for poisson random number (see: \href{https://root.cern.ch/doc/master/classTRandom.html#a1529ed28e6ce1230d135548460b12c19}{TRandom}) generator from \ROOT. In this way, the pseudodata feature realistic systematic structures and fluctuations and we can check whether prefit pull trends are covered by our current parametrization. 
+
+% The results of the pseudodata used are found in Appendix~\ref{ch:appendix_pseudodata}.
 
 \subsection{ADD Postfit results}~\label{sec:ADDPostfits}
  The ADD postfit results are shown in Figs.~\ref{fig:Postfit_Real2016ADD},~\ref{fig:Postfit_Real2017ADD},~\ref{fig:Postfit_Real2018ADD}, where we use light and dark blue for the real and fake background estimates respectively.
@@ -241,28 +266,9 @@ We observe from the bottom pads that various systematic trends initially present
 The nuisances are constrained and their priors which are either gaussian or lognormal probability distribution function transforms into their corresponding postfit version. While \COMBINE provides summary tables with the means and the standard deviations of the nuisances postfit pdfs, \THETA provides the full postfit pdfs spectra of each nuisance. The postfit probability distribution function (pdfs) of nuisances are presented in Figure~\ref{fig:Postfit_Nuisances_real}. Each plot corresponds to the sources (nuisances) presented of the table \ref{tab:Systematics} (names in labels). The statistics panel of each plot contain the mean and the standard deviation of the pdf.
 Text indicates the name of each nuisance, and the parenthesis after that indicates the regions in which this is constrained over. This information can also be found in table \ref{tab:Systematics}. In this figure, we see that signal strength named \texttt{beta\_signal} on the top-left, is strongly constrained near zero for GRW, $M_S=6\TeV$ as expected. Normalization nuisances of real \gmgm and fake $\gj,jj$ background events are constrained and their postfit pdfs are close to zero or some other value dictated by the fit on the data correcting prefit trends. The Postfit nuisances corresponding to the 50 pdfs of the PDFs nuisances; are all close to the prefit, that is it is a gaussian with mean zero and standard deviation of one, as this set of data can not constrain them further.
 
-
-
-\begin{figure}[!htbp]{
-\caption{The postfit probability distribution function (pdf) of each nuisance used for the fits for each of the 6 signal regions that have been fitted. The upper right panel corresponds to the statistics panel indicating the mean and standard deviation of the pdfs.}
-\centering{
-\includegraphics[width=1.0\textwidth]{fig/POST_All_BBBE161718_ADDGRW_real.png} }
-\label{fig:Postfit_Nuisances_real} }
-\end{figure}
-
-
-
 \subsection{ADD Limits}~\label{sec:ADDlimits}
 For the ADD model, we have the positive and the negative interference conventions which have significant shape differences. These are referred to as the GRW and Hewett- conventions respectively. We ran the limit code for all available $\Lambda_T$ values, which are equivalent to $M_s$ depending on the model convention. \THETA then provides us the upper limit on the signal strength at 95\% CL for each $M_S$ scenario. Instances of $M_s$ with postfit signal strength $<1$ are excluded at 95\% CL. The results for the ADD GRW model after fitting all six signal regions from BB16,..., BE18 are presented in Figure~\ref{fig:Limits_real}.
 % We also plot the upper limit on signal strength vs the $M_S$ parameter in order to translate the upper limit on signal strength to lower limit on $M_S$. 
-
-\begin{figure}[!htbp]{
-\caption{The 95\% CL limits on signal strength (y-axis) vs the $M_S$ (x-axis) and the limits on $M_S$ in legend for the ADD GRW model left, and Hewett negative right. These results are using real data. }
-\centering{
-\includegraphics[width=0.49\textwidth]{fig/LIMITPLOT_BBBE161718_ADDGRW_real.png}
-\includegraphics[width=0.49\textwidth]{fig/LIMITPLOT_BBBE161718_ADDHew_real.png}}
-\label{fig:Limits_real}}
-\end{figure}
 
 From Figure~\ref{fig:Limits_real}, we can read the limits on the $M_S$ parameter as intersections with the horizontal line, where the signal strength is equal to 1. The green and yellow bands indicate the $\pm1\sigma$ and $\pm2\sigma$ standard deviation bands, respectively. The limits results from the GRW and Hewett- conventions could be translated to other ADD conventions as explained in Section~\ref{subsec:MC_Signal_ADD}. These are the HLZ conventions of positive interference for $n_{ED}=3,4,5,6,7$ which are obtained by scaling the GRW and the Hewett+ is obtained by scaling the Hewett- results. Table~\ref{Tab:Limits161718} presents the lower limits on $M_S$ scale for all available ADD signal scenarios. The total asymmetric uncertainties are appended to the expected limits.
 % The total asymmetric uncertainties are shown on the expected limits.
@@ -295,7 +301,24 @@ The different trends that GRW and Hewett exhibit are artifacts that the former m
 % In the following subsection we will present procedure of limits setting for the BSM models probed.
 % The limits are set on signal strength for each of the individual signal scenarios presented in sec. \ref{subsec:MC_Signal_ADD}, (table \ref{table:ADDsamples} and Figure \ref{fig:ADDsignal}).
 
-\subsection{CW Limits}~\label{sec:CWlimits}
+
+\begin{figure}[!htbp]{
+\caption{The postfit probability distribution function (pdf) of each nuisance used for the fits for each of the 6 signal regions that have been fitted. The upper right panel corresponds to the statistics panel indicating the mean and standard deviation of the pdfs.}
+\centering{
+\includegraphics[width=1.0\textwidth]{fig/POST_All_BBBE161718_ADDGRW_real.png} }
+\label{fig:Postfit_Nuisances_real} }
+\end{figure}
+
+
+\begin{figure}[!htbp]{
+\caption{The 95\% CL limits on signal strength (y-axis) vs the $M_S$ (x-axis) and the limits on $M_S$ in legend for the ADD GRW model left, and Hewett negative right. These results are using real data. }
+\centering{
+\includegraphics[width=0.49\textwidth]{fig/LIMITPLOT_BBBE161718_ADDGRW_real.png}
+\includegraphics[width=0.49\textwidth]{fig/LIMITPLOT_BBBE161718_ADDHew_real.png}}
+\label{fig:Limits_real}}
+\end{figure}
+
+\subsection{Clockwork Limits}~\label{sec:CWlimits}
 The strategy for limit setting on the clockwork model (CW) is similar to the ADD model as described in the previous section. We use the data \mgg spectra to constrain the resonant excess due to the clockwork model by marginalizing over the aforementioned nuisance parameters assuming a flat prior for the signal strength. One difference with the ADD model is that for the CW we can only use the spectra $\mgg>1000$ \GeV. Since the CW distributions are combinations of the positive and negative interference ADD samples, we are constrained by the samples that are readily available. Below $\mgg>1000$ \GeV, statistical fluctuations dominate such that meaningful conclusions could not be made. 
 
 Eq.~\ref{eq:rescalingfactorCW} shows that the CW signal strength normalization scales as  $M_5^{-3}$, hence the upper limit on the signal strength can be directly translated as a lower limit on $M_5$ for a fixed $k$.  Figure~\ref{Fig:LIMIT_Clockwork_real} shows the updated 95\% CL exclusion in the $k$--$M_5$ plane with the full Run II data.
@@ -313,8 +336,10 @@ The signal shapes are generated for values of $k$ as low as 0.1 \GeV and up to 5
 \begin{figure}[h!]
      \caption{Exclusion limit for the clockwork framework over the $k-M_5$ parameter space. The shaded region denotes where the theory becomes non-perturbative. The right plot displays a non-logarithmic axis.}
     \centering
-    \includegraphics[width=0.49\linewidth]{fig/LIMITPLOT_BBBE161718_CWk_real.png}
-    \includegraphics[width=0.47\linewidth]{fig/LIMITPLOT_BBBE161718_CWk_nonLog_real.png}
+    % \includegraphics[width=0.49\linewidth]{fig/LIMITPLOT_BBBE161718_CWk_real.png}
+    % \includegraphics[width=0.47\linewidth]{fig/LIMITPLOT_BBBE161718_CWk_nonLog_real.png}
+       \includegraphics[width=0.48\linewidth]{fig/Figure_007-1.png}
+    \includegraphics[width=0.48\linewidth]{fig/Figure-aux_003-1.png}
     \label{Fig:LIMIT_Clockwork_real}
 \end{figure}
 

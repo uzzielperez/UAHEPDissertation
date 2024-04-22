@@ -173,6 +173,8 @@
     \end{singlespace}
 	\hfill \linebreak
 	\hfill \linebreak
+    \hfill \linebreak
+    \hfill \linebreak
 	\MakeTextUppercase{\@place}
 	\hfill \linebreak
 	\hfill \linebreak
